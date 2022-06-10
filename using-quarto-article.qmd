@@ -1,0 +1,41 @@
+---
+title: "Using Quarto for reproducible article writing"
+format:
+    pdf:
+        documentclass: scrartcl
+author: Lucas A. Meyer
+date: 2022-07-14
+---
+
+# Introduction
+
+Here I write some very interesting thing
+
+# Data
+
+Here I describe the data I'm using
+
+# Theory
+
+Is dependency ratio correlated to GDP Growth? We examine this with a few data points.
+
+# Code
+
+```{python}
+#| echo: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+# Conclusion
+
+This is where things end
