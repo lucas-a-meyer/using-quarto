@@ -1,0 +1,10 @@
+{
+  "hash": "4f3d576b121b2a61e433a3cea5c35744",
+  "result": {
+    "markdown": "---\ntitle: \"Using Quarto for reproducible article writing\"\nformat: pptx\nauthor: Lucas A. Meyer\ndate: 2022-07-14\nreference-doc: templates/template.pptx\n---\n\n# Quarto\n\n## Popular Science\n\nIn 1997...\n\n- I watched the movie \"Contact\"\n- I read \"Literate Programming\"\n- I started working on a science museum\n\n\n# Articles\n\n## Using Quarto to write articles\n \n\n## What if I want to add code?\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](using-quarto-ppt_files/figure-pptx/cell-2-output-1.png){}\n:::\n:::\n\n\n# Presentations\n\n## Things that you can add to a template\n\n- Title Slide\n- Title and Content\n- Section Header\n- Two Content\n- Comparison\n- Content with Caption\n- Blank\n\n<!-- # Websites -->\n\n# Projects\n\nYou can use Quarto to generate the whole shebang!\n\n",
+    "supporting": [
+      "using-quarto-ppt_files"
+    ],
+    "filters": []
+  }
+}
