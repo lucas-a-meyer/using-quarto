@@ -1,26 +1,138 @@
 ---
-title: "Using Quarto for reproducible article writing"
+title: "Using Quarto for everything"
 format: pptx
 author: Lucas A. Meyer
 date: 2022-07-14
 reference-doc: templates/template.pptx
 ---
+# Why Quarto
 
-# Quarto
+## Quarto helps with the content value chain
 
-## Popular Science
+:::: {.columns}
+::: {.column}
+![The content value chain from David Robinson's (@drrob) Tweet](images/useful-output.jpg)
+:::
+::: {.column}
+> - Gets things out of my computer **fast**
+> - Reproducible
+> - Git-based collaboration
+> - Write once, generate:
+>   - Code
+>   - Paper
+>   - PowerPoint
+>   - Site/documentation
+:::
+::::
 
-In 1997...
+## Also... the population project
 
-- I watched the movie "Contact"
-- I read "Literate Programming"
-- I started working on a science museum
+:::: {.columns}
+::: {.column}
+
+### Goals and questions
+Explore the consequences of the decline in population predicted to start
+at around 2100 for the world, but earlier in developed nations. 
+
+- What are the economic impacts?
+- What should governments do?
+
+:::
+
+::: {.column}
+
+### Challenges
+
+- Unknown collaborators at the start
+- Need to go "wide" rather than "deep"
+- May need to pivot fast
+- May need to generate data on demand
+    - Show graphs for country X, Y and Z
+- Generate code, paper, PowerPoint
+
+:::
+::::
+
+## In the last 20 years, I tried many tools...
+
+:::: {.columns}
+::: {.column}
+
+### LaTeX
+
+- Great for PDFs... Ok, Beamer!
+- Website generation is not great
+- I even know how to write code!
+    - `\usepackage{ifthen}`
+    - `@for`, `@while`
+
+### Word/PPT
+
+- Hard to collaborate before O365
+- Hard to reproduce / auto-generate 
+
+:::
+::: {.column}
+
+### Jekyll
+
+- Great for sites
+- Not great for PPT, papers
+
+### RMarkdown
+
+- Great PDFs
+- Mostly good presentations
+- Hugo and `blogdown` work well
+- Need to learn `R` 
+
+:::
+::::
+
+## Quarto
+
+Quarto is `pandoc` on steroids, and solves a lot of problems.
+
+:::: {.columns}
+::: {.column}
+
+### LaTeX
+
+- Great for PDFs... Ok, Beamer!
+- Website generation is not great
+- I even know how to write code!
+    - `\usepackage{ifthen}`
+    - `@for`, `@while`
+
+### Word/PPT
+
+- Hard to collaborate before O365
+- Hard to reproduce / auto-generate 
+
+:::
+::: {.column}
+
+### Jekyll
+
+- Great for sites
+- Not great for PPT, papers
+
+### RMarkdown
+
+- Great PDFs
+- Mostly good presentations
+- Hugo and `blogdown` work well
+- Need to learn `R` 
+
+:::
+::::
 
 
 # Articles
 
 ## Using Quarto to write articles
- 
+
+Blah bleh blih 
 
 ## What if I want to add code?
 
@@ -53,8 +165,47 @@ plt.show()
 
 <!-- # Websites -->
 
-# Projects
+## Projects
 
 You can use Quarto to generate the whole shebang!
 
 
+# Appendix
+
+## Test multiple images
+
+This slide uses the "Caption plus stuff" template
+
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+import matplotlib.image as img
+
+figure, ax = plt.subplots(2, 4)
+
+# reading png image file
+im1 = img.imread('images/contact.jpg')
+im2 = img.imread('images/literate-programming.jpg')
+  
+# show image
+ax[0, 0].imshow(im2)
+ax[0, 1].imshow(im1)
+ax[0, 2].imshow(im2)
+ax[0, 3].imshow(im1)
+ax[1, 0].imshow(im1)
+ax[1, 1].imshow(im2)
+ax[1, 2].imshow(im1)
+ax[1, 3].imshow(im2)
+
+
+for i in range(2):
+    for j in range(4):
+        axx = ax[i, j]
+        axx.get_xaxis().set_visible(False)
+        axx.get_yaxis().set_visible(False)
+
+
+plt.show()
+
+```
