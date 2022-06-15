@@ -1,9 +1,13 @@
 project:
   type: website
   output-dir: docs
+  preview: 
+    port: 4300
+    browser: false
 
 website:
   title: "Using Quarto for Everything"
+  google-analytics: "G-6KTZ853BN5"
   navbar:
     left:
       - href: index.qmd
