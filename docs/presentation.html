@@ -418,15 +418,15 @@
 </div>
 </div><div class="column">
 <ul>
-<li>Move content out of my computer <strong>as fast as possible</strong></li>
-<li>Reproducible</li>
-<li>Git-based collaboration</li>
-<li>Write once, generate:
+<li class="fragment">Move content out of my computer <strong>as fast as possible</strong></li>
+<li class="fragment">Reproducible</li>
+<li class="fragment">Git-based collaboration</li>
+<li class="fragment">Write once, generate:
 <ul>
-<li>Code</li>
-<li>Paper</li>
-<li>PowerPoint</li>
-<li>Site/documentation</li>
+<li class="fragment">Code</li>
+<li class="fragment">Paper</li>
+<li class="fragment">PowerPoint</li>
+<li class="fragment">Site/documentation</li>
 </ul></li>
 </ul>
 </div>
@@ -439,20 +439,20 @@
 <h3 id="goals-and-questions">Goals and questions</h3>
 <p>Explore the consequences of the decline in population predicted to start at around 2100 for the world, but earlier in developed nations.</p>
 <ul>
-<li class="fragment">What are the economic impacts?</li>
-<li class="fragment">What should governments do?</li>
+<li>What are the economic impacts?</li>
+<li>What should governments do?</li>
 </ul>
 </div><div class="column">
 <h3 id="population-project-challenges">Population project challenges</h3>
 <ul>
-<li class="fragment">Unknown collaborators at the start</li>
-<li class="fragment">Need to go “wide” rather than “deep”</li>
-<li class="fragment">May need to pivot fast</li>
-<li class="fragment">May need to generate data on demand
+<li>Unknown collaborators at the start</li>
+<li>Need to go “wide” rather than “deep”</li>
+<li>May need to pivot fast</li>
+<li>May need to generate data on demand
 <ul>
-<li class="fragment">Show graphs for country X, Y and Z</li>
+<li>Show graphs for country X, Y and Z</li>
 </ul></li>
-<li class="fragment">Generate code, paper, PowerPoint</li>
+<li>Generate code, paper, PowerPoint</li>
 </ul>
 </div>
 </div>
@@ -463,31 +463,31 @@
 <div class="column">
 <h3 id="latex">LaTeX</h3>
 <ul>
-<li class="fragment">Great for PDFs… Ok, Beamer!</li>
-<li class="fragment">Website generation is not great</li>
-<li class="fragment">I even know how to write code!
+<li>Great for PDFs… Ok, Beamer!</li>
+<li>Website generation is not great</li>
+<li>I even know how to write code!
 <ul>
-<li class="fragment"><code>\usepackage{ifthen}</code></li>
-<li class="fragment"><code>@for</code>, <code>@while</code></li>
+<li><code>\usepackage{ifthen}</code></li>
+<li><code>@for</code>, <code>@while</code></li>
 </ul></li>
 </ul>
 <h3 id="wordppt">Word/PPT</h3>
 <ul>
-<li class="fragment">Hard to collaborate before O365</li>
-<li class="fragment">Hard to reproduce / auto-generate</li>
+<li>Hard to collaborate before O365</li>
+<li>Hard to reproduce / auto-generate</li>
 </ul>
 </div><div class="column">
 <h3 id="jekyll">Jekyll</h3>
 <ul>
-<li class="fragment">Great for sites</li>
-<li class="fragment">Not great for PPT, papers</li>
+<li>Great for sites</li>
+<li>Not great for PPT, papers</li>
 </ul>
 <h3 id="rmarkdown">RMarkdown</h3>
 <ul>
-<li class="fragment">Great PDFs</li>
-<li class="fragment">Mostly good presentations</li>
-<li class="fragment">Hugo and <code>blogdown</code> work well</li>
-<li class="fragment">Need to learn <code>R</code></li>
+<li>Great PDFs</li>
+<li>Mostly good presentations</li>
+<li>Hugo and <code>blogdown</code> work well</li>
+<li>Need to learn <code>R</code></li>
 </ul>
 </div>
 </div>
@@ -542,21 +542,36 @@
 <span id="cb1-8"><a href="#cb1-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
 <span id="cb1-9"><a href="#cb1-9"></a>ax.grid(<span class="va">True</span>)</span>
 <span id="cb1-10"><a href="#cb1-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/cell-2-output-1.png" width="442" height="432"></p>
+
 </div>
-</div>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD # Presentations in PowerPoint</p>
+<img data-src="presentation_files/figure-revealjs/cell-2-output-1.png" class="r-stretch"></section></section>
+<section>
+<section id="presentations-in-powerpoint" class="title-slide slide level1 center">
+<h1>Presentations in PowerPoint</h1>
+
 </section>
 <section id="things-that-you-can-add-to-a-template" class="slide level2">
 <h2>Things that you can add to a template</h2>
 <div class="columns">
-
-</div>
+<div class="column">
 <p>This is the part of Quarto I liked the <em>least</em>.</p>
 <p>To generate a presentation from a <code>.qmd</code> file, add <code>format: pptx</code> to the YAML front-matter.</p>
 <p>Quarto will use the <a href="https://pandoc.org/MANUAL.html#powerpoint-layout-choice">pandoc PowerPoint rules</a> to render the content from the <code>.qmd</code> into the <code>.pptx</code>.</p>
-<p>::: ::: {.column} - Quarto can use a template with (<strong>only</strong>) these layouts: - Title Slide - Title and Content - Section Header - Two Content - Comparison - Content with Caption - Blank ::: :::: {.columns}</p>
+</div><div class="column">
+<ul>
+<li>Quarto can use a template with (<strong>only</strong>) these layouts:
+<ul>
+<li>Title Slide</li>
+<li>Title and Content</li>
+<li>Section Header</li>
+<li>Two Content</li>
+<li>Comparison</li>
+<li>Content with Caption</li>
+<li>Blank</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="dependency-ratios-around-the-world" class="slide level2">
 <h2>Dependency ratios around the world</h2>
@@ -577,12 +592,8 @@
 <section id="test-multiple-images" class="slide level2">
 <h2>Test multiple images</h2>
 <p>This slide uses the “Caption plus stuff” template</p>
-<div class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/cell-5-output-1.png" width="716" height="386"></p>
-</div>
-</div>
-</section>
+
+<img data-src="presentation_files/figure-revealjs/cell-5-output-1.png" class="r-stretch"></section>
 <section id="mermaid-diagram-1" class="slide level2">
 <h2>Mermaid Diagram 1</h2>
 <div class="cell" data-reveal="true">
@@ -642,7 +653,9 @@ end
 </div>
 </div>
 </div>
-<h3 id="mermaid-diagram-3">Mermaid Diagram 3</h3>
+</section>
+<section id="mermaid-diagram-3" class="slide level2">
+<h2>Mermaid Diagram 3</h2>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>

@@ -2,6 +2,8 @@
 title: "Using Quarto for scholarly projects"
 ---
 
-This is an example that shows how to create a Quarto project that integrates an article ([PDF](using-quarto-article.pdf)), a presentation about that article ([PPTX](using-quarto-ppt.pptx)) and a website (GitHub Pages), which you are reading now.
+This is an example that shows how to create a Quarto project that integrates an article ([PDF](article.pdf)), a presentation about that article ([PPTX](presentation.pptx)) and a website (GitHub Pages), which you are reading now. 
+
+I also have a [RevealJS presentation](presentation.html).
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

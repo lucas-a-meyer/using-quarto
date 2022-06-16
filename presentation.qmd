@@ -1,9 +1,15 @@
 ---
 title: "Using Quarto for everything"
-format: pptx
+format: 
+    pptx:
+        reference-doc: templates/template.pptx
+    revealjs:
+        incremental: false
+        theme: [sky, revealjs-customizations.scss]
+
 author: Lucas A. Meyer
 date: 2022-07-14
-reference-doc: templates/template.pptx
+
 ---
 
 # Why Quarto
@@ -116,13 +122,9 @@ Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-
 ::: {.column}
 Whether you use Quarto from `.qmd`, `.ipynb`, or `.Rmd` files, you always start with a YAML front-matter file. 
 
-<<<<<<< HEAD
 The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. 
 
 **You can use a single source file to generate multiple output types.**
-=======
-The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. **You can use a single source file to generate multiple output types.**
->>>>>>> 200ec8a2ea507b9ddcca2b264c8b725b351d5f50
 :::
 ::: {.column}
 ![YAML](images/yaml-front-matter.png)
@@ -146,20 +148,19 @@ ax.grid(True)
 plt.show()
 ```
 
-<<<<<<< HEAD
 # Presentations in PowerPoint
 
 ## Things that you can add to a template
 
 :::: {.columns}
-:::
+::: {.column}
 This is the part of Quarto I liked the _least_.
 
 To generate a presentation from a `.qmd` file, add `format: pptx` to the YAML front-matter.
 
 Quarto will use the [pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#powerpoint-layout-choice) to render the content from the `.qmd` into the `.pptx`.
-
 :::
+
 ::: {.column}
 - Quarto can use a template with (**only**) these layouts:
     - Title Slide
@@ -169,8 +170,9 @@ Quarto will use the [pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#pow
     - Comparison
     - Content with Caption
     - Blank
+
 :::
-:::: {.columns}
+::::
 
 
 ## Dependency ratios around the world
@@ -283,7 +285,7 @@ end
 
 ```
 
-### Mermaid Diagram 3
+## Mermaid Diagram 3
 
 ```{mermaid}
 graph LR
