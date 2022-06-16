@@ -5,6 +5,7 @@ author: Lucas A. Meyer
 date: 2022-07-14
 reference-doc: templates/template.pptx
 ---
+
 # Why Quarto
 
 ## Quarto helps with the content value chain
@@ -14,7 +15,7 @@ reference-doc: templates/template.pptx
 ![The content value chain from David Robinson's (@drrob) Tweet](images/useful-output.jpg)
 :::
 ::: {.column}
-> - Gets things out of my computer **fast**
+> - Move content out of my computer **as fast as possible**
 > - Reproducible
 > - Git-based collaboration
 > - Write once, generate:
@@ -41,7 +42,7 @@ at around 2100 for the world, but earlier in developed nations.
 
 ::: {.column}
 
-### Challenges
+### Population project challenges
 
 - Unknown collaborators at the start
 - Need to go "wide" rather than "deep"
@@ -89,50 +90,38 @@ at around 2100 for the world, but earlier in developed nations.
 :::
 ::::
 
-## Quarto
+## The content pipeline for .ipynb
 
-Quarto is `pandoc` on steroids, and solves a lot of problems.
+About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks, and one can use [`pandoc`](https://pandoc.org/index.html) to generate papers and PowerPoint, but it can be complicated.
+
+![Processing ipynb](images/mermaid1.png)
+
+## Quarto for Python, in a nutshell
+
+In Quarto's `.qmd` files, you write Markdown and code, just like `.ipynb`. Add some `YAML` configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.
+
+![Quarto using Python](images/mermaid2-quarto-nutshell.png)
+
+## But wait, there's more!
+
+Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.
+
+![Scripts](images/mermaid2-quarto-scripts.png)
+
+# Using Quarto
+
+## The basics
 
 :::: {.columns}
 ::: {.column}
+Whether you use Quarto from `.qmd`, `.ipynb`, or `.Rmd` files, you always start with a YAML front-matter file. 
 
-### LaTeX
-
-- Great for PDFs... Ok, Beamer!
-- Website generation is not great
-- I even know how to write code!
-    - `\usepackage{ifthen}`
-    - `@for`, `@while`
-
-### Word/PPT
-
-- Hard to collaborate before O365
-- Hard to reproduce / auto-generate 
-
+The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. **You can use a single source file to generate multiple output types.**
 :::
 ::: {.column}
-
-### Jekyll
-
-- Great for sites
-- Not great for PPT, papers
-
-### RMarkdown
-
-- Great PDFs
-- Mostly good presentations
-- Hugo and `blogdown` work well
-- Need to learn `R` 
-
+![YAML](images/yaml-front-matter.png)
 :::
 ::::
-
-
-# Articles
-
-## Using Quarto to write articles
-
-Blah bleh blih 
 
 ## What if I want to add code?
 
@@ -162,6 +151,31 @@ plt.show()
 - Comparison
 - Content with Caption
 - Blank
+
+## Dependency ratios around the world
+
+```{python}
+#| echo: false
+
+# for name in un_geos:
+#   display(Markdown(f"### Dependency Ratio for {name}"))
+#   df = df_dr[df_dr.Location == name]
+#   plot_dependency_ratio(df)
+
+```
+
+## Population pyramids around the world
+
+```{python}
+#| echo: false
+# years = [2000, 2025, 2050, 2075, 2100]
+
+# for name in un_geos:
+#   display(Markdown(f"### Population Pyramids for {name}"))
+#   df = df_pop[df_pop["Location"]==name]
+#   plot_population_pyramid_series(df, years)
+
+```
 
 <!-- # Websites -->
 
@@ -208,4 +222,70 @@ for i in range(2):
 
 plt.show()
 
+```
+
+## Mermaid Diagram 1
+```{mermaid}
+graph LR
+    A[.ipynb] --> B(("Pandoc"))
+    B ----> E[.doc]
+    B ----> H[.pptx]
+    B --> C[.md]
+    B --> D[.tex] 
+    D --> F((Xetex))
+    C --> I((Hugo))
+    F --> G[.pdf]
+    I --> J[.html]
+    style B fill:#FF6655AA
+    style F fill:#88ffFF
+    style I fill:#88ffFF
+```
+
+## Mermaid Diagram 2
+```{mermaid}
+graph LR
+Q[.qmd] --> A
+subgraph Quarto
+    A[.ipynb] --> B(("Pandoc"))
+    B --> C[.md]
+    B --> D[.tex] 
+    D --> F((Xetex))
+    C --> I((Hugo))
+    style B fill:#FF6655AA
+    style F fill:#88ffFF
+    style I fill:#88ffFF
+end
+    B ----> E[.doc]
+    B ----> H[.pptx]
+    F --> G[.pdf]
+    I --> J[.html]
+
+```
+
+### Mermaid Diagram 3
+
+```{mermaid}
+graph LR
+    P[Pre-scripts] --> Q
+    style P fill:#AA99FF
+    Q[.qmd] --> A
+    subgraph Quarto
+        A[.ipynb] --> B(("Pandoc"))
+        B --> C[.md]
+        B --> D[.tex] 
+        D --> F((Xetex))
+        C --> I((Hugo))
+        style B fill:#FF6655AA
+        style F fill:#88ffFF
+        style I fill:#88ffFF
+    end
+        B ----> E[.doc]
+        B ----> H[.pptx]
+        F --> G[.pdf]
+        I --> J[.html]
+    E --> X[Post-scripts]
+    H --> X
+    G --> X
+    J --> X
+    style X fill:#AA99FF
 ```
