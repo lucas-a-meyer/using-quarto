@@ -116,9 +116,13 @@ Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-
 ::: {.column}
 Whether you use Quarto from `.qmd`, `.ipynb`, or `.Rmd` files, you always start with a YAML front-matter file. 
 
+<<<<<<< HEAD
 The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. 
 
 **You can use a single source file to generate multiple output types.**
+=======
+The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. **You can use a single source file to generate multiple output types.**
+>>>>>>> 200ec8a2ea507b9ddcca2b264c8b725b351d5f50
 :::
 ::: {.column}
 ![YAML](images/yaml-front-matter.png)
@@ -142,6 +146,7 @@ ax.grid(True)
 plt.show()
 ```
 
+<<<<<<< HEAD
 # Presentations in PowerPoint
 
 ## Things that you can add to a template
