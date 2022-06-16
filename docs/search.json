@@ -11,6 +11,111 @@
     "href": "index.html",
     "title": "Using Quarto for scholarly projects",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "I also have a RevealJS presentation.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "presentation.html#quarto-helps-with-the-content-value-chain",
+    "href": "presentation.html#quarto-helps-with-the-content-value-chain",
+    "title": "Using Quarto for everything",
+    "section": "Quarto helps with the content value chain",
+    "text": "Quarto helps with the content value chain\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
+  },
+  {
+    "objectID": "presentation.html#also-the-population-project",
+    "href": "presentation.html#also-the-population-project",
+    "title": "Using Quarto for everything",
+    "section": "Also… the population project",
+    "text": "Also… the population project\n\n\nGoals and questions\nExplore the consequences of the decline in population predicted to start at around 2100 for the world, but earlier in developed nations.\n\nWhat are the economic impacts?\nWhat should governments do?\n\n\nPopulation project challenges\n\nUnknown collaborators at the start\nNeed to go “wide” rather than “deep”\nMay need to pivot fast\nMay need to generate data on demand\n\nShow graphs for country X, Y and Z\n\nGenerate code, paper, PowerPoint"
+  },
+  {
+    "objectID": "presentation.html#in-the-last-20-years-i-tried-many-tools",
+    "href": "presentation.html#in-the-last-20-years-i-tried-many-tools",
+    "title": "Using Quarto for everything",
+    "section": "In the last 20 years, I tried many tools…",
+    "text": "In the last 20 years, I tried many tools…\n\n\nLaTeX\n\nGreat for PDFs… Ok, Beamer!\nWebsite generation is not great\nI even know how to write code!\n\n\\usepackage{ifthen}\n@for, @while\n\n\nWord/PPT\n\nHard to collaborate before O365\nHard to reproduce / auto-generate\n\n\nJekyll\n\nGreat for sites\nNot great for PPT, papers\n\nRMarkdown\n\nGreat PDFs\nMostly good presentations\nHugo and blogdown work well\nNeed to learn R"
+  },
+  {
+    "objectID": "presentation.html#the-content-pipeline-for-.ipynb",
+    "href": "presentation.html#the-content-pipeline-for-.ipynb",
+    "title": "Using Quarto for everything",
+    "section": "The content pipeline for .ipynb",
+    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks, and one can use pandoc to generate papers and PowerPoint, but it can be complicated.\n\nProcessing ipynb"
+  },
+  {
+    "objectID": "presentation.html#quarto-for-python-in-a-nutshell",
+    "href": "presentation.html#quarto-for-python-in-a-nutshell",
+    "title": "Using Quarto for everything",
+    "section": "Quarto for Python, in a nutshell",
+    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.\n\nQuarto using Python"
+  },
+  {
+    "objectID": "presentation.html#but-wait-theres-more",
+    "href": "presentation.html#but-wait-theres-more",
+    "title": "Using Quarto for everything",
+    "section": "But wait, there’s more!",
+    "text": "But wait, there’s more!\nQuarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.\n\nScripts"
+  },
+  {
+    "objectID": "presentation.html#the-basics",
+    "href": "presentation.html#the-basics",
+    "title": "Using Quarto for everything",
+    "section": "The basics",
+    "text": "The basics\n\n\nWhether you use Quarto from .qmd, .ipynb, or .Rmd files, you always start with a YAML front-matter file.\nThe YAML configuration determines what’s the output format of your document. A few popular output options are html, pptx, docx, and pdf.\nYou can use a single source file to generate multiple output types.\n\n\n\n\nYAML"
+  },
+  {
+    "objectID": "presentation.html#what-if-i-want-to-add-code",
+    "href": "presentation.html#what-if-i-want-to-add-code",
+    "title": "Using Quarto for everything",
+    "section": "What if I want to add code?",
+    "text": "What if I want to add code?\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n<<<<<<< HEAD # Presentations in PowerPoint"
+  },
+  {
+    "objectID": "presentation.html#things-that-you-can-add-to-a-template",
+    "href": "presentation.html#things-that-you-can-add-to-a-template",
+    "title": "Using Quarto for everything",
+    "section": "Things that you can add to a template",
+    "text": "Things that you can add to a template\n\n\n\nThis is the part of Quarto I liked the least.\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nQuarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\n::: ::: {.column} - Quarto can use a template with (only) these layouts: - Title Slide - Title and Content - Section Header - Two Content - Comparison - Content with Caption - Blank ::: :::: {.columns}"
+  },
+  {
+    "objectID": "presentation.html#dependency-ratios-around-the-world",
+    "href": "presentation.html#dependency-ratios-around-the-world",
+    "title": "Using Quarto for everything",
+    "section": "Dependency ratios around the world",
+    "text": "Dependency ratios around the world"
+  },
+  {
+    "objectID": "presentation.html#population-pyramids-around-the-world",
+    "href": "presentation.html#population-pyramids-around-the-world",
+    "title": "Using Quarto for everything",
+    "section": "Population pyramids around the world",
+    "text": "Population pyramids around the world"
+  },
+  {
+    "objectID": "presentation.html#projects",
+    "href": "presentation.html#projects",
+    "title": "Using Quarto for everything",
+    "section": "Projects",
+    "text": "Projects\nYou can use Quarto to generate the whole shebang!"
+  },
+  {
+    "objectID": "presentation.html#test-multiple-images",
+    "href": "presentation.html#test-multiple-images",
+    "title": "Using Quarto for everything",
+    "section": "Test multiple images",
+    "text": "Test multiple images\nThis slide uses the “Caption plus stuff” template"
+  },
+  {
+    "objectID": "presentation.html#mermaid-diagram-1",
+    "href": "presentation.html#mermaid-diagram-1",
+    "title": "Using Quarto for everything",
+    "section": "Mermaid Diagram 1",
+    "text": "Mermaid Diagram 1\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+  },
+  {
+    "objectID": "presentation.html#mermaid-diagram-2",
+    "href": "presentation.html#mermaid-diagram-2",
+    "title": "Using Quarto for everything",
+    "section": "Mermaid Diagram 2",
+    "text": "Mermaid Diagram 2\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]\n\n\n\n\n\n\n\n\n\nMermaid Diagram 3\n\n\n\n\ngraph LR\n    P[Pre-scripts] --> Q\n    style P fill:#AA99FF\n    Q[.qmd] --> A\n    subgraph Quarto\n        A[.ipynb] --> B((\"Pandoc\"))\n        B --> C[.md]\n        B --> D[.tex] \n        D --> F((Xetex))\n        C --> I((Hugo))\n        style B fill:#FF6655AA\n        style F fill:#88ffFF\n        style I fill:#88ffFF\n    end\n        B ----> E[.doc]\n        B ----> H[.pptx]\n        F --> G[.pdf]\n        I --> J[.html]\n    E --> X[Post-scripts]\n    H --> X\n    G --> X\n    J --> X\n    style X fill:#AA99FF"
   }
 ]
