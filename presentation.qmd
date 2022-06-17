@@ -1,314 +1,61 @@
 ---
 title: "Using Quarto for everything"
 format: 
-    pptx:
-        reference-doc: templates/template.pptx
+#    pptx:
+#        reference-doc: templates/template.pptx
+#        monofont: "Lucida Console"
+#        fontsize: 10pt
     revealjs:
         incremental: false
-        theme: [sky, revealjs-customizations.scss]
+        theme: [simple, revealjs-customizations.scss]
+        title-slide-attributes:
+            data-background-image: images/data-viz-bg.jpg
+            data-background-size: contain
+            data-background-position: right
 
 author: Lucas A. Meyer
 date: 2022-07-14
-
 ---
 
-# Why Quarto
+{{< include _revealjs_presentation_source.qmd >}}
 
-## Quarto helps with the content value chain
+# Websites
 
-:::: {.columns}
-::: {.column}
-![The content value chain from David Robinson's (@drrob) Tweet](images/useful-output.jpg)
-:::
-::: {.column}
-> - Move content out of my computer **as fast as possible**
-> - Reproducible
-> - Git-based collaboration
-> - Write once, generate:
->   - Code
->   - Paper
->   - PowerPoint
->   - Site/documentation
-:::
-::::
+## What I get by just changing the format in YAML
 
-## Also... the population project
+```{.yaml code-line-numbers="3"}
+---
+title: "Using Quarto for everything"
+format: html
+    # revealjs:
+    #     incremental: false
+    #     theme: [simple, revealjs-customizations.scss]
+    #     title-slide-attributes:
+    #         data-background-image: images/data-viz-bg.jpg
+    #         data-background-size: contain
+    #         data-background-position: right
 
-:::: {.columns}
-::: {.column}
-
-### Goals and questions
-Explore the consequences of the decline in population predicted to start
-at around 2100 for the world, but earlier in developed nations. 
-
-- What are the economic impacts?
-- What should governments do?
-
-:::
-
-::: {.column}
-
-### Population project challenges
-
-- Unknown collaborators at the start
-- Need to go "wide" rather than "deep"
-- May need to pivot fast
-- May need to generate data on demand
-    - Show graphs for country X, Y and Z
-- Generate code, paper, PowerPoint
-
-:::
-::::
-
-## In the last 20 years, I tried many tools...
-
-:::: {.columns}
-::: {.column}
-
-### LaTeX
-
-- Great for PDFs... Ok, Beamer!
-- Website generation is not great
-- I even know how to write code!
-    - `\usepackage{ifthen}`
-    - `@for`, `@while`
-
-### Word/PPT
-
-- Hard to collaborate before O365
-- Hard to reproduce / auto-generate 
-
-:::
-::: {.column}
-
-### Jekyll
-
-- Great for sites
-- Not great for PPT, papers
-
-### RMarkdown
-
-- Great PDFs
-- Mostly good presentations
-- Hugo and `blogdown` work well
-- Need to learn `R` 
-
-:::
-::::
-
-## The content pipeline for .ipynb
-
-About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks, and one can use [`pandoc`](https://pandoc.org/index.html) to generate papers and PowerPoint, but it can be complicated.
-
-![Processing ipynb](images/mermaid1.png)
-
-## Quarto for Python, in a nutshell
-
-In Quarto's `.qmd` files, you write Markdown and code, just like `.ipynb`. Add some `YAML` configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.
-
-![Quarto using Python](images/mermaid2-quarto-nutshell.png)
-
-## But wait, there's more!
-
-Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.
-
-![Scripts](images/mermaid2-quarto-scripts.png)
-
-# Using Quarto
-
-## The basics
-
-:::: {.columns}
-::: {.column}
-Whether you use Quarto from `.qmd`, `.ipynb`, or `.Rmd` files, you always start with a YAML front-matter file. 
-
-The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. 
-
-**You can use a single source file to generate multiple output types.**
-:::
-::: {.column}
-![YAML](images/yaml-front-matter.png)
-:::
-::::
-
-## What if I want to add code?
-
-```{python}
-#| echo: true
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
+author: Lucas A. Meyer
+date: 2022-07-14
+---
 ```
+<br />
 
-# Presentations in PowerPoint
+To avoid overwriting the slides, I'm generating a new file for the website.
 
-## Things that you can add to a template
+You can see the result [here](website.html){preview-link="false"}, 
+and a screenshot in the next slide.
 
-:::: {.columns}
-::: {.column}
-This is the part of Quarto I liked the _least_.
+## Render presentation as a website
 
-To generate a presentation from a `.qmd` file, add `format: pptx` to the YAML front-matter.
+![](images/website.png)
 
-Quarto will use the [pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#powerpoint-layout-choice) to render the content from the `.qmd` into the `.pptx`.
-:::
-
-::: {.column}
-- Quarto can use a template with (**only**) these layouts:
-    - Title Slide
-    - Title and Content
-    - Section Header
-    - Two Content
-    - Comparison
-    - Content with Caption
-    - Blank
-
-:::
-::::
+# Articles
 
 
-## Dependency ratios around the world
 
-```{python}
-#| echo: false
-
-# for name in un_geos:
-#   display(Markdown(f"### Dependency Ratio for {name}"))
-#   df = df_dr[df_dr.Location == name]
-#   plot_dependency_ratio(df)
-
-```
-
-## Population pyramids around the world
-
-```{python}
-#| echo: false
-# years = [2000, 2025, 2050, 2075, 2100]
-
-# for name in un_geos:
-#   display(Markdown(f"### Population Pyramids for {name}"))
-#   df = df_pop[df_pop["Location"]==name]
-#   plot_population_pyramid_series(df, years)
-
-```
-
-<!-- # Websites -->
-
-## Projects
+# Projects
 
 You can use Quarto to generate the whole shebang!
 
 
-# Appendix
-
-## Test multiple images
-
-This slide uses the "Caption plus stuff" template
-
-```{python}
-#| echo: false
-
-import matplotlib.pyplot as plt
-import matplotlib.image as img
-
-figure, ax = plt.subplots(2, 4)
-
-# reading png image file
-im1 = img.imread('images/contact.jpg')
-im2 = img.imread('images/literate-programming.jpg')
-  
-# show image
-ax[0, 0].imshow(im2)
-ax[0, 1].imshow(im1)
-ax[0, 2].imshow(im2)
-ax[0, 3].imshow(im1)
-ax[1, 0].imshow(im1)
-ax[1, 1].imshow(im2)
-ax[1, 2].imshow(im1)
-ax[1, 3].imshow(im2)
-
-
-for i in range(2):
-    for j in range(4):
-        axx = ax[i, j]
-        axx.get_xaxis().set_visible(False)
-        axx.get_yaxis().set_visible(False)
-
-
-plt.show()
-
-```
-
-## Mermaid Diagram 1
-```{mermaid}
-graph LR
-    A[.ipynb] --> B(("Pandoc"))
-    B ----> E[.doc]
-    B ----> H[.pptx]
-    B --> C[.md]
-    B --> D[.tex] 
-    D --> F((Xetex))
-    C --> I((Hugo))
-    F --> G[.pdf]
-    I --> J[.html]
-    style B fill:#FF6655AA
-    style F fill:#88ffFF
-    style I fill:#88ffFF
-```
-
-## Mermaid Diagram 2
-```{mermaid}
-graph LR
-Q[.qmd] --> A
-subgraph Quarto
-    A[.ipynb] --> B(("Pandoc"))
-    B --> C[.md]
-    B --> D[.tex] 
-    D --> F((Xetex))
-    C --> I((Hugo))
-    style B fill:#FF6655AA
-    style F fill:#88ffFF
-    style I fill:#88ffFF
-end
-    B ----> E[.doc]
-    B ----> H[.pptx]
-    F --> G[.pdf]
-    I --> J[.html]
-
-```
-
-## Mermaid Diagram 3
-
-```{mermaid}
-graph LR
-    P[Pre-scripts] --> Q
-    style P fill:#AA99FF
-    Q[.qmd] --> A
-    subgraph Quarto
-        A[.ipynb] --> B(("Pandoc"))
-        B --> C[.md]
-        B --> D[.tex] 
-        D --> F((Xetex))
-        C --> I((Hugo))
-        style B fill:#FF6655AA
-        style F fill:#88ffFF
-        style I fill:#88ffFF
-    end
-        B ----> E[.doc]
-        B ----> H[.pptx]
-        F --> G[.pdf]
-        I --> J[.html]
-    E --> X[Post-scripts]
-    H --> X
-    G --> X
-    J --> X
-    style X fill:#AA99FF
-```

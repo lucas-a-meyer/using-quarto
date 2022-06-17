@@ -395,7 +395,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" data-background-image="images/data-viz-bg.jpg" data-background-position="right" data-background-size="contain" class="center">
   <h1 class="title">Using Quarto for everything</h1>
   <p class="author">Lucas A. Meyer</p>
   <p class="date">2022-07-14</p>
@@ -431,31 +431,35 @@
 </ul>
 </div>
 </div>
-</section>
-<section id="also-the-population-project" class="slide level2">
-<h2>Also… the population project</h2>
-<div class="columns">
-<div class="column">
-<h3 id="goals-and-questions">Goals and questions</h3>
-<p>Explore the consequences of the decline in population predicted to start at around 2100 for the world, but earlier in developed nations.</p>
-<ul>
-<li>What are the economic impacts?</li>
-<li>What should governments do?</li>
-</ul>
-</div><div class="column">
-<h3 id="population-project-challenges">Population project challenges</h3>
-<ul>
-<li>Unknown collaborators at the start</li>
-<li>Need to go “wide” rather than “deep”</li>
-<li>May need to pivot fast</li>
-<li>May need to generate data on demand
-<ul>
-<li>Show graphs for country X, Y and Z</li>
-</ul></li>
-<li>Generate code, paper, PowerPoint</li>
-</ul>
-</div>
-</div>
+<!-- FUTURE CONTENT 
+## Also... the population project
+
+:::: {.columns}
+::: {.column}
+
+### Goals and questions
+Explore the consequences of the decline in population predicted to start
+at around 2100 for the world, but earlier in developed nations. 
+
+- What are the economic impacts?
+- What should governments do?
+
+:::
+::: {.column}
+
+### Population project challenges
+
+- Unknown collaborators at the start
+- Need to go "wide" rather than "deep"
+- May need to pivot fast
+- May need to generate data on demand
+    - Show graphs for country X, Y and Z
+- Generate code, paper, PowerPoint
+
+:::
+::::
+:::::
+-->
 </section>
 <section id="in-the-last-20-years-i-tried-many-tools" class="slide level2">
 <h2>In the last 20 years, I tried many tools…</h2>
@@ -495,107 +499,6 @@
 <section id="the-content-pipeline-for-.ipynb" class="slide level2">
 <h2>The content pipeline for .ipynb</h2>
 <p>About <a href="https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx">75% of data scientists</a> use Python through Jupyter notebooks, and one can use <a href="https://pandoc.org/index.html"><code>pandoc</code></a> to generate papers and PowerPoint, but it can be complicated.</p>
-
-<img data-src="images/mermaid1.png" class="r-stretch quarto-figure-center"><p class="caption">Processing ipynb</p></section>
-<section id="quarto-for-python-in-a-nutshell" class="slide level2">
-<h2>Quarto for Python, in a nutshell</h2>
-<p>In Quarto’s <code>.qmd</code> files, you write Markdown and code, just like <code>.ipynb</code>. Add some <code>YAML</code> configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.</p>
-
-<img data-src="images/mermaid2-quarto-nutshell.png" class="r-stretch quarto-figure-center"><p class="caption">Quarto using Python</p></section>
-<section id="but-wait-theres-more" class="slide level2">
-<h2>But wait, there’s more!</h2>
-<p>Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.</p>
-
-<img data-src="images/mermaid2-quarto-scripts.png" class="r-stretch quarto-figure-center"><p class="caption">Scripts</p></section></section>
-<section>
-<section id="using-quarto" class="title-slide slide level1 center">
-<h1>Using Quarto</h1>
-
-</section>
-<section id="the-basics" class="slide level2">
-<h2>The basics</h2>
-<div class="columns">
-<div class="column">
-<p>Whether you use Quarto from <code>.qmd</code>, <code>.ipynb</code>, or <code>.Rmd</code> files, you always start with a YAML front-matter file.</p>
-<p>The YAML configuration determines what’s the output format of your document. A few popular output options are <code>html</code>, <code>pptx</code>, <code>docx</code>, and <code>pdf</code>.</p>
-<p><strong>You can use a single source file to generate multiple output types.</strong></p>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/yaml-front-matter.png"></p>
-<p></p><figcaption aria-hidden="true">YAML</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="what-if-i-want-to-add-code" class="slide level2">
-<h2>What if I want to add code?</h2>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb1-7"><a href="#cb1-7"></a>ax.plot(theta, r)</span>
-<span id="cb1-8"><a href="#cb1-8"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-9"><a href="#cb1-9"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="presentation_files/figure-revealjs/cell-2-output-1.png" class="r-stretch"></section></section>
-<section>
-<section id="presentations-in-powerpoint" class="title-slide slide level1 center">
-<h1>Presentations in PowerPoint</h1>
-
-</section>
-<section id="things-that-you-can-add-to-a-template" class="slide level2">
-<h2>Things that you can add to a template</h2>
-<div class="columns">
-<div class="column">
-<p>This is the part of Quarto I liked the <em>least</em>.</p>
-<p>To generate a presentation from a <code>.qmd</code> file, add <code>format: pptx</code> to the YAML front-matter.</p>
-<p>Quarto will use the <a href="https://pandoc.org/MANUAL.html#powerpoint-layout-choice">pandoc PowerPoint rules</a> to render the content from the <code>.qmd</code> into the <code>.pptx</code>.</p>
-</div><div class="column">
-<ul>
-<li>Quarto can use a template with (<strong>only</strong>) these layouts:
-<ul>
-<li>Title Slide</li>
-<li>Title and Content</li>
-<li>Section Header</li>
-<li>Two Content</li>
-<li>Comparison</li>
-<li>Content with Caption</li>
-<li>Blank</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="dependency-ratios-around-the-world" class="slide level2">
-<h2>Dependency ratios around the world</h2>
-</section>
-<section id="population-pyramids-around-the-world" class="slide level2">
-<h2>Population pyramids around the world</h2>
-<!-- # Websites -->
-</section>
-<section id="projects" class="slide level2">
-<h2>Projects</h2>
-<p>You can use Quarto to generate the whole shebang!</p>
-</section></section>
-<section>
-<section id="appendix" class="title-slide slide level1 center">
-<h1>Appendix</h1>
-
-</section>
-<section id="test-multiple-images" class="slide level2">
-<h2>Test multiple images</h2>
-<p>This slide uses the “Caption plus stuff” template</p>
-
-<img data-src="presentation_files/figure-revealjs/cell-5-output-1.png" class="r-stretch"></section>
-<section id="mermaid-diagram-1" class="slide level2">
-<h2>Mermaid Diagram 1</h2>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
@@ -622,8 +525,9 @@
 </div>
 </div>
 </section>
-<section id="mermaid-diagram-2" class="slide level2">
-<h2>Mermaid Diagram 2</h2>
+<section id="quarto-for-python-in-a-nutshell" class="slide level2">
+<h2>Quarto for Python, in a nutshell</h2>
+<p>In Quarto’s <code>.qmd</code> files, you write Markdown and code, just like <code>.ipynb</code>. Add some <code>YAML</code> configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.</p>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
@@ -644,7 +548,6 @@ end
     B ----&gt; H[.pptx]
     F --&gt; G[.pdf]
     I --&gt; J[.html]
-
 </pre>
 <div id="mermaid-tooltip-2" class="mermaidTooltip">
 
@@ -654,8 +557,9 @@ end
 </div>
 </div>
 </section>
-<section id="mermaid-diagram-3" class="slide level2">
-<h2>Mermaid Diagram 3</h2>
+<section id="but-wait-theres-more" class="slide level2">
+<h2>But wait, there’s more!</h2>
+<p>Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.</p>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
@@ -691,11 +595,321 @@ end
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="using-quarto" class="title-slide slide level1 center">
+<h1>Using Quarto</h1>
+
+</section>
+<section id="the-basics" class="slide level2">
+<h2>The basics</h2>
+<div class="columns">
+<div class="column">
+<p>Whether you use Quarto from <code>.qmd</code>, <code>.ipynb</code>, or <code>.Rmd</code> files, you always start with a YAML front-matter file.</p>
+<p>The YAML configuration determines what’s the output format of your document. A few popular output options are <code>html</code>, <code>pptx</code>, <code>docx</code>, and <code>pdf</code>.</p>
+<p><strong>You can use a single source file to generate multiple output types.</strong></p>
+<p>For example, the YAML on the right will generate a PowerPoint file and a Revealjs presentation.</p>
+</div><div class="column">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Using Quarto for everything"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">    </span><span class="fu">pptx</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">        </span><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> templates/template.pptx</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="at">        </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> sky</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Lucas A. Meyer</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-07-14</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="main-content" class="slide level2">
+<h2>Main content</h2>
+<div class="columns">
+<div class="column">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">### Writing the main content</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>Most writing in Quarto is done in <span class="co">[</span><span class="ot">Markdown</span><span class="co">]</span>.</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>Quarto's Markdown supports everything I'm</span>
+<span id="cb2-6"><a href="#cb2-6"></a>used to: figures, tables, bibliography, etc.</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a>It also supports lots of extra features, like</span>
+<span id="cb2-9"><a href="#cb2-9"></a>diagrams with <span class="in">`mermaid`</span> and <span class="in">`GraphViz`</span> and</span>
+<span id="cb2-10"><a href="#cb2-10"></a>even LaTeX equations: </span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a>$$</span>
+<span id="cb2-13"><a href="#cb2-13"></a>E = mc^2</span>
+<span id="cb2-14"><a href="#cb2-14"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<h3 id="writing-the-main-content">Writing the main content</h3>
+<p>Most writing in Quarto is done in <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown</a>.</p>
+<p>Quarto’s Markdown supports everything I’m used to: figures, tables, bibliography, etc.</p>
+<p>It also supports lots of extra features, like diagrams with <code>mermaid</code> and <code>GraphViz</code> and even LaTeX equations:</p>
+<p><span class="math display">\[
+E = mc^2
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="what-if-i-want-to-add-code" class="slide level2">
+<h2>What if I want to add code?</h2>
+<div class="columns">
+<div class="column">
+<p>The best thing about Quarto is that you can use it to run any code that you would be able to run in a Python notebook.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb3-7"><a href="#cb3-7"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=\</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>                {<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb3-9"><a href="#cb3-9"></a>ax.plot(theta, r)</span>
+<span id="cb3-10"><a href="#cb3-10"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb3-11"><a href="#cb3-11"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb3-12"><a href="#cb3-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<p><img data-src="presentation_files/figure-revealjs/cell-3-output-1.png"></p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="presentations-in-quarto" class="title-slide slide level1 center">
+<h1>Presentations in Quarto</h1>
+<!-- 
+## Creating slides
+
+:::: {.columns}
+::: {.column}
+To generate a presentation from a `.qmd` file, add `format: pptx` to the YAML front-matter.
+
+The part I liked the _least_ is that Quarto will use the 
+[pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#powerpoint-layout-choice) 
+to render the content from the `.qmd` into the `.pptx`.
+
+The "pandoc rules" substantially limit the flexibility you would have in PowerPoint presentations. 
+Quarto has better presentation support for `revealjs` and `beamer`. 
+:::
+
+::: {.column}
+- Quarto can use a template with (**only**) these layouts:
+    - Title Slide
+    - Title and Content
+    - Section Header
+    - Two Content
+    - Comparison
+    - Content with Caption
+    - Blank
+
+:::
+::::
+
+## PowerPoint layout rules
+
+The rules are available at: <br />
+<https://pandoc.org/MANUAL.html#powerpoint-layout-choice>
+
+- **Title Slide:** created from metadata fields like `title` and `author`
+- **Section Header:** created from the top-level markdown headings (for example, `#`)
+- **Two Content:** used when `.md` source contains `.columns` div (`:::: {.columns}`) and text content
+- **Comparison:** same as "Two Content", but content of divs is not text
+- **Blank:** used for slides that have no displayable content (e.g. notes)
+- **Content with Caption:** used when content doesn't have a `columns` div but has text **and** non-text content
+- **Title and Content:** whatever doesn't fit the rules above.
+
+## A redeeming PowerPoint feature: templates
+
+By adding a `reference-doc` entry to your YAML, you can tell
+Quarto (and pandoc) to use a file as a template for the format
+of your presentation. 
+
+The "Slide Master" needs to contain layouts named as per the previous slide (e.g. "Comparison").
+
+This allows you a lot of flexibility in the design of your
+slide deck, even if it is for just the small number of layouts
+that were listed in the previous slide.
+
+You can control fonts, add background images, page numbering, etc.
+
+```yaml
+---
+title: "Using Quarto for everything"
+format: pptx
+reference-doc: templates/template.pptx
+author: Lucas A. Meyer
+date: 2022-07-14
+---
+```
+-->
+</section>
+<section id="basic-slide-syntax" class="slide level2">
+<h2>Basic slide syntax</h2>
+<div class="columns">
+<div class="column">
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>To create slides, you create sections </span>
+<span id="cb4-2"><a href="#cb4-2"></a>with <span class="in">`#`</span>, titles with <span class="in">`##`</span>, and bullets </span>
+<span id="cb4-3"><a href="#cb4-3"></a>with <span class="in">`-`</span>.</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a>Quarto will render your content in slide form.</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="fu">### Content types</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="ss">- </span>You can add several types of content</span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="ss">    - </span>code (use backticks)</span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="ss">    - </span>images</span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="ss">    - </span>diagrams</span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="ss">    - </span>tables</span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="ss">    - </span>etc.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<p>To create slides, you create sections with <code>#</code>, titles with <code>##</code>, and bullets with <code>-</code>.</p>
+<h3 id="content-types">Content types</h3>
+<ul>
+<li>You can add several types of content
+<ul>
+<li>code (use backticks)</li>
+<li>images</li>
+<li>diagrams</li>
+<li>tables</li>
+<li>etc.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="best-feature-generate-content-dynamically" class="slide level2">
+<h2>Best feature: generate content dynamically</h2>
+<!-- Population pyramid -->
+<!-- Plot time series -->
+<!-- Plot time stack -->
+<p>Let’s say you’re presenting a project about population dynamics but you don’t know which world leaders are coming to the conference.</p>
+<p>On the presentation day, you learn that Belgium, China, Brazil, India, Japan and Nigeria are attending.</p>
+<p>The next slides were generated using the code below:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>df_dr <span class="op">=</span> pd.read_csv(<span class="st">"data/dr.csv.gz"</span>, compression<span class="op">=</span><span class="st">"gzip"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>df_pop <span class="op">=</span> pd.read_csv(<span class="st">"data/pop_brackets.csv.gz"</span>, compression<span class="op">=</span><span class="st">"gzip"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>years <span class="op">=</span> [<span class="dv">2000</span>, <span class="dv">2025</span>, <span class="dv">2050</span>, <span class="dv">2075</span>, <span class="dv">2100</span>]</span>
+<span id="cb5-5"><a href="#cb5-5"></a>regions <span class="op">=</span> [<span class="st">"Belgium"</span>, <span class="st">"China"</span>, <span class="st">"Brazil"</span>, <span class="st">"India"</span>, <span class="st">"Japan"</span>, <span class="st">"Nigeria"</span>]</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="cf">for</span> name <span class="kw">in</span> regions:</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    display(Markdown(<span class="ss">f"## Age and Population Pyramids for </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>))</span>
+<span id="cb5-9"><a href="#cb5-9"></a>    display(Markdown(<span class="ss">f'&lt;div class="columns"&gt;'</span>))</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    display(Markdown(<span class="ss">f'&lt;div class="column"&gt;'</span>))</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    plot_dependency_ratio(df_dr[df_dr.Location <span class="op">==</span> name])</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
+<span id="cb5-13"><a href="#cb5-13"></a>    display(Markdown(<span class="ss">f'&lt;div class="column"&gt;'</span>))</span>
+<span id="cb5-14"><a href="#cb5-14"></a>    plot_population_pyramid_series(df_pop[df_pop[<span class="st">"Location"</span>]<span class="op">==</span>name], years)</span>
+<span id="cb5-15"><a href="#cb5-15"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
+<span id="cb5-16"><a href="#cb5-16"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="age-and-population-pyramids-for-belgium" class="slide level2">
+<h2>Age and Population Pyramids for Belgium</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-4.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-7.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-china" class="slide level2">
+<h2>Age and Population Pyramids for China</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-13.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-16.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-brazil" class="slide level2">
+<h2>Age and Population Pyramids for Brazil</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-22.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-25.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-india" class="slide level2">
+<h2>Age and Population Pyramids for India</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-31.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-34.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-japan" class="slide level2">
+<h2>Age and Population Pyramids for Japan</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-40.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-43.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-nigeria" class="slide level2">
+<h2>Age and Population Pyramids for Nigeria</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-49.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-52.png"></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="websites" class="title-slide slide level1 center">
+<h1>Websites</h1>
+
+</section>
+<section id="what-i-get-by-just-changing-the-format-in-yaml" class="slide level2">
+<h2>What I get by just changing the format in YAML</h2>
+<div class="sourceCode" id="cb6" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Using Quarto for everything"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">    # revealjs:</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">    #     incremental: false</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">    #     theme: [simple, revealjs-customizations.scss]</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">    #     title-slide-attributes:</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">    #         data-background-image: images/data-viz-bg.jpg</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co">    #         data-background-size: contain</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="co">    #         data-background-position: right</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Lucas A. Meyer</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-07-14</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>To avoid overwriting the slides, I’m generating a new file for the website.</p>
+<p>You can see the result <a href="website.html" data-preview-link="false">here</a>, and a screenshot in the next slide.</p>
+</section>
+<section id="render-presentation-as-a-website" class="slide level2">
+<h2>Render presentation as a website</h2>
+
+<img data-src="images/website.png" class="r-stretch"></section></section>
+<section id="articles" class="title-slide slide level1 center">
+<h1>Articles</h1>
+
+</section>
+
+<section id="projects" class="title-slide slide level1 center">
+<h1>Projects</h1>
+<p>You can use Quarto to generate the whole shebang!</p>
 
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

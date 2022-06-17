@@ -1,0 +1,116 @@
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+```
+
+<!-- Population pyramid -->
+
+```{python}
+#| echo: false
+
+def plot_population_pyramid_series(df, time_list):
+  df_pyr = df[df['Time'].isin(time_list)][['Time', 'Location', 'AgeBrackets', 'PopMale', 'PopFemale']]
+  df_pyr = df_pyr.groupby(by=['Time', 'Location', 'AgeBrackets'], as_index=False).agg(sum)
+  df_pyr.reset_index(inplace=True)
+  bin_categories = ["0-4","5-9","10-14","15-19","20-24","25-29","30-34","35-39","40-44","45-49",
+                                "50-54","55-59","60-64","65-69","70-74","75-79","80-84","85-89","90-94","95-99","100+"]       
+  df_pyr["AgeBrackets"] = pd.Categorical(df_pyr['AgeBrackets'], categories=bin_categories)
+  df_pyr.sort_values(by=["Time", "AgeBrackets"], ascending=True, inplace=True)
+
+  for time in time_list:
+      df_yr = df_pyr[df_pyr["Time"]==time]
+      y_up = list(range(0, 101, 5))
+      y_down = list(range(100, -1, -5))
+      y = list(chain(y_up, y_down))
+      x = list(chain(-df_yr["PopMale"], df_yr["PopFemale"].iloc[::-1]))
+      plt.plot(x, y, linewidth=3)
+
+  plt.legend(time_list)
+  plt.show()
+
+```
+
+<!-- Plot time series -->
+
+```{python}
+#| echo: false
+def plot_time_series(df, x_axis, y_axis, x_label, y_label, palette="pastel"):
+
+    sns.set_theme(palette=palette)
+
+    plt.plot(x_axis, y_axis, data=df)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.show()
+
+```
+
+```{python}
+#| echo: false
+def plot_multiple_time_series(*data_frames, x_axes_list = [], y_axes_list = [],
+                                x_label = "", y_label ="",
+                                legends=None, palette = "pastel"):
+
+    if len(data_frames) != len(x_axes_list):
+        raise ValueError (f"The length of x axes ({len(x_axes_list)}) should be the same as the length of the list of data frames {len(data_frames)}")
+
+    if len(data_frames) != len(y_axes_list):
+        raise ValueError ("The length of y axes should be the same as the length of the list of data frames")
+
+    sns.set_theme(palette=palette)
+
+    i = 0
+    for df in data_frames:
+        plt.plot(x_axes_list[i], y_axes_list[i], data=df, linewidth = 3)
+        i = i + 1
+
+    plt.legend(legends)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.show()
+
+```
+
+<!-- Plot time stack -->
+
+```{python}
+#| echo: false
+def plot_time_stack(*y_axis_series, x_axis_series,
+                    legends, legend_pos="best",
+                    x_label, y_label,
+                    xlim=None,ylim=None,
+                    palette="pastel", colors=None):
+
+    sns.set_theme(palette=palette)
+
+    if xlim:
+        plt.xlim(xlim)
+    if ylim:
+        plt.ylim(ylim)
+    plt.stackplot(x_axis_series, list(y_axis_series), colors=colors)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.legend(legends, loc=legend_pos)
+    plt.show()
+```
+
+```{python}
+#| echo: false
+
+def plot_dependency_ratio(df):
+    plot_time_stack(
+    df["YoungDependencyRatio"], 
+    df["OldDependencyRatio"],
+    df["VeryOldDependencyRatio"],    
+    x_axis_series = df["Time"], 
+    legends = ["Young", "Old", "Very Old"],
+    x_label = "Year",
+    y_label = "Dependency Ratio",
+    colors = ["FFFF00", "0000FF", "0000AA"],
+    ylim=(0,150)
+    )
+
+```

@@ -1,0 +1,35 @@
+## Test multiple images
+
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+import matplotlib.image as img
+
+figure, ax = plt.subplots(2, 4)
+
+# reading png image file
+im1 = img.imread('images/contact.jpg')
+im2 = img.imread('images/literate-programming.jpg')
+  
+# show image
+ax[0, 0].imshow(im2)
+ax[0, 1].imshow(im1)
+ax[0, 2].imshow(im2)
+ax[0, 3].imshow(im1)
+ax[1, 0].imshow(im1)
+ax[1, 1].imshow(im2)
+ax[1, 2].imshow(im1)
+ax[1, 3].imshow(im2)
+
+
+for i in range(2):
+    for j in range(4):
+        axx = ax[i, j]
+        axx.get_xaxis().set_visible(False)
+        axx.get_yaxis().set_visible(False)
+
+
+plt.show()
+
+```
