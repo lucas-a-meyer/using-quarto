@@ -418,6 +418,8 @@ for name in regions:
     display(Markdown(f'</div>'))
 ```
 
+```{python}
+#| echo: false
 #| output: asis
 
 df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")

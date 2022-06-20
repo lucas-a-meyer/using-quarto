@@ -808,40 +808,88 @@ date: 2022-07-14
 <span id="cb5-14"><a href="#cb5-14"></a>    plot_population_pyramid_series(df_pop[df_pop[<span class="st">"Location"</span>]<span class="op">==</span>name], years)</span>
 <span id="cb5-15"><a href="#cb5-15"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
 <span id="cb5-16"><a href="#cb5-16"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>#| output: asis</p>
-<p>df_dr = pd.read_csv(“data/dr.csv.gz”, compression=“gzip”) df_pop = pd.read_csv(“data/pop_brackets.csv.gz”, compression=“gzip”)</p>
-<p>years = [2000, 2025, 2050, 2075, 2100] regions = [“Belgium”, “China”, “Brazil”, “India”, “Japan”, “Nigeria”]</p>
-for name in regions: display(Markdown(f”## Age and Population Pyramids for {name}“)) display(Markdown(f’
+</section>
+<section id="age-and-population-pyramids-for-belgium" class="slide level2">
+<h2>Age and Population Pyramids for Belgium</h2>
 <div class="columns">
-‘)) display(Markdown(f’<div class="column">
-‘)) plot_dependency_ratio(df_dr[df_dr.Location == name]) display(Markdown(f’
-</div>‘)) display(Markdown(f’<div class="column">
-‘)) plot_population_pyramid_series(df_pop[df_pop[“Location”]==name], years) display(Markdown(f’
-</div>‘)) display(Markdown(f’
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-4.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-7.png"></p>
 </div>
-<p>’))</p>
-<pre><code>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-china" class="slide level2">
+<h2>Age and Population Pyramids for China</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-13.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-16.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-brazil" class="slide level2">
+<h2>Age and Population Pyramids for Brazil</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-22.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-25.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-india" class="slide level2">
+<h2>Age and Population Pyramids for India</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-31.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-34.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-japan" class="slide level2">
+<h2>Age and Population Pyramids for Japan</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-40.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-43.png"></p>
+</div>
+</div>
+</section>
+<section id="age-and-population-pyramids-for-nigeria" class="slide level2">
+<h2>Age and Population Pyramids for Nigeria</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-49.png"></p>
+</div><div class="column">
+<p><img data-src="presentation_files/figure-revealjs/cell-10-output-52.png"></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="websites" class="title-slide slide level1 center">
+<h1>Websites</h1>
 
-
-# Websites
-
-## What I get by just changing the format in YAML
-
-```{.yaml code-line-numbers="3"}
----
-title: "Using Quarto for everything"
-format: html
-    # revealjs:
-    #     incremental: false
-    #     theme: [simple, revealjs-customizations.scss]
-    #     title-slide-attributes:
-    #         data-background-image: images/data-viz-bg.jpg
-    #         data-background-size: contain
-    #         data-background-position: right
-
-author: Lucas A. Meyer
-date: 2022-07-14
----</code></pre>
+</section>
+<section id="what-i-get-by-just-changing-the-format-in-yaml" class="slide level2">
+<h2>What I get by just changing the format in YAML</h2>
+<div class="sourceCode" id="cb6" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Using Quarto for everything"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">    # revealjs:</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">    #     incremental: false</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">    #     theme: [simple, revealjs-customizations.scss]</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">    #     title-slide-attributes:</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">    #         data-background-image: images/data-viz-bg.jpg</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co">    #         data-background-size: contain</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="co">    #         data-background-position: right</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Lucas A. Meyer</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-07-14</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <p>To avoid overwriting the slides, I’m generating a new file for the website.</p>
 <p>You can see the result <a href="web-site.qmd" data-preview-link="false">here</a>, and a screenshot in the next slide.</p>
