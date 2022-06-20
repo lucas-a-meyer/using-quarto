@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.587">
+<meta name="generator" content="quarto-0.9.598">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -189,12 +189,6 @@ gtag('config', 'G-6KTZ853BN5', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#basic-slide-syntax" id="toc-basic-slide-syntax" class="nav-link" data-scroll-target="#basic-slide-syntax">Basic slide syntax</a></li>
   <li><a href="#best-feature-generate-content-dynamically" id="toc-best-feature-generate-content-dynamically" class="nav-link" data-scroll-target="#best-feature-generate-content-dynamically">Best feature: generate content dynamically</a></li>
-  <li><a href="#age-and-population-pyramids-for-belgium" id="toc-age-and-population-pyramids-for-belgium" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-belgium">Age and Population Pyramids for Belgium</a></li>
-  <li><a href="#age-and-population-pyramids-for-china" id="toc-age-and-population-pyramids-for-china" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-china">Age and Population Pyramids for China</a></li>
-  <li><a href="#age-and-population-pyramids-for-brazil" id="toc-age-and-population-pyramids-for-brazil" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-brazil">Age and Population Pyramids for Brazil</a></li>
-  <li><a href="#age-and-population-pyramids-for-india" id="toc-age-and-population-pyramids-for-india" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-india">Age and Population Pyramids for India</a></li>
-  <li><a href="#age-and-population-pyramids-for-japan" id="toc-age-and-population-pyramids-for-japan" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-japan">Age and Population Pyramids for Japan</a></li>
-  <li><a href="#age-and-population-pyramids-for-nigeria" id="toc-age-and-population-pyramids-for-nigeria" class="nav-link" data-scroll-target="#age-and-population-pyramids-for-nigeria">Age and Population Pyramids for Nigeria</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -513,7 +507,7 @@ E = mc^2
 </div><div class="column">
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<p><img src="website_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
+<p><img src="web-site_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -647,82 +641,19 @@ date: 2022-07-14
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    plot_population_pyramid_series(df_pop[df_pop[<span class="st">"Location"</span>]<span class="op">==</span>name], years)</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_dr <span class="op">=</span> pd.read_csv(<span class="st">"data/dr.csv.gz"</span>, compression<span class="op">=</span><span class="st">"gzip"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_pop <span class="op">=</span> pd.read_csv(<span class="st">"data/pop_brackets.csv.gz"</span>, compression<span class="op">=</span><span class="st">"gzip"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> [<span class="dv">2000</span>, <span class="dv">2025</span>, <span class="dv">2050</span>, <span class="dv">2075</span>, <span class="dv">2100</span>]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>regions <span class="op">=</span> [<span class="st">"Belgium"</span>, <span class="st">"China"</span>, <span class="st">"Brazil"</span>, <span class="st">"India"</span>, <span class="st">"Japan"</span>, <span class="st">"Nigeria"</span>]</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> regions:</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f"## Age and Population Pyramids for </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>))</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;div class="columns"&gt;'</span>))</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;div class="column"&gt;'</span>))</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    plot_dependency_ratio(df_dr[df_dr.Location <span class="op">==</span> name])</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;div class="column"&gt;'</span>))</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    plot_population_pyramid_series(df_pop[df_pop[<span class="st">"Location"</span>]<span class="op">==</span>name], years)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    display(Markdown(<span class="ss">f'&lt;/div&gt;'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="age-and-population-pyramids-for-belgium" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-belgium">Age and Population Pyramids for Belgium</h2>
+<p>#| output: asis</p>
+<p>df_dr = pd.read_csv(“data/dr.csv.gz”, compression=“gzip”) df_pop = pd.read_csv(“data/pop_brackets.csv.gz”, compression=“gzip”)</p>
+<p>years = [2000, 2025, 2050, 2075, 2100] regions = [“Belgium”, “China”, “Brazil”, “India”, “Japan”, “Nigeria”]</p>
+for name in regions: display(Markdown(f”## Age and Population Pyramids for {name}“)) display(Markdown(f’
 <div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-4.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-7.png" class="img-fluid"></p>
+‘)) display(Markdown(f’<div class="column">
+‘)) plot_dependency_ratio(df_dr[df_dr.Location == name]) display(Markdown(f’
+</div>‘)) display(Markdown(f’<div class="column">
+‘)) plot_population_pyramid_series(df_pop[df_pop[“Location”]==name], years) display(Markdown(f’
+</div>‘)) display(Markdown(f’
 </div>
-</div>
-</section>
-<section id="age-and-population-pyramids-for-china" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-china">Age and Population Pyramids for China</h2>
-<div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-13.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-16.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="age-and-population-pyramids-for-brazil" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-brazil">Age and Population Pyramids for Brazil</h2>
-<div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-22.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-25.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="age-and-population-pyramids-for-india" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-india">Age and Population Pyramids for India</h2>
-<div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-31.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-34.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="age-and-population-pyramids-for-japan" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-japan">Age and Population Pyramids for Japan</h2>
-<div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-40.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-43.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="age-and-population-pyramids-for-nigeria" class="level2">
-<h2 class="anchored" data-anchor-id="age-and-population-pyramids-for-nigeria">Age and Population Pyramids for Nigeria</h2>
-<div class="columns">
-<div class="column">
-<p><img src="website_files/figure-html/cell-10-output-49.png" class="img-fluid"></p>
-</div><div class="column">
-<p><img src="website_files/figure-html/cell-10-output-52.png" class="img-fluid"></p>
-</div>
-</div>
+<p>’))</p>
+<p>```</p>
 
 
 </section>

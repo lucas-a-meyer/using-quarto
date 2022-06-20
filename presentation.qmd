@@ -1,10 +1,9 @@
 ---
 title: "Using Quarto for everything"
 format: 
-#    pptx:
-#        reference-doc: templates/template.pptx
-#        monofont: "Lucida Console"
-#        fontsize: 10pt
+    pptx:
+       reference-doc: templates/template.pptx
+       monofont: "Consolas"
     revealjs:
         incremental: false
         theme: [simple, revealjs-customizations.scss]
@@ -43,7 +42,7 @@ date: 2022-07-14
 
 To avoid overwriting the slides, I'm generating a new file for the website.
 
-You can see the result [here](website.html){preview-link="false"}, 
+You can see the result [here](web-site.qmd){preview-link="false"}, 
 and a screenshot in the next slide.
 
 ## Render presentation as a website
