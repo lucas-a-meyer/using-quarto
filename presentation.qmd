@@ -5,6 +5,7 @@ format:
        reference-doc: templates/template.pptx
        monofont: "Consolas"
     revealjs:
+        include-in-header: _msft-clarity.html
         incremental: false
         theme: [simple, revealjs-customizations.scss]
         title-slide-attributes:

@@ -1,5 +1,6 @@
 ---
 title: "About"
+include-in-header: _msft-clarity.html
 ---
 
 About this site
