@@ -1,7 +1,5 @@
 ## Best feature: generate content dynamically
 
-{{< include ../_graph_functions.qmd >}}
-
 Let's say you're presenting a project about population dynamics but you 
 don't know which world leaders are coming to the conference. 
 
