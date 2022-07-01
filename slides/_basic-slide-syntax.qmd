@@ -3,6 +3,21 @@
 :::: {.columns}
 
 ::: {.column}
+To create slides, you create sections 
+with `#`, titles with `##`, and bullets 
+with `-`.
+
+### Content types
+
+- You can add several types of content
+    - code (use backticks)
+    - images
+    - diagrams
+    - tables
+    - etc.
+:::
+
+::: {.column}
 
 ```markdown
 To create slides, you create sections 
@@ -20,19 +35,5 @@ Quarto will render your content in slide form.
     - tables
     - etc.
 ```
-:::
-::: {.column}
-To create slides, you create sections 
-with `#`, titles with `##`, and bullets 
-with `-`.
-
-### Content types
-
-- You can add several types of content
-    - code (use backticks)
-    - images
-    - diagrams
-    - tables
-    - etc.
 :::
 ::::

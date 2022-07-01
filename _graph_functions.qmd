@@ -28,49 +28,6 @@ def plot_population_pyramid_series(df, time_list):
   plt.legend(time_list)
   plt.show()
 
-```
-
-```{python}
-#| echo: false
-def plot_time_series(df, x_axis, y_axis, x_label, y_label, palette="pastel"):
-
-    sns.set_theme(palette=palette)
-
-    plt.plot(x_axis, y_axis, data=df)
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    plt.show()
-
-```
-
-```{python}
-#| echo: false
-def plot_multiple_time_series(*data_frames, x_axes_list = [], y_axes_list = [],
-                                x_label = "", y_label ="",
-                                legends=None, palette = "pastel"):
-
-    if len(data_frames) != len(x_axes_list):
-        raise ValueError (f"The length of x axes ({len(x_axes_list)}) should be the same as the length of the list of data frames {len(data_frames)}")
-
-    if len(data_frames) != len(y_axes_list):
-        raise ValueError ("The length of y axes should be the same as the length of the list of data frames")
-
-    sns.set_theme(palette=palette)
-
-    i = 0
-    for df in data_frames:
-        plt.plot(x_axes_list[i], y_axes_list[i], data=df, linewidth = 3)
-        i = i + 1
-
-    plt.legend(legends)
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    plt.show()
-
-```
-
-```{python}
-#| echo: false
 def plot_time_stack(*y_axis_series, x_axis_series,
                     legends, legend_pos="best",
                     x_label, y_label,
@@ -88,10 +45,6 @@ def plot_time_stack(*y_axis_series, x_axis_series,
     plt.ylabel(y_label)
     plt.legend(legends, loc=legend_pos)
     plt.show()
-```
-
-```{python}
-#| echo: false
 
 def plot_dependency_ratio(df):
     plot_time_stack(

@@ -1,0 +1,17 @@
+---
+title: "Using Quarto for everything"
+format: html
+    # revealjs:
+    #     incremental: false
+    #     theme: [simple, revealjs-customizations.scss]
+    #     title-slide-attributes:
+    #         data-background-image: images/data-viz-bg.jpg
+    #         data-background-size: contain
+    #         data-background-position: right
+include-in-header: _msft-clarity.html
+
+author: Lucas A. Meyer
+date: 2022-07-14
+---
+
+{{< include slides/_content-value-chain.qmd >}}

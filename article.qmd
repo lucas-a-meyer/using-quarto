@@ -3,21 +3,42 @@ title: "Using Quarto for reproducible article writing"
 format:
     pdf:
         documentclass: scrartcl
+    docx:
+        number-sections: true
+
 author: Lucas A. Meyer
-date: 2022-07-14
+date: 2022-07-07
 ---
+
+```{python}
+#| echo: false
+from IPython.display import display, Markdown
+from itertools import chain
+import pandas as pd
+```
 
 # Introduction
 
-Here I write some very interesting thing
+The purpose of this article is to show how to use Quarto to generate an article just like this, hopefully with better content. 
+This is just a demonstration of how powerful Quarto is to generate multiple artifacts from substantially the same content/code.
 
-# Data
+You can see how I have done this in <https://www.meyerperin.com/using-quarto>.
 
-Here I describe the data I'm using
+# Population changes
 
-# Theory
+Over the last few decades, the number of children per woman has been declining and overall longevity has been increasing.
 
-Is dependency ratio correlated to GDP Growth? We examine this with a few data points.
+The outcome of these changes is that over the next few decades, the proportion of children and working adults will go down in many countries,
+and the proportion of older adults will increase.
+
+Demographers use a metric called **Dependency Ratio** to evaluate how many non-working people are supported by 100 working people.
+
+The formula for the dependency ratio is:
+
+$$
+
+$$
+
 
 # Code
 
