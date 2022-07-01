@@ -36,27 +36,40 @@ Demographers use a metric called **Dependency Ratio** to evaluate how many non-w
 The formula for the dependency ratio is:
 
 $$
-
+\text{Dependency Ratio} = 100 \times \frac{\text{Non-working population}}{\text{Working population}}
 $$
 
+In the figures below, I further decompose the dependency ratio into Young (0-20 years-old), Old (65-79 years-old) and Very Old (80+ years-old). 
+Note that these are terms used by demographers. I don't mean any personal judgment when using this classification. One of my favorite writers,
+Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond84] and _Collapse_ [@diamond13], is currently 84-years old and I hope to have his 
+disposition at that age.
 
 # Code
 
+{{< include _graph_functions.qmd >}}
+
 ```{python}
-#| echo: true
+#| echo: false
+#| output: asis
 
-import numpy as np
-import matplotlib.pyplot as plt
+df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")
+df_pop = pd.read_csv("data/pop_brackets.csv.gz", compression="gzip")
 
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
+years = [2000, 2025, 2050, 2075, 2100]
+regions = ["Belgium", "China", "Brazil", "India", "Japan", "Nigeria"]
+
+for name in regions:
+    display(Markdown(f"## Age and Population Pyramids for {name}"))
+    display(Markdown(f'<div class="columns">'))
+    display(Markdown(f'<div class="column">'))
+    plot_dependency_ratio(df_dr[df_dr.Location == name])
+    display(Markdown(f'</div>'))
+    display(Markdown(f'<div class="column">'))
+    plot_population_pyramid_series(df_pop[df_pop["Location"]==name], years)
+    display(Markdown(f'</div>'))
+    display(Markdown(f'</div>'))
+
 ```
 
-# Conclusion
+# References
 
-This is where things end

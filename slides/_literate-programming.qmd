@@ -13,7 +13,7 @@ Jupyter implements the literate programming paradigm, but I haven't seen the Mar
 :::
 
 ::: {.column}
-![Donald Knuth's Literate Programming](images/literate-programming.jpg)
+![Donald Knuth's Literate Programming](images/literate-programming.jpg){width=70%}
 :::
 
 ::::

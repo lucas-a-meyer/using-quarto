@@ -25,7 +25,7 @@ The presentation shows how I used the same content files to generate:
 - A [PowerPoint presentation](/presentation.pptx) using my team's template
 - This website (starting after the header below)
 - A scholarly-looking [article](/article.pdf) in PDF using LaTeX
-- A scholarly-looking [document](/article.doc) using Microsoft Word
+- A scholarly-looking [document](/article.docx) using Microsoft Word
 
 # Why Quarto
 
