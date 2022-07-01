@@ -12,12 +12,26 @@ website:
   google-analytics: "G-6KTZ853BN5"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+        - text: "Using Quarto: Home"
+          file: index.qmd
+        - text: "Blog"
+          href: https://www.meyerperin.com/
+        - text: "GNNs with Python"
+          href: https://www.meyerperin.com/python-gnn
+        - text: "Econometrics with Python"
+          href: https://www.meyerperin.com/econometrics-python
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/lucasameyer
+      - icon: github
+        href: https://github.com/lucas-a-meyer
+      - icon: twitter
+        href: https://twitter.com/lucas_a_meyer
+      - text: About
+        href: https://www.meyerperin.com/about.html
 
 format:
   html:
-    theme: cosmo
+    theme: pulse
     css: styles.css
     toc: true

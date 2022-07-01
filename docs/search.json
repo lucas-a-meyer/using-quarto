@@ -28,6 +28,13 @@
     "text": "The content value chain\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
   },
   {
+    "objectID": "presentation.html#literate-programming",
+    "href": "presentation.html#literate-programming",
+    "title": "Using Quarto for everything",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\n\n\n\n\nDonald Knuth’s Literate Programming\n\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter notebooks implement that paradigm, as does Quarto. This makes it easier to publish content."
+  },
+  {
     "objectID": "presentation.html#in-the-last-20-years-i-tried-many-tools",
     "href": "presentation.html#in-the-last-20-years-i-tried-many-tools",
     "title": "Using Quarto for everything",
@@ -60,7 +67,7 @@
     "href": "presentation.html#the-yaml-front-matter",
     "title": "Using Quarto for everything",
     "section": "The YAML front-matter",
-    "text": "The YAML front-matter\n\n\nWhether you use Quarto from .qmd, .ipynb, or .Rmd files, you always start with a YAML front-matter file.\nThe YAML configuration determines what’s the output format of your document. A few popular output options are html, pptx, docx, and pdf.\nYou can use a single source file to generate multiple output types.\nFor example, the YAML on the right will generate a PowerPoint file and a Revealjs presentation.\n\n---\ntitle: \"Using Quarto for everything\"\nformat: \n    pptx:\n        reference-doc: templates/template.pptx\n    revealjs:\n        incremental: false\n        theme: sky\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---"
+    "text": "The YAML front-matter\n\n\nWhether you use Quarto from .qmd, .ipynb, or .Rmd files, you always start with a YAML front-matter file.\nThe YAML configuration determines what’s the output format of your document. A few popular output options are html, pptx, docx, and pdf.\nYou can use a single source file to generate multiple output types.\nFor example, the YAML on the right will generate a PowerPoint file and a Revealjs presentation.\n\n---\ntitle: \"Using Quarto for everything\"\nformat: \n    pptx:\n        reference-doc: templates/template.pptx\n    revealjs:\n        incremental: false\n        theme: pulse\n\nauthor: Lucas A. Meyer\ndate: 2022-07-07\n---"
   },
   {
     "objectID": "presentation.html#main-content",
@@ -82,6 +89,27 @@
     "title": "Using Quarto for everything",
     "section": "Basic slide syntax",
     "text": "Basic slide syntax\n\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\nQuarto will render your content in slide form.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc.\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc."
+  },
+  {
+    "objectID": "presentation.html#creating-powerpoint-slides",
+    "href": "presentation.html#creating-powerpoint-slides",
+    "title": "Using Quarto for everything",
+    "section": "Creating PowerPoint slides",
+    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nThe part I liked the least is that Quarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\nThe “pandoc rules” substantially limit the flexibility you would have in PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nQuarto can use a template with (only) these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
+  },
+  {
+    "objectID": "presentation.html#powerpoint-layout-rules",
+    "href": "presentation.html#powerpoint-layout-rules",
+    "title": "Using Quarto for everything",
+    "section": "PowerPoint layout rules",
+    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level markdown headings (for example, #)\nTwo Content: used when .md source contains .columns div (:::: {.columns}) and text content\nComparison: same as “Two Content”, but content of divs is not text\nBlank: used for slides that have no displayable content (e.g. notes)\nContent with Caption: used when content doesn’t have a columns div but has text and non-text content\nTitle and Content: whatever doesn’t fit the rules above."
+  },
+  {
+    "objectID": "presentation.html#powerpoint-templates",
+    "href": "presentation.html#powerpoint-templates",
+    "title": "Using Quarto for everything",
+    "section": "PowerPoint templates",
+    "text": "PowerPoint templates\nBy adding a reference-doc entry to your YAML, you can tell Quarto (and pandoc) to use a file as a template for the format of your presentation.\nThe “Slide Master” needs to contain layouts named as per the previous slide (e.g. “Comparison”).\nThis allows you a lot of flexibility in the design of your slide deck, even if it is for just the small number of layouts that were listed in the previous slide.\nYou can control fonts, add background images, page numbering, etc.\n---\ntitle: \"Using Quarto for everything\"\nformat: pptx\nreference-doc: templates/template.pptx\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---"
   },
   {
     "objectID": "presentation.html#best-feature-generate-content-dynamically",
@@ -159,33 +187,5 @@
     "title": "Using Quarto for everything",
     "section": "Blah",
     "text": "Blah\nBleh - blih You can use Quarto to generate the whole shebang!"
-  },
-  {
-    "objectID": "presentation.html#literate-programming",
-    "href": "presentation.html#literate-programming",
-    "title": "Using Quarto for everything",
-    "section": "Literate Programming",
-    "text": "Literate Programming\n\n\n\n\n\nDonald Knuth’s Literate Programming\n\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter notebooks implement that paradigm, as does Quarto. This makes it easier to publish content."
-  },
-  {
-    "objectID": "presentation.html#creating-powerpoint-slides",
-    "href": "presentation.html#creating-powerpoint-slides",
-    "title": "Using Quarto for everything",
-    "section": "Creating PowerPoint slides",
-    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nThe part I liked the least is that Quarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\nThe “pandoc rules” substantially limit the flexibility you would have in PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nQuarto can use a template with (only) these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
-  },
-  {
-    "objectID": "presentation.html#powerpoint-layout-rules",
-    "href": "presentation.html#powerpoint-layout-rules",
-    "title": "Using Quarto for everything",
-    "section": "PowerPoint layout rules",
-    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level markdown headings (for example, #)\nTwo Content: used when .md source contains .columns div (:::: {.columns}) and text content\nComparison: same as “Two Content”, but content of divs is not text\nBlank: used for slides that have no displayable content (e.g. notes)\nContent with Caption: used when content doesn’t have a columns div but has text and non-text content\nTitle and Content: whatever doesn’t fit the rules above."
-  },
-  {
-    "objectID": "presentation.html#powerpoint-templates",
-    "href": "presentation.html#powerpoint-templates",
-    "title": "Using Quarto for everything",
-    "section": "PowerPoint templates",
-    "text": "PowerPoint templates\nBy adding a reference-doc entry to your YAML, you can tell Quarto (and pandoc) to use a file as a template for the format of your presentation.\nThe “Slide Master” needs to contain layouts named as per the previous slide (e.g. “Comparison”).\nThis allows you a lot of flexibility in the design of your slide deck, even if it is for just the small number of layouts that were listed in the previous slide.\nYou can control fonts, add background images, page numbering, etc.\n---\ntitle: \"Using Quarto for everything\"\nformat: pptx\nreference-doc: templates/template.pptx\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---"
   }
 ]

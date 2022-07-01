@@ -19,10 +19,10 @@ format:
         reference-doc: templates/template.pptx
     revealjs:
         incremental: false
-        theme: sky
+        theme: pulse
 
 author: Lucas A. Meyer
-date: 2022-07-14
+date: 2022-07-07
 ---
 ```
 :::
