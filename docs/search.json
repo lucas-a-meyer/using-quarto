@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Using Quarto",
     "section": "",
-    "text": "While I was learning Quarto, I created a presentation in RevealJS to help my team learn about it.\nThe presentation shows how I used the same content files to generate: - A RevealJS presentation - A PowerPoint presentation using my team’s template - This website (starting after the header below) - A scholarly-looking article in PDF using LaTeX - A scholarly-looking document using Microsoft Word"
+    "text": "While I was learning Quarto, I created a presentation in RevealJS to help my team learn about it.\nThe presentation shows how I used the same content files to generate:"
   },
   {
     "objectID": "index.html#the-content-value-chain",
