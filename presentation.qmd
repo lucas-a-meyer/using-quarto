@@ -14,7 +14,7 @@ format:
             data-background-size: contain
             data-background-position: right
         slide-level: 2
-
+        self-countained: true
 author: Lucas A. Meyer
 date: 2022-07-14
 ---
