@@ -3,7 +3,7 @@ title: "Using Quarto for scholarly projects"
 include-in-header: _msft-clarity.html
 ---
 
-This is an example that shows how to create a Quarto project that integrates an article ([PDF](article.pdf)), a presentation about that article ([PPTX](presentation-fixed.pptx)) and a website (GitHub Pages), which you are reading now. 
+This is an example that shows how to create a Quarto project that integrates an article ([PDF](article.pdf)), a presentation about that article ([PPTX](presentation.pptx)) and a website (GitHub Pages), which you are reading now. 
 
 I also have a [RevealJS presentation](presentation.html).
 

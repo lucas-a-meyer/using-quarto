@@ -7,18 +7,18 @@
     "text": "About this site"
   },
   {
-    "objectID": "web-site.html",
-    "href": "web-site.html",
-    "title": "Using Quarto for everything",
-    "section": "",
-    "text": "The content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Using Quarto for scholarly projects",
     "section": "",
     "text": "I also have a RevealJS presentation.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "website.html",
+    "href": "website.html",
+    "title": "Using Quarto for everything",
+    "section": "",
+    "text": "The content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
   },
   {
     "objectID": "presentation.html#the-content-value-chain",

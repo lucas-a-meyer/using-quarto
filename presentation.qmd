@@ -28,7 +28,6 @@ import pandas as pd
 
 {{< include _graph_functions.qmd >}}
 
-
 # Why Quarto
 
 {{< include slides/_content-value-chain.qmd >}}

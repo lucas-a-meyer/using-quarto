@@ -1,12 +1,9 @@
 ```{python}
 #| echo: false
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 ```
-
-<!-- Population pyramid -->
 
 ```{python}
 #| echo: false
@@ -32,8 +29,6 @@ def plot_population_pyramid_series(df, time_list):
   plt.show()
 
 ```
-
-<!-- Plot time series -->
 
 ```{python}
 #| echo: false
@@ -73,8 +68,6 @@ def plot_multiple_time_series(*data_frames, x_axes_list = [], y_axes_list = [],
     plt.show()
 
 ```
-
-<!-- Plot time stack -->
 
 ```{python}
 #| echo: false
