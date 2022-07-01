@@ -159,5 +159,12 @@
     "title": "Using Quarto for everything",
     "section": "Blah",
     "text": "Blah\nBleh - blih You can use Quarto to generate the whole shebang!"
+  },
+  {
+    "objectID": "presentation.html#literate-programming",
+    "href": "presentation.html#literate-programming",
+    "title": "Using Quarto for everything",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\n\n\n\n\nDonald Knuth’s Literate Programming\n\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter notebooks implement that paradigm, as does Quarto. This makes it easier to publish content."
   }
 ]
