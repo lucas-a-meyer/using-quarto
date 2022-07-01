@@ -1,0 +1,16 @@
+## Literate Programming
+
+:::: {.columns}
+::: {.column}
+![Donald Knuth's Literate Programming](images/literate-programming.jpg)
+:::
+::: {.column}
+
+Donald E. Knuth proposed literate programming in a 1984 [article](http://www.literateprogramming.com/knuthweb.pdf).
+
+One of my proudest tech moments was to make `CWeave` and `CWeb` (and LaTeX) run in a Windows computer circa 1998.
+
+Jupyter notebooks implement that paradigm, as does Quarto. This makes it easier to publish content.
+
+:::
+::::

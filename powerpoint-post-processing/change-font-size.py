@@ -14,6 +14,6 @@ for slide in prs.slides:
         for paragraph in shape.text_frame.paragraphs:
             for run in paragraph.runs:
                 if run.font.name == "Consolas":
-                    run.font.size = Pt(11)
+                    run.font.size = Pt(12)
 
 prs.save("/home/lucasmeyer/msft/using-quarto/docs/presentation-fixed.pptx")

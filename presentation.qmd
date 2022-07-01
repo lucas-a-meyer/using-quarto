@@ -32,6 +32,8 @@ import pandas as pd
 
 {{< include slides/_content-value-chain.qmd >}}
 
+{{< include slides/_literate-programming.qmd >}}
+
 {{< include slides/_tools-for-literate-programming.qmd >}}
 
 <!--
