@@ -1,0 +1,24 @@
+## PowerPoint templates
+
+By adding a `reference-doc` entry to your YAML, you can tell
+Quarto (and pandoc) to use a file as a template for the format
+of your presentation. 
+
+The "Slide Master" needs to contain layouts named as per the previous slide (e.g. "Comparison").
+
+This allows you a lot of flexibility in the design of your
+slide deck, even if it is for just the small number of layouts
+that were listed in the previous slide.
+
+You can control fonts, add background images, page numbering, etc.
+
+```yaml
+---
+title: "Using Quarto for everything"
+format: pptx
+reference-doc: templates/template.pptx
+author: Lucas A. Meyer
+date: 2022-07-14
+---
+```
+

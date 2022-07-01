@@ -42,7 +42,11 @@ import pandas as pd
 
 # What Quarto really is
 
-{{< include slides/_quarto-python-pipeline-3-slides.qmd >}}
+{{< include slides/_ipynb-pipeline.qmd >}}
+
+{{< include slides/_quarto-ipynb-pandoc.qmd >}}
+
+{{< include slides/_quarto-pandoc-scripts.qmd >}}
 
 # Quarto basics
 
@@ -54,13 +58,16 @@ import pandas as pd
 
 # Presentations in Quarto
 
-<!--
-{{< include slides/_slide-layout-rules.qmd >}}
--->
-
 {{< include slides/_basic-slide-syntax.qmd >}}
 
+{{< include slides/_powerpoint-slides.qmd >}}
+
+{{< include slides/_powerpoint-layout-rules.qmd >}}
+
+{{< include slides/_powerpoint-templates.qmd >}}
+
 {{< include slides/_generating-content-dynamically.qmd >}}
+
 
 
 # Websites

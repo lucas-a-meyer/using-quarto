@@ -1,0 +1,30 @@
+
+## But wait, there's more!
+
+Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.
+
+```{mermaid}
+graph LR
+    P[Pre-scripts] --> Q
+    style P fill:#AA99FF
+    Q[.qmd] --> A
+    subgraph Quarto
+        A[.ipynb] --> B(("Pandoc"))
+        B --> C[.md]
+        B --> D[.tex] 
+        D --> F((Xetex))
+        C --> I((Hugo))
+        style B fill:#FF6655AA
+        style F fill:#88ffFF
+        style I fill:#88ffFF
+    end
+        B ----> E[.doc]
+        B ----> H[.pptx]
+        F --> G[.pdf]
+        I --> J[.html]
+    E --> X[Post-scripts]
+    H --> X
+    G --> X
+    J --> X
+    style X fill:#AA99FF
+```

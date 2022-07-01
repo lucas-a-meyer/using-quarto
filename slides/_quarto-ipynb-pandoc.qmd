@@ -1,0 +1,23 @@
+
+## Quarto for Python, in a nutshell
+
+In Quarto's `.qmd` files, you write Markdown and code, just like `.ipynb`. Add some `YAML` configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.
+
+```{mermaid}
+graph LR
+Q[.qmd] --> A
+subgraph Quarto
+    A[.ipynb] --> B(("Pandoc"))
+    B --> C[.md]
+    B --> D[.tex] 
+    D --> F((Xetex))
+    C --> I((Hugo))
+    style B fill:#FF6655AA
+    style F fill:#88ffFF
+    style I fill:#88ffFF
+end
+    B ----> E[.doc]
+    B ----> H[.pptx]
+    F --> G[.pdf]
+    I --> J[.html]
+```

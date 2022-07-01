@@ -31,5 +31,8 @@
 - Hugo and `blogdown` work well
 - Heavily dependent on R `R` 
 
+### Python notebooks
+
+- Great, with Pandoc
 :::
 ::::
