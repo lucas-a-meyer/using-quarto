@@ -11,7 +11,7 @@
     "href": "index.html#the-content-value-chain",
     "title": "Using Quarto",
     "section": "The content value chain",
-    "text": "The content value chain\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\nThe Goal\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
+    "text": "The content value chain\n\n\nThe value of content stuck in my computer is near zero. Putting content out in the world increases its value substantially.\n\nGoal\n\nMove good content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation\n\n\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet"
   },
   {
     "objectID": "index.html#literate-programming",
@@ -40,13 +40,6 @@
     "title": "Using Quarto",
     "section": "Quarto for Python, in a nutshell",
     "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
-  },
-  {
-    "objectID": "index.html#but-wait-theres-more",
-    "href": "index.html#but-wait-theres-more",
-    "title": "Using Quarto",
-    "section": "But wait, there’s more!",
-    "text": "But wait, there’s more!\nQuarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.\n\n\n\n\ngraph LR\n    P[Pre-scripts] --> Q\n    style P fill:#AA99FF\n    Q[.qmd] --> A\n    subgraph Quarto\n        A[.ipynb] --> B((\"Pandoc\"))\n        B --> C[.md]\n        B --> D[.tex] \n        D --> F((Xetex))\n        C --> I((Hugo))\n        style B fill:#FF6655AA\n        style F fill:#88ffFF\n        style I fill:#88ffFF\n    end\n        B ----> E[.doc]\n        B ----> H[.pptx]\n        F --> G[.pdf]\n        I --> J[.html]\n    E --> X[Post-scripts]\n    H --> X\n    G --> X\n    J --> X\n    style X fill:#AA99FF"
   },
   {
     "objectID": "index.html#the-yaml-front-matter",
@@ -147,18 +140,11 @@
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
-    "objectID": "website.html",
-    "href": "website.html",
-    "title": "Using Quarto for everything",
-    "section": "",
-    "text": "The content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
-  },
-  {
     "objectID": "presentation.html#the-content-value-chain",
     "href": "presentation.html#the-content-value-chain",
     "title": "Using Quarto for everything",
     "section": "The content value chain",
-    "text": "The content value chain\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet\n\n\n\nThe Goal\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
+    "text": "The content value chain\n\n\nThe value of content stuck in my computer is near zero. Putting content out in the world increases its value substantially.\nGoal\n\nMove good content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation\n\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet"
   },
   {
     "objectID": "presentation.html#literate-programming",
@@ -294,18 +280,18 @@
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
-    "objectID": "presentation.html#what-i-get-by-just-changing-the-format-in-yaml",
-    "href": "presentation.html#what-i-get-by-just-changing-the-format-in-yaml",
+    "objectID": "presentation.html#what-i-could-get-by-just-changing-the-format-in-yaml",
+    "href": "presentation.html#what-i-could-get-by-just-changing-the-format-in-yaml",
     "title": "Using Quarto for everything",
-    "section": "What I get by just changing the format in YAML",
-    "text": "What I get by just changing the format in YAML\n---\ntitle: \"Using Quarto for everything\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nTo avoid overwriting the slides, I’m generating a new file for the website.\nYou can see the result here, and a screenshot in the next slide."
+    "section": "What I could get by just changing the format in YAML",
+    "text": "What I could get by just changing the format in YAML\n---\ntitle: \"Using Quarto for everything\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nYou can see the result here, and a screenshot in the next slide."
   },
   {
-    "objectID": "presentation.html#render-presentation-as-a-website",
-    "href": "presentation.html#render-presentation-as-a-website",
+    "objectID": "presentation.html#screenshot-of-website",
+    "href": "presentation.html#screenshot-of-website",
     "title": "Using Quarto for everything",
-    "section": "Render presentation as a website",
-    "text": "Render presentation as a website"
+    "section": "Screenshot of website",
+    "text": "Screenshot of website"
   },
   {
     "objectID": "presentation.html#blah",

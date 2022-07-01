@@ -44,8 +44,6 @@ Note that Young, Old and Very Old are terms used by demographers. I don't mean a
 Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond97] and _Collapse_ [@diamond11], is currently 84-years old and I hope to have his 
 disposition at that age.
 
-# Code
-
 {{< include _graph_functions.qmd >}}
 
 ```{python}

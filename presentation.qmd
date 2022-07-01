@@ -68,9 +68,9 @@ import pandas as pd
 
 {{< include slides/_generating-content-dynamically.qmd >}}
 
-# Websites
+# Generating a website
 
-## What I get by just changing the format in YAML
+## What I could get by just changing the format in YAML
 
 ```{.yaml code-line-numbers="3"}
 ---
@@ -90,12 +90,10 @@ date: 2022-07-14
 ```
 <br />
 
-To avoid overwriting the slides, I'm generating a new file for the website.
-
-You can see the result [here](/web-site.html){preview-link="false"}, 
+You can see the result [here](https://www.meyerperin.com/using-quarto/){preview-link="false"}, 
 and a screenshot in the next slide.
 
-## Render presentation as a website
+## Screenshot of website
 
 ![](images/website.png)
 

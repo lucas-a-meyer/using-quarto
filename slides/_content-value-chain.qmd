@@ -1,14 +1,14 @@
 ## The content value chain
 
 :::: {.columns}
-::: {.column}
-![The content value chain from David Robinson's (@drrob) Tweet](images/content-value-chain.jpg)
-:::
+
 ::: {.column}
 
-### The Goal
+The value of content stuck in my computer is near zero. Putting content out in the world increases its value substantially.
 
-- Move content out of my computer **as fast as possible**
+### Goal
+
+- Move good content out of my computer **as fast as possible**
 - Reproducible
 - Git-based collaboration
 - Write once, generate:
@@ -16,5 +16,9 @@
   - Paper
   - PowerPoint
   - Site/documentation
+:::
+
+::: {.column}
+![The content value chain from David Robinson's (@drrob) Tweet](images/content-value-chain.jpg)
 :::
 ::::

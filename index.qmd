@@ -45,8 +45,6 @@ The presentation shows how I used the same content files to generate:
 
 {{< include slides/_quarto-ipynb-pandoc.qmd >}}
 
-{{< include slides/_quarto-pandoc-scripts.qmd >}}
-
 # Quarto basics
 
 {{< include slides/_yaml-front-matter.qmd >}}
