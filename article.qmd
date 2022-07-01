@@ -5,7 +5,7 @@ format:
         documentclass: scrartcl
     docx:
         number-sections: true
-
+bibliography: references.bib
 author: Lucas A. Meyer
 date: 2022-07-07
 ---
@@ -40,8 +40,8 @@ $$
 $$
 
 In the figures below, I further decompose the dependency ratio into Young (0-20 years-old), Old (65-79 years-old) and Very Old (80+ years-old). 
-Note that these are terms used by demographers. I don't mean any personal judgment when using this classification. One of my favorite writers,
-Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond84] and _Collapse_ [@diamond13], is currently 84-years old and I hope to have his 
+Note that Young, Old and Very Old are terms used by demographers. I don't mean any personal judgment when using this classification. One of my favorite writers,
+Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond97] and _Collapse_ [@diamond11], is currently 84-years old and I hope to have his 
 disposition at that age.
 
 # Code
