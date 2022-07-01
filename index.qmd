@@ -1,10 +1,19 @@
 ---
-title: "Using Quarto for scholarly projects"
+title: "Using Quarto"
 include-in-header: _msft-clarity.html
+author: Lucas A. Meyer
+date: 2022-07-07
 ---
 
-This is an example that shows how to create a Quarto project that integrates an article ([PDF](article.pdf)), a presentation about that article ([PPTX](presentation.pptx)) and a website (GitHub Pages), which you are reading now. 
+While I was learning [Quarto](https://www.quarto.org), I created a [presentation](/presentation.html) in RevealJS to help my team learn about it. 
 
-I also have a [RevealJS presentation](presentation.html).
+The presentation shows how I used the same content files to generate:
+- A RevealJS [presentation](/presentation.html)
+- A [PowerPoint presentation](/presentation.pptx) using my team's template
+- This website (starting after the header below)
+- A scholarly-looking [article](/article.pdf) in PDF using LaTeX
+- A scholarly-looking [document](/article.doc) using Microsoft Word
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Using Quarto 
+
+{{< include slides/_content-value-chain.qmd >}}

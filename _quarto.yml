@@ -4,12 +4,10 @@ project:
   post-render: ./post-render.sh
 
 website:
-  title: "Using Quarto for Everything"
+  title: "Using Quarto"
   google-analytics: "G-6KTZ853BN5"
   navbar:
     left:
-        - text: "Using Quarto: Home"
-          file: index.qmd
         - text: "Blog"
           href: https://www.meyerperin.com/
         - text: "GNNs with Python"
