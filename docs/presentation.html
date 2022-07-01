@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.598">
+  <meta name="generator" content="quarto-0.9.634">
 
   <meta name="author" content="Lucas A. Meyer">
   <meta name="dcterms.date" content="2022-07-14">
@@ -387,6 +387,14 @@
       margin-right: 0; 
     }
   </style>
+  <!-- Clarity tracking code for https://meyerperin.com/ -->
+  <script>
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "cjhrvqb66a");
+  </script>
   <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
   <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
   <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -401,18 +409,24 @@
   <p class="date">2022-07-14</p>
 </section>
 
+<section class="slide level2">
+
+<!-- Population pyramid -->
+<!-- Plot time series -->
+<!-- Plot time stack -->
+</section>
 <section>
 <section id="why-quarto" class="title-slide slide level1 center">
 <h1>Why Quarto</h1>
 
 </section>
-<section id="quarto-helps-with-the-content-value-chain" class="slide level2">
-<h2>Quarto helps with the content value chain</h2>
+<section id="the-content-value-chain" class="slide level2">
+<h2>The content value chain</h2>
 <div class="columns">
 <div class="column">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/useful-output.jpg"></p>
+<p><img data-src="images/content-value-chain.jpg"></p>
 <p></p><figcaption aria-hidden="true">The content value chain from David Robinson’s (<span class="citation" data-cites="drrob">@drrob</span>) Tweet</figcaption><p></p>
 </figure>
 </div>
@@ -431,7 +445,42 @@
 </ul>
 </div>
 </div>
-<!-- FUTURE CONTENT 
+</section>
+<section id="in-the-last-20-years-i-tried-many-tools" class="slide level2">
+<h2>In the last 20 years, I tried many tools…</h2>
+<div class="columns">
+<div class="column">
+<h3 id="latex">LaTeX</h3>
+<ul>
+<li>Great for PDFs… Ok, Beamer!</li>
+<li>Website generation is not great</li>
+<li>Dynamic content requires Latex programming
+<ul>
+<li><code>\usepackage{ifthen}</code></li>
+<li><code>@for</code>, <code>@while</code></li>
+</ul></li>
+</ul>
+<h3 id="wordppt">Word/PPT</h3>
+<ul>
+<li>Hard to collaborate before O365</li>
+<li>Hard to reproduce / auto-generate</li>
+</ul>
+</div><div class="column">
+<h3 id="jekyll">Jekyll</h3>
+<ul>
+<li>Great for sites</li>
+<li>Not great for PPT, papers</li>
+</ul>
+<h3 id="rmarkdown">RMarkdown</h3>
+<ul>
+<li>Great PDFs</li>
+<li>Mostly good presentations</li>
+<li>Hugo and <code>blogdown</code> work well</li>
+<li>Heavily dependent on R <code>R</code></li>
+</ul>
+</div>
+</div>
+<!--
 ## Also... the population project
 
 :::: {.columns}
@@ -459,42 +508,14 @@ at around 2100 for the world, but earlier in developed nations.
 :::
 ::::
 :::::
+
+
 -->
-</section>
-<section id="in-the-last-20-years-i-tried-many-tools" class="slide level2">
-<h2>In the last 20 years, I tried many tools…</h2>
-<div class="columns">
-<div class="column">
-<h3 id="latex">LaTeX</h3>
-<ul>
-<li>Great for PDFs… Ok, Beamer!</li>
-<li>Website generation is not great</li>
-<li>I even know how to write code!
-<ul>
-<li><code>\usepackage{ifthen}</code></li>
-<li><code>@for</code>, <code>@while</code></li>
-</ul></li>
-</ul>
-<h3 id="wordppt">Word/PPT</h3>
-<ul>
-<li>Hard to collaborate before O365</li>
-<li>Hard to reproduce / auto-generate</li>
-</ul>
-</div><div class="column">
-<h3 id="jekyll">Jekyll</h3>
-<ul>
-<li>Great for sites</li>
-<li>Not great for PPT, papers</li>
-</ul>
-<h3 id="rmarkdown">RMarkdown</h3>
-<ul>
-<li>Great PDFs</li>
-<li>Mostly good presentations</li>
-<li>Hugo and <code>blogdown</code> work well</li>
-<li>Need to learn <code>R</code></li>
-</ul>
-</div>
-</div>
+</section></section>
+<section>
+<section id="what-quarto-really-is" class="title-slide slide level1 center">
+<h1>What Quarto really is</h1>
+
 </section>
 <section id="the-content-pipeline-for-.ipynb" class="slide level2">
 <h2>The content pipeline for .ipynb</h2>
@@ -597,12 +618,12 @@ end
 </div>
 </section></section>
 <section>
-<section id="using-quarto" class="title-slide slide level1 center">
-<h1>Using Quarto</h1>
+<section id="quarto-basics" class="title-slide slide level1 center">
+<h1>Quarto basics</h1>
 
 </section>
-<section id="the-basics" class="slide level2">
-<h2>The basics</h2>
+<section id="the-yaml-front-matter" class="slide level2">
+<h2>The YAML front-matter</h2>
 <div class="columns">
 <div class="column">
 <p>Whether you use Quarto from <code>.qmd</code>, <code>.ipynb</code>, or <code>.Rmd</code> files, you always start with a YAML front-matter file.</p>
@@ -673,9 +694,9 @@ E = mc^2
 <span id="cb3-11"><a href="#cb3-11"></a>ax.grid(<span class="va">True</span>)</span>
 <span id="cb3-12"><a href="#cb3-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/cell-3-output-1.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-9-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -684,7 +705,7 @@ E = mc^2
 <section>
 <section id="presentations-in-quarto" class="title-slide slide level1 center">
 <h1>Presentations in Quarto</h1>
-<!-- 
+<!--
 ## Creating slides
 
 :::: {.columns}
@@ -748,6 +769,9 @@ author: Lucas A. Meyer
 date: 2022-07-14
 ---
 ```
+
+
+
 -->
 </section>
 <section id="basic-slide-syntax" class="slide level2">
@@ -813,9 +837,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for Belgium</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-4.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-4.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-7.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-7.png"></p>
 </div>
 </div>
 </section>
@@ -823,9 +847,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for China</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-13.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-13.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-16.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-16.png"></p>
 </div>
 </div>
 </section>
@@ -833,9 +857,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for Brazil</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-22.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-22.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-25.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-25.png"></p>
 </div>
 </div>
 </section>
@@ -843,9 +867,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for India</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-31.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-31.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-34.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-34.png"></p>
 </div>
 </div>
 </section>
@@ -853,9 +877,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for Japan</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-40.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-40.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-43.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-43.png"></p>
 </div>
 </div>
 </section>
@@ -863,9 +887,9 @@ date: 2022-07-14
 <h2>Age and Population Pyramids for Nigeria</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-49.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-49.png"></p>
 </div><div class="column">
-<p><img data-src="presentation_files/figure-revealjs/cell-10-output-52.png"></p>
+<p><img data-src="presentation_files/figure-revealjs/cell-16-output-52.png"></p>
 </div>
 </div>
 </section></section>
@@ -892,25 +916,34 @@ date: 2022-07-14
 <span id="cb6-14"><a href="#cb6-14"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <p>To avoid overwriting the slides, I’m generating a new file for the website.</p>
-<p>You can see the result <a href="web-site.html" data-preview-link="false">here</a>, and a screenshot in the next slide.</p>
+<p>You can see the result <a href="./web-site.html" data-preview-link="false">here</a>, and a screenshot in the next slide.</p>
 </section>
 <section id="render-presentation-as-a-website" class="slide level2">
 <h2>Render presentation as a website</h2>
 
 <img data-src="images/website.png" class="r-stretch"></section></section>
+<section>
 <section id="articles" class="title-slide slide level1 center">
 <h1>Articles</h1>
 
 </section>
-
+<section id="blah" class="slide level2">
+<h2>Blah</h2>
+<p>bleh blih</p>
+</section></section>
+<section>
 <section id="projects" class="title-slide slide level1 center">
 <h1>Projects</h1>
-<p>You can use Quarto to generate the whole shebang!</p>
+
+</section>
+<section id="blah-1" class="slide level2">
+<h2>Blah</h2>
+<p>Bleh - blih You can use Quarto to generate the whole shebang!</p>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

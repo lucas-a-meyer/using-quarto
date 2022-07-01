@@ -1,0 +1,17 @@
+## The content value chain
+
+:::: {.columns}
+::: {.column}
+![The content value chain from David Robinson's (@drrob) Tweet](images/content-value-chain.jpg)
+:::
+::: {.column}
+> - Move content out of my computer **as fast as possible**
+> - Reproducible
+> - Git-based collaboration
+> - Write once, generate:
+>   - Code
+>   - Paper
+>   - PowerPoint
+>   - Site/documentation
+:::
+::::

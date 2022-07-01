@@ -1,0 +1,35 @@
+## In the last 20 years, I tried many tools...
+
+:::: {.columns}
+::: {.column}
+
+### LaTeX
+
+- Great for PDFs... Ok, Beamer!
+- Website generation is not great
+- Dynamic content requires Latex programming
+    - `\usepackage{ifthen}`
+    - `@for`, `@while`
+
+### Word/PPT
+
+- Hard to collaborate before O365
+- Hard to reproduce / auto-generate 
+
+:::
+::: {.column}
+
+### Jekyll
+
+- Great for sites
+- Not great for PPT, papers
+
+### RMarkdown
+
+- Great PDFs
+- Mostly good presentations
+- Hugo and `blogdown` work well
+- Heavily dependent on R `R` 
+
+:::
+::::

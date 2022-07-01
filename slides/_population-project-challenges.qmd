@@ -1,0 +1,27 @@
+## Also... the population project
+
+:::: {.columns}
+::: {.column}
+
+### Goals and questions
+Explore the consequences of the decline in population predicted to start
+at around 2100 for the world, but earlier in developed nations. 
+
+- What are the economic impacts?
+- What should governments do?
+
+:::
+::: {.column}
+
+### Population project challenges
+
+- Unknown collaborators at the start
+- Need to go "wide" rather than "deep"
+- May need to pivot fast
+- May need to generate data on demand
+    - Show graphs for country X, Y and Z
+- Generate code, paper, PowerPoint
+
+:::
+::::
+:::::

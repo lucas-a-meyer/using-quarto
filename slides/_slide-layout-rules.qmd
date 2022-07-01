@@ -1,0 +1,64 @@
+## Creating slides
+
+:::: {.columns}
+::: {.column}
+To generate a presentation from a `.qmd` file, add `format: pptx` to the YAML front-matter.
+
+The part I liked the _least_ is that Quarto will use the 
+[pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#powerpoint-layout-choice) 
+to render the content from the `.qmd` into the `.pptx`.
+
+The "pandoc rules" substantially limit the flexibility you would have in PowerPoint presentations. 
+Quarto has better presentation support for `revealjs` and `beamer`. 
+:::
+
+::: {.column}
+- Quarto can use a template with (**only**) these layouts:
+    - Title Slide
+    - Title and Content
+    - Section Header
+    - Two Content
+    - Comparison
+    - Content with Caption
+    - Blank
+
+:::
+::::
+
+## PowerPoint layout rules
+
+The rules are available at: <br />
+<https://pandoc.org/MANUAL.html#powerpoint-layout-choice>
+
+- **Title Slide:** created from metadata fields like `title` and `author`
+- **Section Header:** created from the top-level markdown headings (for example, `#`)
+- **Two Content:** used when `.md` source contains `.columns` div (`:::: {.columns}`) and text content
+- **Comparison:** same as "Two Content", but content of divs is not text
+- **Blank:** used for slides that have no displayable content (e.g. notes)
+- **Content with Caption:** used when content doesn't have a `columns` div but has text **and** non-text content
+- **Title and Content:** whatever doesn't fit the rules above.
+
+## A redeeming PowerPoint feature: templates
+
+By adding a `reference-doc` entry to your YAML, you can tell
+Quarto (and pandoc) to use a file as a template for the format
+of your presentation. 
+
+The "Slide Master" needs to contain layouts named as per the previous slide (e.g. "Comparison").
+
+This allows you a lot of flexibility in the design of your
+slide deck, even if it is for just the small number of layouts
+that were listed in the previous slide.
+
+You can control fonts, add background images, page numbering, etc.
+
+```yaml
+---
+title: "Using Quarto for everything"
+format: pptx
+reference-doc: templates/template.pptx
+author: Lucas A. Meyer
+date: 2022-07-14
+---
+```
+

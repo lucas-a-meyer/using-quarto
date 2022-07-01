@@ -1,0 +1,72 @@
+## The content pipeline for .ipynb
+
+About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks, and one can use [`pandoc`](https://pandoc.org/index.html) to generate papers and PowerPoint, but it can be complicated.
+
+```{mermaid}
+graph LR
+    A[.ipynb] --> B(("Pandoc"))
+    B ----> E[.doc]
+    B ----> H[.pptx]
+    B --> C[.md]
+    B --> D[.tex] 
+    D --> F((Xetex))
+    C --> I((Hugo))
+    F --> G[.pdf]
+    I --> J[.html]
+    style B fill:#FF6655AA
+    style F fill:#88ffFF
+    style I fill:#88ffFF
+```
+
+## Quarto for Python, in a nutshell
+
+In Quarto's `.qmd` files, you write Markdown and code, just like `.ipynb`. Add some `YAML` configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.
+
+```{mermaid}
+graph LR
+Q[.qmd] --> A
+subgraph Quarto
+    A[.ipynb] --> B(("Pandoc"))
+    B --> C[.md]
+    B --> D[.tex] 
+    D --> F((Xetex))
+    C --> I((Hugo))
+    style B fill:#FF6655AA
+    style F fill:#88ffFF
+    style I fill:#88ffFF
+end
+    B ----> E[.doc]
+    B ----> H[.pptx]
+    F --> G[.pdf]
+    I --> J[.html]
+```
+
+## But wait, there's more!
+
+Quarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.
+
+```{mermaid}
+graph LR
+    P[Pre-scripts] --> Q
+    style P fill:#AA99FF
+    Q[.qmd] --> A
+    subgraph Quarto
+        A[.ipynb] --> B(("Pandoc"))
+        B --> C[.md]
+        B --> D[.tex] 
+        D --> F((Xetex))
+        C --> I((Hugo))
+        style B fill:#FF6655AA
+        style F fill:#88ffFF
+        style I fill:#88ffFF
+    end
+        B ----> E[.doc]
+        B ----> H[.pptx]
+        F --> G[.pdf]
+        I --> J[.html]
+    E --> X[Post-scripts]
+    H --> X
+    G --> X
+    J --> X
+    style X fill:#AA99FF
+```

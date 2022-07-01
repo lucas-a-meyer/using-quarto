@@ -4,6 +4,7 @@ format:
     pptx:
        reference-doc: templates/template.pptx
        monofont: "Consolas"
+       slide-level: 2
     revealjs:
         include-in-header: _msft-clarity.html
         incremental: false
@@ -12,12 +13,53 @@ format:
             data-background-image: images/data-viz-bg.jpg
             data-background-size: contain
             data-background-position: right
+        slide-level: 2
 
 author: Lucas A. Meyer
 date: 2022-07-14
 ---
 
-{{< include _revealjs_presentation_source.qmd >}}
+```{python}
+#| echo: false
+from IPython.display import display, Markdown
+from itertools import chain
+import pandas as pd
+```
+
+{{< include _graph_functions.qmd >}}
+
+
+# Why Quarto
+
+{{< include slides/_content-value-chain.qmd >}}
+
+{{< include slides/_tools-for-literate-programming.qmd >}}
+
+<!--
+{{< include slides/_population-project-challenges.qmd >}}
+-->
+
+# What Quarto really is
+
+{{< include slides/_quarto-python-pipeline-3-slides.qmd >}}
+
+# Quarto basics
+
+{{< include slides/_yaml-front-matter.qmd >}}
+
+{{< include slides/_quarto-main-content.qmd >}}
+
+{{< include slides/_code-content.qmd >}}
+
+# Presentations in Quarto
+
+<!--
+{{< include slides/_slide-layout-rules.qmd >}}
+-->
+
+{{< include slides/_basic-slide-syntax.qmd >}}
+
+{{< include slides/_generating-content-dynamically.qmd >}}
 
 
 # Websites
@@ -44,7 +86,7 @@ date: 2022-07-14
 
 To avoid overwriting the slides, I'm generating a new file for the website.
 
-You can see the result [here](web-site.html){preview-link="false"}, 
+You can see the result [here](/web-site.html){preview-link="false"}, 
 and a screenshot in the next slide.
 
 ## Render presentation as a website
@@ -53,10 +95,14 @@ and a screenshot in the next slide.
 
 # Articles
 
-
+## Blah
+bleh blih
 
 # Projects
 
+## Blah
+
+Bleh - blih
 You can use Quarto to generate the whole shebang!
 
 

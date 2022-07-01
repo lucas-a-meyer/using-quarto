@@ -1,0 +1,40 @@
+## Main content
+
+:::: {.columns}
+
+::: {.column}
+```markdown
+### Writing the main content
+
+Most writing in Quarto is done in [Markdown].
+
+Quarto's Markdown supports everything I'm
+used to: figures, tables, bibliography, etc.
+
+It also supports lots of extra features, like
+diagrams with `mermaid` and `GraphViz` and
+even LaTeX equations: 
+
+$$
+E = mc^2
+$$
+```
+:::
+
+::: {.column}
+### Writing the main content
+
+Most writing in Quarto is done in [Markdown](https://quarto.org/docs/authoring/markdown-basics.html).
+
+Quarto's Markdown supports everything I'm
+used to: figures, tables, bibliography, etc.
+
+It also supports lots of extra features, like
+diagrams with `mermaid` and `GraphViz` and
+even LaTeX equations: 
+
+$$
+E = mc^2
+$$
+::: 
+::::

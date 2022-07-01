@@ -4,6 +4,8 @@ project:
   preview: 
     port: 4300
     browser: false
+  
+  post-render: ./post-render.sh
 
 website:
   title: "Using Quarto for Everything"
@@ -19,6 +21,3 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-
