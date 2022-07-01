@@ -9,16 +9,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Using Quarto for scholarly projects",
+    "title": "Using Quarto",
     "section": "",
-    "text": "I also have a RevealJS presentation.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "While I was learning Quarto, I created a presentation in RevealJS to help my team learn about it.\nThe presentation shows how I used the same content files to generate: - A RevealJS presentation - A PowerPoint presentation using my team’s template - This website (starting after the header below) - A scholarly-looking article in PDF using LaTeX - A scholarly-looking document using Microsoft Word"
   },
   {
-    "objectID": "website.html",
-    "href": "website.html",
-    "title": "Using Quarto for everything",
-    "section": "",
-    "text": "The content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
+    "objectID": "index.html#the-content-value-chain",
+    "href": "index.html#the-content-value-chain",
+    "title": "Using Quarto",
+    "section": "The content value chain",
+    "text": "The content value chain\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet\n\n\n\n\n\nMove content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation"
   },
   {
     "objectID": "presentation.html#the-content-value-chain",
@@ -32,7 +32,7 @@
     "href": "presentation.html#literate-programming",
     "title": "Using Quarto for everything",
     "section": "Literate Programming",
-    "text": "Literate Programming\n\n\n\n\n\nDonald Knuth’s Literate Programming\n\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter notebooks implement that paradigm, as does Quarto. This makes it easier to publish content."
+    "text": "Literate Programming\n\n\n\n\n\nDonald Knuth’s Literate Programming\n\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter implements the literate programming paradigm, but I haven’t seen the Markdown part gain a lot of traction."
   },
   {
     "objectID": "presentation.html#in-the-last-20-years-i-tried-many-tools",

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lucas A. Meyer">
+<meta name="dcterms.date" content="2022-07-07">
 
-<title>Using Quarto for Everything - Using Quarto for scholarly projects</title>
+<title>Using Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,16 +84,13 @@ gtag('config', 'G-6KTZ853BN5', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Using Quarto for Everything</span>
+    <span class="navbar-title">Using Quarto</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Using Quarto: Home</a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://www.meyerperin.com/">Blog</a>
   </li>  
@@ -132,32 +131,83 @@ gtag('config', 'G-6KTZ853BN5', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-quarto" id="toc-using-quarto" class="nav-link active" data-scroll-target="#using-quarto">Using Quarto</a>
+  <ul class="collapse">
+  <li><a href="#the-content-value-chain" id="toc-the-content-value-chain" class="nav-link" data-scroll-target="#the-content-value-chain">The content value chain</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using Quarto for scholarly projects</h1>
+<h1 class="title">Using Quarto</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lucas A. Meyer </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 7, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<p>This is an example that shows how to create a Quarto project that integrates an article (<a href="article.pdf">PDF</a>), a presentation about that article (<a href="presentation.pptx">PPTX</a>) and a website (GitHub Pages), which you are reading now.</p>
-<p>I also have a <a href="presentation.html">RevealJS presentation</a>.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<p>While I was learning <a href="https://www.quarto.org">Quarto</a>, I created a <a href="./presentation.html">presentation</a> in RevealJS to help my team learn about it.</p>
+<p>The presentation shows how I used the same content files to generate: - A RevealJS <a href="./presentation.html">presentation</a> - A <a href="./presentation.pptx">PowerPoint presentation</a> using my team’s template - This website (starting after the header below) - A scholarly-looking <a href="./article.pdf">article</a> in PDF using LaTeX - A scholarly-looking <a href="./article.doc">document</a> using Microsoft Word</p>
+<section id="using-quarto" class="level1">
+<h1>Using Quarto</h1>
+<section id="the-content-value-chain" class="level2">
+<h2 class="anchored" data-anchor-id="the-content-value-chain">The content value chain</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/content-value-chain.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">The content value chain from David Robinson’s (<span class="citation" data-cites="drrob">@drrob</span>) Tweet</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column">
+<blockquote class="blockquote">
+<ul>
+<li>Move content out of my computer <strong>as fast as possible</strong></li>
+<li>Reproducible</li>
+<li>Git-based collaboration</li>
+<li>Write once, generate:
+<ul>
+<li>Code</li>
+<li>Paper</li>
+<li>PowerPoint</li>
+<li>Site/documentation</li>
+</ul></li>
+</ul>
+</blockquote>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
