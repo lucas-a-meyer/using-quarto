@@ -343,6 +343,13 @@
     "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to documents.\nYou need a BibTex file, e.g., bibliography.bib, and a reference to it bibliography: references.bib to the YAML front-matter. Quarto supports any Citation Style Language.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1.\nYou can use footnotes in presentations and websites, too"
   },
   {
+    "objectID": "presentation.html#books-in-quarto-1",
+    "href": "presentation.html#books-in-quarto-1",
+    "title": "Using Quarto for everything",
+    "section": "Books in Quarto",
+    "text": "Books in Quarto\nHere are few books that have been recently written with Quarto:"
+  },
+  {
     "objectID": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto for everything",

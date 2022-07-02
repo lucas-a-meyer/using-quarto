@@ -48,7 +48,7 @@ import pandas as pd
 
 {{< include slides/_quarto-pandoc-scripts.qmd >}}
 
-# Quarto basics
+# Using Quarto
 
 {{< include slides/_yaml-front-matter.qmd >}}
 
@@ -120,6 +120,11 @@ and the [PDF](https://www.meyerperin.com/using-quarto/article.pdf) and [DOCX](ht
 Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
 
 [^f1]: You can use footnotes in presentations and websites, too
+
+# Books in Quarto
+
+{{< include slides/_books.qmd >}}
+
 
 # Should I use Quarto?
 
