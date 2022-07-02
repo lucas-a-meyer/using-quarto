@@ -104,7 +104,7 @@ The relevant files are:
 ## Citations and Footnotes
 
 It's very easy to use citations in Quarto. All you need is a BibTex file with your citations, for example, `bibliography.bib`, and to add `bibliography: references.bib` to the YAML front-matter of your document. 
-You can then refer to the bibliography by simply adding the appropriate `[@citation-name]` in your text.
+You can then refer to the bibliography by simply adding the appropriate `[@citation-name]` in your text. For example, if my BibTex file contains a `diamond97` and a `diamond11` citation for Jared Diamond's books, I can cite them by writing `[@diamond97]` and `[@diamond11]`. I can then cite _Guns, Germs and Steel [@diamon97] and Collapse [@diamond11]. All [Citation Style Language](https://citationstyles.org) formats are supported.
 
 Generating footnotes is also easy, using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
 
@@ -128,6 +128,7 @@ I wanted to have a Python-based blog for a long time, and Quarto delivers it wel
 If I would be doing something in a Python notebook, I don't lose anything by doing it on Quarto, and the extra work is very small.
 
 :::
+
 ::: {.column}
 
 ### Writing articles: unsure
@@ -142,7 +143,8 @@ The best case for generating a presentation with Quarto are when you need to gen
 - Collaborators used to Git/Beamer 
 
 :::
-:::: {.columns}
+::::
+
 
 ## References
 
