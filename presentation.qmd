@@ -70,43 +70,79 @@ import pandas as pd
 
 # Generating a website
 
-## What I could get by just changing the format in YAML
-
-```{.yaml code-line-numbers="3"}
----
-title: "Using Quarto for everything"
-format: html
-    # revealjs:
-    #     incremental: false
-    #     theme: [simple, revealjs-customizations.scss]
-    #     title-slide-attributes:
-    #         data-background-image: images/data-viz-bg.jpg
-    #         data-background-size: contain
-    #         data-background-position: right
-
-author: Lucas A. Meyer
-date: 2022-07-14
----
-```
-<br />
-
-You can see the result [here](https://www.meyerperin.com/using-quarto/){preview-link="false"}, 
-and a screenshot in the next slide.
+{{< include slides/_changing-format-to-website.qmd >}}
 
 ## Screenshot of website
 
 ![](images/website.png)
 
-# Articles
+# Scholarly articles
 
-## Blah
-bleh blih
+## Generating a scholarly article
 
-# Projects
+I reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don't contain original research.
 
-## Blah
+The relevant files are:
 
-Bleh - blih
-You can use Quarto to generate the whole shebang!
+- [Quarto source file](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
+- [Microsoft Word output](https://www.meyerperin.com/using-quarto/article.docx)
+- [LaTeX PDF output](https://www.meyerperin.com/article.pdf)
+
+## Scholarly article screenshots
+
+::::{.columns}
+
+:::{.column}
+![PDF version of the article](images/pdf-screenshot.png)
+:::
+
+:::{.column}
+![Microsoft Word version of the article](images/word-screenshot.png)
+:::
+::::
+
+## Citations and Footnotes
+
+It's very easy to use citations in Quarto. All you need is a BibTex file with your citations, for example, `bibliography.bib`, and to add `bibliography: references.bib` to the YAML front-matter of your document. 
+You can then refer to the bibliography by simply adding the appropriate `[@citation-name]` in your text.
+
+Generating footnotes is also easy, using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
+
+[^f1]: You can use footnotes in presentations and websites, too
+
+# When is Quarto worthwhile
+
+## Using Quarto Everywhere?
+
+::::{.columns}
+:::{.column}
+
+I have been using Quarto a lot lately. Here's my current (July 2022) take on when it's worthwile.
+
+### Blog: excellent
+
+I wanted to have a Python-based blog for a long time, and Quarto delivers it well. Now I can automate my blog to tweet and post to LinkedIn when I write new articles.
+
+### Python notebook: excellent
+
+If I would be doing something in a Python notebook, I don't lose anything by doing it on Quarto, and the extra work is very small.
+
+:::
+:::{.column}
+
+### Writing articles: unsure
+
+I think Quarto is more helpful for a team that uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
+
+### Presentations: probably not
+
+The best case for generating a presentation with Quarto are when you need to generate *a lot* of dynamic content. Other cases:
+
+- Reproducibility
+- Collaborators used to Git/Beamer 
+
+:::
+::::{.columns}
 
 
+# THANK YOU

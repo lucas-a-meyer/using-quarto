@@ -6,6 +6,7 @@ format:
     docx:
         number-sections: true
 bibliography: references.bib
+csl: nature.csl
 author: Lucas A. Meyer
 date: 2022-07-07
 ---
