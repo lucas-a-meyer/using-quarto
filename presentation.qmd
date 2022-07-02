@@ -121,9 +121,9 @@ Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^re
 :::: {.columns}
 ::: {.column}
 
-### Writing articles: unsure
+### Articles: maybe yes
 
-I think Quarto is more helpful for a team that uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
+I think Quarto is more helpful for a team that already uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
 
 ### Python notebook: excellent
 
@@ -137,7 +137,7 @@ Quarto adds to Python notebooks without detracting anything. All you need are a 
 
 Quarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.
 
-### Presentations: unsure
+### Presentations: maybe not
 
 Only if you have
 
