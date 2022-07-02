@@ -210,6 +210,20 @@
     "text": "What if I want to add code?\n\n\nThe best thing about Quarto is that you can use it to run any code that you would be able to run in a Python notebook.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw=\\\n                {'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
   },
   {
+    "objectID": "presentation.html#diagrams",
+    "href": "presentation.html#diagrams",
+    "title": "Using Quarto for everything",
+    "section": "Diagrams",
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+  },
+  {
+    "objectID": "presentation.html#regression-and-results",
+    "href": "presentation.html#regression-and-results",
+    "title": "Using Quarto for everything",
+    "section": "Regression and results",
+    "text": "Regression and results\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\n\n\n\n\ncoef\nstd err\nt\nP>\nt\n\n\n\nIntercept\n-0.9049\n0.685\n-1.321\n0.187\n-2.250\n0.441\n\n\neduc\n0.5414\n0.053\n10.167\n0.000\n0.437\n0.646"
+  },
+  {
     "objectID": "presentation.html#basic-slide-syntax",
     "href": "presentation.html#basic-slide-syntax",
     "title": "Using Quarto for everything",
