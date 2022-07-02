@@ -90,14 +90,17 @@ The relevant files are:
 
 ## Scholarly article screenshots
 
-::::{.columns}
+:::: {.columns}
+::: {.column}
 
-:::{.column}
 ![PDF version of the article](images/pdf-screenshot.png)
+
 :::
 
-:::{.column}
+::: {.column}
+
 ![Microsoft Word version of the article](images/word-screenshot.png)
+
 :::
 ::::
 
