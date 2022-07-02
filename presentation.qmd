@@ -86,7 +86,7 @@ The relevant files are:
 
 - [Quarto source file](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
 - [Microsoft Word output](https://www.meyerperin.com/using-quarto/article.docx)
-- [LaTeX PDF output](https://www.meyerperin.com/article.pdf)
+- [LaTeX PDF output](https://www.meyerperin.com/using-quarto/article.pdf)
 
 ## Scholarly article screenshots
 
@@ -103,54 +103,47 @@ The relevant files are:
 
 ## Citations and Footnotes
 
-It's very easy to use citations in Quarto. All you need is a BibTex file with your citations, for example, `bibliography.bib`, and to add `bibliography: references.bib` to the YAML front-matter of your document. 
-You can then refer to the bibliography by simply adding the appropriate `[@citation-name]` in your text. 
+Citations don't work on presentations, but are easy to add to documents. 
 
-For example, if my BibTex file contains a `diamond97` and a `diamond11` citation for Jared Diamond's books, I can cite them by writing `[@diamond97]` and `[@diamond11]`. I can then cite _Guns, Germs and Steel_ [@diamon97] and _Collapse_ [@diamond11]. All [Citation Style Language](https://citationstyles.org) formats are supported.
+You need a BibTex file, e.g., `bibliography.bib`, and a reference to it `bibliography: references.bib` to the YAML front-matter. Quarto supports any [Citation Style Language](https://citationstyles.org/).
 
-Generating footnotes is also easy, using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
+You can cite by using `[@citation-name]` in your text. Please check the [article .qmd source](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
+and the [PDF](https://www.meyerperin.com/using-quarto/article.pdf) and [DOCX](https://www.meyerperin.com/using-quarto/article.docx) outputs.
+
+Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
 
 [^f1]: You can use footnotes in presentations and websites, too
 
-# When is Quarto worthwhile
+# Should I use Quarto?
 
-## Using Quarto Everywhere?
+## Where I think Quarto is good (July 2022)
 
 :::: {.columns}
-::: {.column}
-
-I have been using Quarto a lot lately. Here's my current (July 2022) take on when it's worthwile.
-
-### Blog: excellent
-
-I wanted to have a Python-based blog for a long time, and Quarto delivers it well. Now I can automate my blog to tweet and post to LinkedIn when I write new articles.
-
-### Python notebook: excellent
-
-If I would be doing something in a Python notebook, I don't lose anything by doing it on Quarto, and the extra work is very small.
-
-:::
-
 ::: {.column}
 
 ### Writing articles: unsure
 
 I think Quarto is more helpful for a team that uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
 
-### Presentations: probably not
+### Blog: excellent
 
-The best case for generating a presentation with Quarto are when you need to generate *a lot* of dynamic content. Other cases:
+Quarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.
 
-- Reproducibility
+:::
+
+::: {.column}
+
+### Python notebook: excellent
+
+Quarto adds to Python notebooks without detracting anything. All it's needed is a few YAML lines.
+
+### Presentations: only if you have
+
+- *a lot* of dynamic content
+- Reproducibility needs
 - Collaborators used to Git/Beamer 
 
 :::
 ::::
-
-
-## References
-
-::: {#refs}
-:::
 
 # THANK YOU

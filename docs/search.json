@@ -326,20 +326,13 @@
     "href": "presentation.html#citations-and-footnotes",
     "title": "Using Quarto for everything",
     "section": "Citations and Footnotes",
-    "text": "Citations and Footnotes\nIt’s very easy to use citations in Quarto. All you need is a BibTex file with your citations, for example, bibliography.bib, and to add bibliography: references.bib to the YAML front-matter of your document. You can then refer to the bibliography by simply adding the appropriate [@citation-name] in your text.\nFor example, if my BibTex file contains a diamond97 and a diamond11 citation for Jared Diamond’s books, I can cite them by writing [@diamond97] and [@diamond11]. I can then cite Guns, Germs and Steel [@diamon97] and Collapse [@diamond11]. All Citation Style Language formats are supported.\nGenerating footnotes is also easy, using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1.\nYou can use footnotes in presentations and websites, too"
+    "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to documents.\nYou need a BibTex file, e.g., bibliography.bib, and a reference to it bibliography: references.bib to the YAML front-matter. Quarto supports any Citation Style Language.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1.\nYou can use footnotes in presentations and websites, too"
   },
   {
-    "objectID": "presentation.html#using-quarto-everywhere",
-    "href": "presentation.html#using-quarto-everywhere",
+    "objectID": "presentation.html#where-i-think-quarto-is-good-july-2022",
+    "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto for everything",
-    "section": "Using Quarto Everywhere?",
-    "text": "Using Quarto Everywhere?\n\n\nI have been using Quarto a lot lately. Here’s my current (July 2022) take on when it’s worthwile.\nBlog: excellent\nI wanted to have a Python-based blog for a long time, and Quarto delivers it well. Now I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPython notebook: excellent\nIf I would be doing something in a Python notebook, I don’t lose anything by doing it on Quarto, and the extra work is very small.\n\nWriting articles: unsure\nI think Quarto is more helpful for a team that uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPresentations: probably not\nThe best case for generating a presentation with Quarto are when you need to generate a lot of dynamic content. Other cases:\n\nReproducibility\nCollaborators used to Git/Beamer"
-  },
-  {
-    "objectID": "presentation.html#references",
-    "href": "presentation.html#references",
-    "title": "Using Quarto for everything",
-    "section": "References",
-    "text": "References"
+    "section": "Where I think Quarto is good (July 2022)",
+    "text": "Where I think Quarto is good (July 2022)\n\n\nWriting articles: unsure\nI think Quarto is more helpful for a team that uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\n\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All it’s needed is a few YAML lines.\nPresentations: only if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   }
 ]
