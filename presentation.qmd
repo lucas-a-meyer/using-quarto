@@ -114,8 +114,8 @@ Generating footnotes is also easy, using `[^ref]` links to a footnote, and `[^re
 
 ## Using Quarto Everywhere?
 
-::::{.columns}
-:::{.column}
+:::: {.columns}
+::: {.column}
 
 I have been using Quarto a lot lately. Here's my current (July 2022) take on when it's worthwile.
 
@@ -128,7 +128,7 @@ I wanted to have a Python-based blog for a long time, and Quarto delivers it wel
 If I would be doing something in a Python notebook, I don't lose anything by doing it on Quarto, and the extra work is very small.
 
 :::
-:::{.column}
+::: {.column}
 
 ### Writing articles: unsure
 
@@ -142,7 +142,11 @@ The best case for generating a presentation with Quarto are when you need to gen
 - Collaborators used to Git/Beamer 
 
 :::
-::::{.columns}
+:::: {.columns}
 
+## References
+
+::: {#refs}
+:::
 
 # THANK YOU

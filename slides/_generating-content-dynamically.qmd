@@ -5,6 +5,10 @@ don't know which world leaders are coming to the conference.
 
 On the presentation day, you learn that Belgium, China, Brazil, India, Japan and Nigeria are attending.
 
+You can use Python or R to automatically generate slides.
+
+## Generating slides with Python
+
 The next slides/sections were generated using the code below:
 
 ```python
