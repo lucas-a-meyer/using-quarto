@@ -25,7 +25,7 @@ I created one main content file [(source)](https://github.com/lucas-a-meyer/usin
 - This website, starting after the "Why Quarto" header below [(source)](https://github.com/lucas-a-meyer/using-quarto/blob/main/index.qmd)
 
 The RevealJS presentation is embedded below:
-<div>
+<div width="100%">
 
 ```{=html}
 <iframe class="slide-deck" src="presentation.html"></iframe>
