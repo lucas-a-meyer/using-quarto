@@ -7,6 +7,10 @@ You can use [mermaid](https://github.com/mermaid-js/mermaid) to create diagrams.
 
 The diagram in this and in previous sections were created with mermaid.
 
+::: {.content-visible when-format="revealjs"}
+Refresh the page to see the diagram on the right.
+:::
+
 ```mermaid
 flowchart TD
 

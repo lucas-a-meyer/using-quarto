@@ -319,7 +319,7 @@
     "href": "presentation.html#diagrams",
     "title": "Using Quarto with Python",
     "section": "Diagrams",
-    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nThe diagram in this and in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nThe diagram in this and in previous sections were created with mermaid.\n\nRefresh the page to see the diagram on the right.\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "presentation.html#regression-and-results",
