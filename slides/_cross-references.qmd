@@ -3,7 +3,7 @@
 :::: {.columns}
 ::: {.column}
 
-The [Quarto guide] has a great section on [cross-references]. I cover only the main points.
+The [Quarto guide](https://quarto.org/docs/guide/) has a great section on [cross-references](https://quarto.org/docs/authoring/cross-references.html). I cover only the main points.
 
 To create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively "fig", "sec" and "eq".
 

@@ -9,3 +9,4 @@ Quarto is under active development, and quickly reaching v1.0. While creating th
     - Workaround: force both to be `self-contained`, by adding `self-contained: true` to the YAML front-matter
 5. Pandoc doesn't have a way to control the monospaced font size for PowerPoint. I wrote a script to do that.
 6. The decorations on this slide (background color, background image) only appear on RevealJS, no workaround.
+7. The slide with the two article figures renders weird in HTML but perfectly in PPTX. No workaround.

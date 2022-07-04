@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Quarto with Python",
     "section": "",
-    "text": "Folowing the spirit of “learning out loud”, I created several artifacts while I was learning about Quarto.\nI created one main content file (source) that I used to create:\nI also reused some of the content above in another Quarto file (source) to create: - A scholarly-looking article in PDF using LaTeX - A scholarly-looking document using Microsoft Word"
+    "text": "Folowing the spirit of “learning out loud”, I created several artifacts while I was learning about Quarto.\nI created one main content file (source) that I used to create:\nI also reused some of the content above in another Quarto file (source) to create:"
   },
   {
     "objectID": "index.html#the-content-value-chain",
@@ -165,7 +165,7 @@
     "href": "index.html#cross-references",
     "title": "Quarto with Python",
     "section": "Cross references",
-    "text": "Cross references\n\n\nThe [Quarto guide] has a great section on [cross-references]. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
+    "text": "Cross references\n\n\nThe Quarto guide has a great section on cross-references. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
   },
   {
     "objectID": "index.html#books-in-quarto-1",
@@ -194,6 +194,13 @@
     "title": "Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
     "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+  },
+  {
+    "objectID": "index.html#hacks",
+    "href": "index.html#hacks",
+    "title": "Quarto with Python",
+    "section": "Hacks",
+    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nTo ensure I always have the latest version, I created a quick script that downloads and installs Quarto.\nMermaid diagrams were not rendering in PowerPoints. I submitted a bug and it was quickly fixed.\nMermaid diagrams require refreshing RevealJS pages twice, at least in Edge. I didn’t yet submit a bug about this.\nWhen creating a HTML website and a HTML RevealJS presentation from the same source, only one keeps the images.\n\nWorkaround: force both to be self-contained, by adding self-contained: true to the YAML front-matter\n\nPandoc doesn’t have a way to control the monospaced font size for PowerPoint. I wrote a script to do that.\nThe decorations on this slide (background color, background image) only appear on RevealJS, no workaround.\nThe slide with the two article figures renders weird in HTML but perfectly in PPTX. No workaround."
   },
   {
     "objectID": "index.html#next-steps",
@@ -361,7 +368,7 @@
     "href": "presentation.html#cross-references",
     "title": "Using Quarto with Python",
     "section": "Cross references",
-    "text": "Cross references\n\n\nThe [Quarto guide] has a great section on [cross-references]. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
+    "text": "Cross references\n\n\nThe Quarto guide has a great section on cross-references. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
   },
   {
     "objectID": "presentation.html#books-in-quarto-1",
@@ -390,6 +397,13 @@
     "title": "Using Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
     "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+  },
+  {
+    "objectID": "presentation.html#hacks",
+    "href": "presentation.html#hacks",
+    "title": "Using Quarto with Python",
+    "section": "Hacks",
+    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nTo ensure I always have the latest version, I created a quick script that downloads and installs Quarto.\nMermaid diagrams were not rendering in PowerPoints. I submitted a bug and it was quickly fixed.\nMermaid diagrams require refreshing RevealJS pages twice, at least in Edge. I didn’t yet submit a bug about this.\nWhen creating a HTML website and a HTML RevealJS presentation from the same source, only one keeps the images.\n\nWorkaround: force both to be self-contained, by adding self-contained: true to the YAML front-matter\n\nPandoc doesn’t have a way to control the monospaced font size for PowerPoint. I wrote a script to do that.\nThe decorations on this slide (background color, background image) only appear on RevealJS, no workaround.\nThe slide with the two article figures renders weird in HTML but perfectly in PPTX. No workaround."
   },
   {
     "objectID": "presentation.html#next-steps",

@@ -68,6 +68,6 @@
 
 # Where to go next
 
-{{< include slides/_hacks.qmd >>}}
+{{< include slides/_hacks.qmd >}}
 
 {{< include slides/_next-steps.qmd >}}
