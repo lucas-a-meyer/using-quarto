@@ -88,7 +88,7 @@
     "href": "index.html#basic-slide-syntax",
     "title": "Using Quarto",
     "section": "Basic slide syntax",
-    "text": "Basic slide syntax\n\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\n\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc.\n\n\n\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\nQuarto will render your content in slide form.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc."
+    "text": "Basic slide syntax\n\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\n\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc.\n\n\n\n\n## Basic slide syntax\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc."
   },
   {
     "objectID": "index.html#creating-powerpoint-slides",
@@ -312,7 +312,7 @@
     "href": "presentation.html#basic-slide-syntax",
     "title": "Using Quarto with Python",
     "section": "Basic slide syntax",
-    "text": "Basic slide syntax\n\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc.\n\n\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\nQuarto will render your content in slide form.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc."
+    "text": "Basic slide syntax\n\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc.\n\n\n\n## Basic slide syntax\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc."
   },
   {
     "objectID": "presentation.html#creating-powerpoint-slides",

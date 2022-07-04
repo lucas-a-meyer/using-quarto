@@ -20,11 +20,11 @@ with `-`.
 ::: {.column}
 
 ```markdown
+## Basic slide syntax
+
 To create slides, you create sections 
 with `#`, titles with `##`, and bullets 
 with `-`.
-
-Quarto will render your content in slide form.
 
 ### Content types
 
