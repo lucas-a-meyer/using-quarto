@@ -53,7 +53,7 @@ res = mod.fit()
 reg_table = pd.read_html(res.summary().
   tables[1].as_html(), header=0)[0]
 reg_table = reg_table[["coef", 'std err', 't', 'P>|t|']]
-display(Markdown(reg_table.to_markdown()))
+display(Markdown(reg_table.to_markdown(index=False)))
 ```
 :::
 ::::
