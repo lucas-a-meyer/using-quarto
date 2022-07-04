@@ -8,12 +8,12 @@ Donald E. Knuth proposed literate programming in a 1984 [article](http://www.lit
 
 One of my proudest tech moments was to make `CWeave` and `CWeb` (and `LaTeX`) run in a Windows computer circa 1998.
 
-Jupyter implements the literate programming paradigm, but I haven't seen the Markdown part gain a lot of traction.
+Jupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.
 
 :::
 
 ::: {.column}
-![Donald Knuth's Literate Programming](images/literate-programming.jpg){width=70%}
+![Donald Knuth's Literate Programming book](images/literate-programming.jpg){width=70%}
 :::
 
 ::::

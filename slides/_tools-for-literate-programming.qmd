@@ -5,9 +5,9 @@
 
 ### LaTeX
 
-- Great for PDFs... Ok, Beamer!
-- Website generation is not great
-- Dynamic content requires Latex programming
+- Great for PDFs... Beamer for slides
+- Not great for websites
+- Dynamic content: coding Latex
     - `\usepackage{ifthen}`
     - `@for`, `@while`
 
@@ -19,20 +19,20 @@
 :::
 ::: {.column}
 
-### Jekyll
+### Jekyll / Github Pages
 
 - Great for sites
-- Not great for PPT, papers
-
-### RMarkdown
-
-- Great PDFs
-- Mostly good presentations
-- Hugo and `blogdown` work well
-- Heavily dependent on R `R` 
+- Not great for slides, papers
 
 ### Python notebooks
 
 - Great, with Pandoc
+
+### RMarkdown
+
+- Great for everything
+- Heavily dependent on R
+- New features in Quarto
+
 :::
 ::::

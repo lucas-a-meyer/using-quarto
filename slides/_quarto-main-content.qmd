@@ -3,15 +3,15 @@
 :::: {.columns}
 
 ::: {.column}
-### Writing the main content
+### Writing content
 
-Most writing in Quarto is done in [Markdown](https://quarto.org/docs/authoring/markdown-basics.html).
+Write content in [Markdown](https://quarto.org/docs/authoring/markdown-basics.html).
 
-Quarto's Markdown supports everything I'm
-used to: figures, tables, bibliography, etc.
+Quarto's Markdown supports everything
+figures, tables, bibliography, etc.
 
 It also supports lots of extra features, like
-diagrams with `mermaid` and `GraphViz` and
+diagrams with `mermaid` and `GraphViz`, and
 even LaTeX equations: 
 
 $$
@@ -21,16 +21,16 @@ $$
 
 ::: {.column}
 ```markdown
-### Writing the main content
+### Writing content
 
-Most writing in Quarto is done in [Markdown].
+Write content in [Markdown].
 
 Quarto's Markdown supports everything I'm
 used to: figures, tables, bibliography, etc.
 
-It also supports lots of extra features, like
-diagrams with `mermaid` and `GraphViz` and
-even LaTeX equations: 
+It also supports lots of extra features, 
+like diagrams with `mermaid` and 
+`GraphViz`, and even LaTeX equations: 
 
 $$
 E = mc^2

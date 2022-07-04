@@ -2,7 +2,7 @@
 
 :::: {.columns}
 ::: {.column}
-Whether you use Quarto from `.qmd`, `.ipynb`, or `.Rmd` files, you always start with a YAML front-matter file. 
+Quarto files always start with a YAML front-matter. 
 
 The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. 
 
@@ -13,13 +13,13 @@ For example, the YAML on the right will generate a PowerPoint file and a Revealj
 ::: {.column}
 ```yaml
 ---
-title: "Using Quarto for everything"
+title: "Quarto with Python"
 format: 
-    pptx:
-        reference-doc: templates/template.pptx
-    revealjs:
-        incremental: false
-        theme: pulse
+  pptx:
+    reference-doc: templates/template.pptx
+  revealjs:
+    incremental: false
+    theme: pulse
 
 author: Lucas A. Meyer
 date: 2022-07-07
