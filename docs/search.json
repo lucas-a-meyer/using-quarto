@@ -28,6 +28,13 @@
     "text": "I tried many tools for Literate Programming\n\n\n\nLaTeX\n\nGreat for PDFs… Ok, Beamer!\nWebsite generation is not great\nDynamic content requires Latex programming\n\n\\usepackage{ifthen}\n@for, @while\n\n\n\n\nWord/PPT\n\nHard to collaborate before O365\nHard to reproduce / auto-generate\n\n\n\n\nJekyll\n\nGreat for sites\nNot great for PPT, papers\n\n\n\nRMarkdown\n\nGreat PDFs\nMostly good presentations\nHugo and blogdown work well\nHeavily dependent on R R\n\n\n\nPython notebooks\n\nGreat, with Pandoc"
   },
   {
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Using Quarto",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare’s plays.\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
+  },
+  {
     "objectID": "index.html#the-content-pipeline-for-.ipynb",
     "href": "index.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto",
@@ -61,6 +68,20 @@
     "title": "Using Quarto",
     "section": "What if I want to add code?",
     "text": "What if I want to add code?\n\n\nThe best thing about Quarto is that you can use it to run any code that you would be able to run in a Python notebook.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw=\\\n                {'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "index.html#diagrams",
+    "href": "index.html#diagrams",
+    "title": "Using Quarto",
+    "section": "Diagrams",
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+  },
+  {
+    "objectID": "index.html#regression-and-results",
+    "href": "index.html#regression-and-results",
+    "title": "Using Quarto",
+    "section": "Regression and results",
+    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_markdown())))\n\n\n\n     coef  std err       t  P>|t|\n0 -0.9049    0.685  -1.321  0.187\n1  0.5414    0.053  10.167  0.000"
   },
   {
     "objectID": "index.html#basic-slide-syntax",
@@ -147,226 +168,289 @@
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
+    "objectID": "index.html#what-i-could-get-by-just-changing-the-format-in-yaml",
+    "href": "index.html#what-i-could-get-by-just-changing-the-format-in-yaml",
+    "title": "Using Quarto",
+    "section": "What I could get by just changing the format in YAML",
+    "text": "What I could get by just changing the format in YAML\n---\ntitle: \"Using Quarto for everything\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
+  },
+  {
+    "objectID": "index.html#screenshot-of-website",
+    "href": "index.html#screenshot-of-website",
+    "title": "Using Quarto",
+    "section": "Screenshot of website",
+    "text": "Screenshot of website"
+  },
+  {
+    "objectID": "index.html#writing-a-scholarly-article",
+    "href": "index.html#writing-a-scholarly-article",
+    "title": "Using Quarto",
+    "section": "Writing a scholarly article",
+    "text": "Writing a scholarly article\nI reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don’t contain original research.\nThe relevant files are:\n\nQuarto source file\nMicrosoft Word output\nLaTeX PDF output `"
+  },
+  {
+    "objectID": "index.html#scholarly-article-screenshots",
+    "href": "index.html#scholarly-article-screenshots",
+    "title": "Using Quarto",
+    "section": "Scholarly article screenshots",
+    "text": "Scholarly article screenshots\n\n\n\n\n\nPDF version of the article\n\n\n\n\n\n\nMicrosoft Word version of the article"
+  },
+  {
+    "objectID": "index.html#citations-and-footnotes",
+    "href": "index.html#citations-and-footnotes",
+    "title": "Using Quarto",
+    "section": "Citations and Footnotes",
+    "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to documents.\nYou need a BibTex file, e.g., bibliography.bib, and a reference to it bibliography: references.bib to the YAML front-matter. Quarto supports any Citation Style Language.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content2."
+  },
+  {
+    "objectID": "index.html#books-in-quarto-1",
+    "href": "index.html#books-in-quarto-1",
+    "title": "Using Quarto",
+    "section": "Books in Quarto",
+    "text": "Books in Quarto\nYou can also write books with quarto. From the same collection of .qmd files, Quarto can generate:\n\nePub\nPDF\nOnline book\n\nTwo recent examples are:\n\nHands-on Programming in R, by Garrett Grolemund source\nPython for Data Analysis, 3E, by Wes McKinney source"
+  },
+  {
+    "objectID": "index.html#hands-on-programming-in-r",
+    "href": "index.html#hands-on-programming-in-r",
+    "title": "Using Quarto",
+    "section": "Hands-on Programming in R",
+    "text": "Hands-on Programming in R"
+  },
+  {
+    "objectID": "index.html#python-for-data-analysis-3e",
+    "href": "index.html#python-for-data-analysis-3e",
+    "title": "Using Quarto",
+    "section": "Python for Data Analysis, 3E",
+    "text": "Python for Data Analysis, 3E"
+  },
+  {
+    "objectID": "index.html#where-i-think-quarto-is-good-july-2022",
+    "href": "index.html#where-i-think-quarto-is-good-july-2022",
+    "title": "Using Quarto",
+    "section": "Where I think Quarto is good (July 2022)",
+    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\n\n\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+  },
+  {
     "objectID": "presentation.html#the-content-value-chain",
     "href": "presentation.html#the-content-value-chain",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "The content value chain",
     "text": "The content value chain\n\n\nContent stuck in my computer is nearly worthless.\nGoal\n\nMove good content out of my computer as fast as possible\nReproducible\nGit-based collaboration\nWrite once, generate:\n\nCode\nPaper\nPowerPoint\nSite/documentation\n\n\n\n\n\n\nThe content value chain from David Robinson’s (@drrob) Tweet"
   },
   {
     "objectID": "presentation.html#literate-programming",
     "href": "presentation.html#literate-programming",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Literate Programming",
     "text": "Literate Programming\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter implements the literate programming paradigm, but I haven’t seen the Markdown part gain a lot of traction.\n\n\n\n\nDonald Knuth’s Literate Programming"
   },
   {
     "objectID": "presentation.html#i-tried-many-tools-for-literate-programming",
     "href": "presentation.html#i-tried-many-tools-for-literate-programming",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "I tried many tools for Literate Programming",
     "text": "I tried many tools for Literate Programming\n\n\nLaTeX\n\nGreat for PDFs… Ok, Beamer!\nWebsite generation is not great\nDynamic content requires Latex programming\n\n\\usepackage{ifthen}\n@for, @while\n\n\nWord/PPT\n\nHard to collaborate before O365\nHard to reproduce / auto-generate\n\n\nJekyll\n\nGreat for sites\nNot great for PPT, papers\n\nRMarkdown\n\nGreat PDFs\nMostly good presentations\nHugo and blogdown work well\nHeavily dependent on R R\n\nPython notebooks\n\nGreat, with Pandoc"
   },
   {
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Quarto",
     "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare’s plays.\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
   },
   {
     "objectID": "presentation.html#the-content-pipeline-for-.ipynb",
     "href": "presentation.html#the-content-pipeline-for-.ipynb",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "The content pipeline for .ipynb",
     "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use pandoc to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
     "objectID": "presentation.html#quarto-in-python-in-a-nutshell",
     "href": "presentation.html#quarto-in-python-in-a-nutshell",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Quarto in Python, in a nutshell",
     "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file1. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]\n\n\n\n\n\n\n\n\nyou can also add the YAML as raw content in the first cell of an .ipynb file"
   },
   {
     "objectID": "presentation.html#the-yaml-front-matter",
     "href": "presentation.html#the-yaml-front-matter",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "The YAML front-matter",
     "text": "The YAML front-matter\n\n\nWhether you use Quarto from .qmd, .ipynb, or .Rmd files, you always start with a YAML front-matter file.\nThe YAML configuration determines what’s the output format of your document. A few popular output options are html, pptx, docx, and pdf.\nYou can use a single source file to generate multiple output types.\nFor example, the YAML on the right will generate a PowerPoint file and a Revealjs presentation.\n\n---\ntitle: \"Using Quarto for everything\"\nformat: \n    pptx:\n        reference-doc: templates/template.pptx\n    revealjs:\n        incremental: false\n        theme: pulse\n\nauthor: Lucas A. Meyer\ndate: 2022-07-07\n---"
   },
   {
     "objectID": "presentation.html#main-content",
     "href": "presentation.html#main-content",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Main content",
     "text": "Main content\n\n\nWriting the main content\nMost writing in Quarto is done in Markdown.\nQuarto’s Markdown supports everything I’m used to: figures, tables, bibliography, etc.\nIt also supports lots of extra features, like diagrams with mermaid and GraphViz and even LaTeX equations:\n\\[\nE = mc^2\n\\]\n\n### Writing the main content\n\nMost writing in Quarto is done in [Markdown].\n\nQuarto's Markdown supports everything I'm\nused to: figures, tables, bibliography, etc.\n\nIt also supports lots of extra features, like\ndiagrams with `mermaid` and `GraphViz` and\neven LaTeX equations: \n\n$$\nE = mc^2\n$$"
   },
   {
     "objectID": "presentation.html#what-if-i-want-to-add-code",
     "href": "presentation.html#what-if-i-want-to-add-code",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "What if I want to add code?",
     "text": "What if I want to add code?\n\n\nThe best thing about Quarto is that you can use it to run any code that you would be able to run in a Python notebook.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw=\\\n                {'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
   },
   {
     "objectID": "presentation.html#diagrams",
     "href": "presentation.html#diagrams",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Diagrams",
     "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart LR\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "presentation.html#regression-and-results",
     "href": "presentation.html#regression-and-results",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_markdown())))\n\n\n\n\n\ncoef\nstd err\nt\nP>\nt\n\n\n\nIntercept\n-0.9049\n0.685\n-1.321\n0.187\n-2.250\n0.441\n\n\neduc\n0.5414\n0.053\n10.167\n0.000\n0.437\n0.646"
+    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_markdown())))\n\n\n\n     coef  std err       t  P>|t|\n0 -0.9049    0.685  -1.321  0.187\n1  0.5414    0.053  10.167  0.000"
   },
   {
     "objectID": "presentation.html#basic-slide-syntax",
     "href": "presentation.html#basic-slide-syntax",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Basic slide syntax",
     "text": "Basic slide syntax\n\n\nTo create slides, you create sections with #, titles with ##, and bullets with -.\nContent types\n\nYou can add several types of content\n\ncode (use backticks)\nimages\ndiagrams\ntables\netc.\n\n\n\nTo create slides, you create sections \nwith `#`, titles with `##`, and bullets \nwith `-`.\n\nQuarto will render your content in slide form.\n\n### Content types\n\n- You can add several types of content\n    - code (use backticks)\n    - images\n    - diagrams\n    - tables\n    - etc."
   },
   {
     "objectID": "presentation.html#creating-powerpoint-slides",
     "href": "presentation.html#creating-powerpoint-slides",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Creating PowerPoint slides",
     "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nThe part I liked the least is that Quarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\nThe “pandoc rules” substantially limit the flexibility you would have in PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nQuarto can use a template with (only) these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
   },
   {
     "objectID": "presentation.html#powerpoint-layout-rules",
     "href": "presentation.html#powerpoint-layout-rules",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "PowerPoint layout rules",
     "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level markdown headings (for example, #)\nTwo Content: used when .md source contains .columns div (:::: {.columns}) and text content\nComparison: same as “Two Content”, but content of divs is not text\nBlank: used for slides that have no displayable content (e.g. notes)\nContent with Caption: used when content doesn’t have a columns div but has text and non-text content\nTitle and Content: whatever doesn’t fit the rules above."
   },
   {
     "objectID": "presentation.html#powerpoint-templates",
     "href": "presentation.html#powerpoint-templates",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "PowerPoint templates",
     "text": "PowerPoint templates\nBy adding a reference-doc entry to your YAML, you can tell Quarto (and pandoc) to use a file as a template for the format of your presentation.\nThe “Slide Master” needs to contain layouts named as per the previous slide (e.g. “Comparison”).\nThis allows you a lot of flexibility in the design of your slide deck, even if it is for just the small number of layouts that were listed in the previous slide.\nYou can control fonts, add background images, page numbering, etc.\n---\ntitle: \"Using Quarto for everything\"\nformat: pptx\nreference-doc: templates/template.pptx\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---"
   },
   {
     "objectID": "presentation.html#best-feature-generate-content-dynamically",
     "href": "presentation.html#best-feature-generate-content-dynamically",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Best feature: generate content dynamically",
     "text": "Best feature: generate content dynamically\nLet’s say you’re presenting a project about population dynamics but you don’t know which world leaders are coming to the conference.\nOn the presentation day, you learn that Belgium, China, Brazil, India, Japan and Nigeria are attending.\nYou can use Python or R to automatically generate slides."
   },
   {
     "objectID": "presentation.html#generating-slides-with-python",
     "href": "presentation.html#generating-slides-with-python",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Generating slides with Python",
     "text": "Generating slides with Python\nThe next slides/sections were generated using the code below:\ndf_dr = pd.read_csv(\"data/dr.csv.gz\", compression=\"gzip\")\ndf_pop = pd.read_csv(\"data/pop_brackets.csv.gz\", compression=\"gzip\")\n\nyears = [2000, 2025, 2050, 2075, 2100]\nregions = [\"Belgium\", \"China\", \"Brazil\", \"India\", \"Japan\", \"Nigeria\"]\n\nfor name in regions:\n    display(Markdown(f\"## Age and Population Pyramids for {name}\"))\n    display(Markdown(f'<div class=\"columns\">'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_dependency_ratio(df_dr[df_dr.Location == name])\n    display(Markdown(f'</div>'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_population_pyramid_series(df_pop[df_pop[\"Location\"]==name], years)\n    display(Markdown(f'</div>'))\n    display(Markdown(f'</div>'))"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-belgium",
     "href": "presentation.html#age-and-population-pyramids-for-belgium",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for Belgium",
     "text": "Age and Population Pyramids for Belgium"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-china",
     "href": "presentation.html#age-and-population-pyramids-for-china",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for China",
     "text": "Age and Population Pyramids for China"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-brazil",
     "href": "presentation.html#age-and-population-pyramids-for-brazil",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for Brazil",
     "text": "Age and Population Pyramids for Brazil"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-india",
     "href": "presentation.html#age-and-population-pyramids-for-india",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for India",
     "text": "Age and Population Pyramids for India"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-japan",
     "href": "presentation.html#age-and-population-pyramids-for-japan",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for Japan",
     "text": "Age and Population Pyramids for Japan"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-nigeria",
     "href": "presentation.html#age-and-population-pyramids-for-nigeria",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Age and Population Pyramids for Nigeria",
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
     "objectID": "presentation.html#what-i-could-get-by-just-changing-the-format-in-yaml",
     "href": "presentation.html#what-i-could-get-by-just-changing-the-format-in-yaml",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "What I could get by just changing the format in YAML",
     "text": "What I could get by just changing the format in YAML\n---\ntitle: \"Using Quarto for everything\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
   },
   {
     "objectID": "presentation.html#screenshot-of-website",
     "href": "presentation.html#screenshot-of-website",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Screenshot of website",
     "text": "Screenshot of website"
   },
   {
     "objectID": "presentation.html#writing-a-scholarly-article",
     "href": "presentation.html#writing-a-scholarly-article",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Writing a scholarly article",
     "text": "Writing a scholarly article\nI reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don’t contain original research.\nThe relevant files are:\n\nQuarto source file\nMicrosoft Word output\nLaTeX PDF output `"
   },
   {
     "objectID": "presentation.html#scholarly-article-screenshots",
     "href": "presentation.html#scholarly-article-screenshots",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Scholarly article screenshots",
     "text": "Scholarly article screenshots\n\n\n\n\n\nPDF version of the article\n\n\n\n\n\n\nMicrosoft Word version of the article"
   },
   {
     "objectID": "presentation.html#citations-and-footnotes",
     "href": "presentation.html#citations-and-footnotes",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Citations and Footnotes",
     "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to documents.\nYou need a BibTex file, e.g., bibliography.bib, and a reference to it bibliography: references.bib to the YAML front-matter. Quarto supports any Citation Style Language.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1.\nYou can use footnotes in presentations and websites, too"
   },
   {
     "objectID": "presentation.html#books-in-quarto-1",
     "href": "presentation.html#books-in-quarto-1",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Books in Quarto",
     "text": "Books in Quarto\nYou can also write books with quarto. From the same collection of .qmd files, Quarto can generate:\n\nePub\nPDF\nOnline book\n\nTwo recent examples are:\n\nHands-on Programming in R, by Garrett Grolemund source\nPython for Data Analysis, 3E, by Wes McKinney source"
   },
   {
     "objectID": "presentation.html#hands-on-programming-in-r",
     "href": "presentation.html#hands-on-programming-in-r",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Hands-on Programming in R",
     "text": "Hands-on Programming in R"
   },
   {
     "objectID": "presentation.html#python-for-data-analysis-3e",
     "href": "presentation.html#python-for-data-analysis-3e",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Python for Data Analysis, 3E",
     "text": "Python for Data Analysis, 3E"
   },
   {
     "objectID": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
-    "title": "Using Quarto for everything",
+    "title": "Using Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
     "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   }

@@ -6,7 +6,6 @@ date: 2022-07-07
 self-contained: true
 ---
 
-
 ```{python}
 #| echo: false
 from IPython.display import display, Markdown
@@ -27,42 +26,4 @@ The presentation shows how I used the same content files to generate:
 - A scholarly-looking [article](/article.pdf) in PDF using LaTeX
 - A scholarly-looking [document](/article.docx) using Microsoft Word
 
-# Why Quarto
-
-{{< include slides/_content-value-chain.qmd >}}
-
-{{< include slides/_literate-programming.qmd >}}
-
-{{< include slides/_tools-for-literate-programming.qmd >}}
-
-<!--
-{{< include slides/_population-project-challenges.qmd >}}
--->
-
-# What Quarto really is
-
-{{< include slides/_ipynb-pipeline.qmd >}}
-
-{{< include slides/_quarto-ipynb-pandoc.qmd >}}
-
-# Quarto basics
-
-{{< include slides/_yaml-front-matter.qmd >}}
-
-{{< include slides/_quarto-main-content.qmd >}}
-
-{{< include slides/_code-content.qmd >}}
-
-# Presentations in Quarto
-
-{{< include slides/_basic-slide-syntax.qmd >}}
-
-{{< include slides/_powerpoint-slides.qmd >}}
-
-{{< include slides/_powerpoint-layout-rules.qmd >}}
-
-{{< include slides/_powerpoint-templates.qmd >}}
-
-# Dynamic content
-
-{{< include slides/_generating-content-dynamically.qmd >}}
+{{< include _presentation-content.qmd >}}

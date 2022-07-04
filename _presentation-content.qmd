@@ -1,0 +1,65 @@
+# Why Quarto
+
+{{< include slides/_content-value-chain.qmd >}}
+
+{{< include slides/_literate-programming.qmd >}}
+
+{{< include slides/_tools-for-literate-programming.qmd >}}
+
+{{< include slides/_intro_quarto.qmd >}}
+
+<!--
+{{< include slides/_population-project-challenges.qmd >}}
+-->
+
+# Quarto workflow
+
+{{< include slides/_ipynb-pipeline.qmd >}}
+
+{{< include slides/_quarto-ipynb-pandoc.qmd >}}
+
+# Using Quarto
+
+{{< include slides/_yaml-front-matter.qmd >}}
+
+{{< include slides/_quarto-main-content.qmd >}}
+
+{{< include slides/_code-content.qmd >}}
+
+{{< include slides/_diagrams.qmd >}}
+
+{{< include slides/_tables.qmd >}}
+
+# Presentations in Quarto
+
+{{< include slides/_basic-slide-syntax.qmd >}}
+
+{{< include slides/_powerpoint-slides.qmd >}}
+
+{{< include slides/_powerpoint-layout-rules.qmd >}}
+
+{{< include slides/_powerpoint-templates.qmd >}}
+
+{{< include slides/_generating-content-dynamically.qmd >}}
+
+# Generating a website
+
+{{< include slides/_changing-format-to-website.qmd >}}
+
+{{< include slides/_presentation-screenshot.qmd >}}
+
+# Scholarly articles
+
+{{< include slides/_writing-articles.qmd >}}
+
+{{< include slides/_articles-screenshots.qmd >}}
+
+{{< include slides/_citations-footnotes.qmd >}}
+
+# Books in Quarto
+
+{{< include slides/_books.qmd >}}
+
+# Should I use Quarto?
+
+{{< include slides/_should-i-use-quarto.qmd >}}

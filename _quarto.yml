@@ -4,7 +4,7 @@ project:
   post-render: ./post-render.sh
 
 website:
-  title: "Using Quarto"
+  title: "Quarto with Python"
   google-analytics: "G-6KTZ853BN5"
   navbar:
     left:
