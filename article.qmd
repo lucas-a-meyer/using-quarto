@@ -29,8 +29,14 @@ You can see how I have done this in <https://www.meyerperin.com/using-quarto>.
 
 Over the last few decades, the number of children per woman has been declining and overall longevity has been increasing.
 
+This has been markedly the case in Asia. Although Japan is frequently remembered as a country with low fertility rates, several other countries now have a fertility rate at or below Japan's levels, even China, as shown in @fig-fertility.
+
+![Fertility rates in Asia](images/asia-fertility.png){#fig-fertility}
+
 The outcome of these changes is that over the next few decades, the proportion of children and working adults will go down in many countries,
-and the proportion of older adults will increase.
+and the proportion of older adults will increase. This is detailed in @sec-dependency-ratio and the projected status for several countries is shown in @sec-world-tour.
+
+## Dependency ratio {#sec-dependency-ratio}
 
 Demographers use a metric called **Dependency Ratio** to evaluate how many non-working people are supported by 100 working people.
 
@@ -40,35 +46,19 @@ $$
 \text{Dependency Ratio} = 100 \times \frac{\text{Non-working population}}{\text{Working population}}
 $$
 
+# World tour {#sec-world-tour}
+
 In the figures below, I further decompose the dependency ratio into Young (0-20 years-old), Old (65-79 years-old) and Very Old (80+ years-old). 
-Note that Young, Old and Very Old are terms used by demographers. I don't mean any personal judgment when using this classification. One of my favorite writers,
-Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond97] and _Collapse_ [@diamond11], is currently 84-years old and I hope to have his 
+Note that Young, Old and Very Old are terms used by demographers. 
+
+I don't mean any personal judgment when using this classification of "young", "old" and "very old". One of my favorite writers,
+Jared Diamond, who wrote _Guns, Germs and Steel_ [@diamond97] and _Collapse_ @diamond11, is currently 84-years old and I hope to have his 
 disposition at that age.
 
 {{< include _graph_functions.qmd >}}
 
-```{python}
-#| echo: false
-#| output: asis
+{{< include _dynamic-content.qmd >}}
 
-df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")
-df_pop = pd.read_csv("data/pop_brackets.csv.gz", compression="gzip")
-
-years = [2000, 2025, 2050, 2075, 2100]
-regions = ["Belgium", "China", "Brazil", "India", "Japan", "Nigeria"]
-
-for name in regions:
-    display(Markdown(f"## Age and Population Pyramids for {name}"))
-    display(Markdown(f'<div class="columns">'))
-    display(Markdown(f'<div class="column">'))
-    plot_dependency_ratio(df_dr[df_dr.Location == name])
-    display(Markdown(f'</div>'))
-    display(Markdown(f'<div class="column">'))
-    plot_population_pyramid_series(df_pop[df_pop["Location"]==name], years)
-    display(Markdown(f'</div>'))
-    display(Markdown(f'</div>'))
-
-```
 {{< pagebreak >}}
 
 # References

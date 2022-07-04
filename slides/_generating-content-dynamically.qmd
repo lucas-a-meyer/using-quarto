@@ -30,25 +30,4 @@ for name in regions:
     display(Markdown(f'</div>'))
 ```
 
-```{python}
-#| echo: false
-#| output: asis
-
-df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")
-df_pop = pd.read_csv("data/pop_brackets.csv.gz", compression="gzip")
-
-years = [2000, 2025, 2050, 2075, 2100]
-regions = ["Belgium", "China", "Brazil", "India", "Japan", "Nigeria"]
-
-for name in regions:
-    display(Markdown(f"## Age and Population Pyramids for {name}"))
-    display(Markdown(f'<div class="columns">'))
-    display(Markdown(f'<div class="column">'))
-    plot_dependency_ratio(df_dr[df_dr.Location == name])
-    display(Markdown(f'</div>'))
-    display(Markdown(f'<div class="column">'))
-    plot_population_pyramid_series(df_pop[df_pop["Location"]==name], years)
-    display(Markdown(f'</div>'))
-    display(Markdown(f'</div>'))
-
-```
+{{< include _dynamic-content.qmd >>}}
