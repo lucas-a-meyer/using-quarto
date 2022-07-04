@@ -63,3 +63,7 @@
 # Should I use Quarto?
 
 {{< include slides/_should-i-use-quarto.qmd >}}
+
+# Next steps
+
+{{< include slides/_next-steps.qmd >>}}

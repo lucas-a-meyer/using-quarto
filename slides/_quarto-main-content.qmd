@@ -7,7 +7,7 @@
 
 Write content in [Markdown](https://quarto.org/docs/authoring/markdown-basics.html).
 
-Quarto's Markdown supports everything
+Quarto's Markdown supports
 figures, tables, bibliography, etc.
 
 It also supports lots of extra features, like
@@ -25,8 +25,8 @@ $$
 
 Write content in [Markdown].
 
-Quarto's Markdown supports everything I'm
-used to: figures, tables, bibliography, etc.
+Quarto's Markdown supports
+figures, tables, bibliography, etc.       
 
 It also supports lots of extra features, 
 like diagrams with `mermaid` and 

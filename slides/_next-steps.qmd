@@ -1,0 +1,39 @@
+## Next Steps
+
+:::: {.columns}
+::: {.column}
+- The Quarto website has great tutorials:
+    - [Jupyter](https://quarto.org/docs/get-started/hello/jupyter.html)
+    - [VSCode](https://quarto.org/docs/get-started/hello/vscode.html)
+
+- If you have multiple input files (e.g., [blog](https://www.meyerperin.com) or book), you can create a [project](https://quarto.org/docs/projects/quarto-projects.html).
+
+- Projects can have pre- and post-render steps
+:::
+::: {.column}
+graph TD
+    P[Pre-scripts] --> Q
+    style P fill:#AA99FF
+    Q[.qmd] --> A
+    subgraph Quarto
+        A[.ipynb] --> B(("Pandoc"))
+        B --> C[.md]
+        B --> D[.tex] 
+        D --> F((Xetex))
+        C --> I((Hugo))
+        style B fill:#FF6655AA
+        style F fill:#88ffFF
+        style I fill:#88ffFF
+    end
+        B ----> E[.doc]
+        B ----> H[.pptx]
+        F --> G[.pdf]
+        I --> J[.html]
+    E --> X[Post-scripts]
+    H --> X
+    G --> X
+    J --> X
+    style X fill:#AA99FF
+```
+:::
+::::

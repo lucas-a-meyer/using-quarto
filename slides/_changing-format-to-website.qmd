@@ -2,7 +2,7 @@
 
 ```{.yaml code-line-numbers="3"}
 ---
-title: "Using Quarto for everything"
+title: "Quarto with Python"
 format: html
     # revealjs:
     #     incremental: false
