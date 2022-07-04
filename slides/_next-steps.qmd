@@ -1,7 +1,7 @@
 ## Next Steps
 
 :::: {.columns}
-::: {.column}
+::: {.column width="25%"}
 - The Quarto website has great tutorials:
     - [Jupyter](https://quarto.org/docs/get-started/hello/jupyter.html)
     - [VSCode](https://quarto.org/docs/get-started/hello/vscode.html)
