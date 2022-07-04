@@ -1,7 +1,7 @@
 ## Next Steps
 
 :::: {.columns}
-::: {.column width="25%"}
+::: {.column width="30%"}
 - The Quarto website has great tutorials:
     - [Jupyter](https://quarto.org/docs/get-started/hello/jupyter.html)
     - [VSCode](https://quarto.org/docs/get-started/hello/vscode.html)
@@ -10,9 +10,12 @@
 
 - Projects can have pre- and post-render steps
 :::
-::: {.column width="75%"}
+::: {.column width="70%"}
+
 ```{mermaid}
-graph TD
+
+graph td
+
     P[Pre-scripts] --> Q
     style P fill:#AA99FF
     Q[.qmd] --> A
@@ -36,5 +39,6 @@ graph TD
     J --> X
     style X fill:#AA99FF
 ```
+
 :::
 ::::
