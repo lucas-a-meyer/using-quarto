@@ -12,28 +12,19 @@ You can use Python or R to automatically generate slides.
 The next slides/sections were generated using the code below:
 
 ```python
-# Read data
+
 df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")
 df_pop = pd.read_csv("data/pop_brackets.csv.gz", compression="gzip")
-
-# Configure parameters
 years = [2000, 2025, 2050, 2075, 2100]
 regions = ["Belgium", "China", "Brazil", "India", "Japan", "Nigeria"]
 
-# graph functions were importe earlier with {{< import _graph.qmd >}}
-
 for name in regions:
-    # generate slide header
     display(Markdown(f"## Age and Population Pyramids for {name}"))
-    
-    # generate columns
     display(Markdown(f'<div class="columns">'))
     display(Markdown(f'<div class="column">'))
-    # column 1 contains a dependency ratio plot
     plot_dependency_ratio(df_dr[df_dr.Location == name])
     display(Markdown(f'</div>'))
     display(Markdown(f'<div class="column">'))
-    # column 2 contains a population pyramid
     plot_population_pyramid_series(df_pop[df_pop["Location"]==name], years)
     display(Markdown(f'</div>'))
     display(Markdown(f'</div>'))

@@ -1,9 +1,7 @@
 
 ## Quarto in Python, in a nutshell
 
-All you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a `.qmd` file. `ipynb` + YAML = `.qmd`. This keeps the configuration and content in the same file.
-
-You can then render the outputs using `quarto render <file.qmd>` in the command line.
+All you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a `.qmd` file. `ipynb` + YAML = `.qmd`. This keeps the configuration and content in the same file. You can then render the outputs using `quarto render <file.qmd>` in the command line.
 
 
 ```{mermaid}

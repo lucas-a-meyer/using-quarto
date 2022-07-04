@@ -11,6 +11,7 @@
 - Projects can have pre- and post-render steps
 :::
 ::: {.column}
+```{mermaid}
 graph TD
     P[Pre-scripts] --> Q
     style P fill:#AA99FF
