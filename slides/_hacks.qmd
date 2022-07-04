@@ -1,4 +1,4 @@
-## Hacks {background-color="black" background-image="images/hacks.png" backgound-position="top right"}
+## Hacks {background-color="black" background-image="images/hacks.png" background-size="150px" backgound-position="right"}
 
 Quarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.
 
