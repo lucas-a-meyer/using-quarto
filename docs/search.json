@@ -95,14 +95,14 @@
     "href": "index.html#creating-powerpoint-slides",
     "title": "Using Quarto",
     "section": "Creating PowerPoint slides",
-    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nThe part I liked the least is that Quarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\nThe “pandoc rules” substantially limit the flexibility you would have in PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nQuarto can use a template with (only) these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
+    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nQuarto will use the pandoc PowerPoint rules to render the content from the .qmd into .pptx.\nThe “pandoc rules” limit the flexibility to create PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nPowerPoint can use a template with only these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
   },
   {
     "objectID": "index.html#powerpoint-layout-rules",
     "href": "index.html#powerpoint-layout-rules",
     "title": "Using Quarto",
     "section": "PowerPoint layout rules",
-    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level markdown headings (for example, #)\nTwo Content: used when .md source contains .columns div (:::: {.columns}) and text content\nComparison: same as “Two Content”, but content of divs is not text\nBlank: used for slides that have no displayable content (e.g. notes)\nContent with Caption: used when content doesn’t have a columns div but has text and non-text content\nTitle and Content: whatever doesn’t fit the rules above."
+    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .md source contains :::: {.columns} and only text content\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
   },
   {
     "objectID": "index.html#powerpoint-templates",
@@ -123,7 +123,7 @@
     "href": "index.html#generating-slides-with-python",
     "title": "Using Quarto",
     "section": "Generating slides with Python",
-    "text": "Generating slides with Python\nThe next slides/sections were generated using the code below:\ndf_dr = pd.read_csv(\"data/dr.csv.gz\", compression=\"gzip\")\ndf_pop = pd.read_csv(\"data/pop_brackets.csv.gz\", compression=\"gzip\")\n\nyears = [2000, 2025, 2050, 2075, 2100]\nregions = [\"Belgium\", \"China\", \"Brazil\", \"India\", \"Japan\", \"Nigeria\"]\n\nfor name in regions:\n    display(Markdown(f\"## Age and Population Pyramids for {name}\"))\n    display(Markdown(f'<div class=\"columns\">'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_dependency_ratio(df_dr[df_dr.Location == name])\n    display(Markdown(f'</div>'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_population_pyramid_series(df_pop[df_pop[\"Location\"]==name], years)\n    display(Markdown(f'</div>'))\n    display(Markdown(f'</div>'))"
+    "text": "Generating slides with Python\nThe next slides/sections were generated using the code below:\n# Read data\ndf_dr = pd.read_csv(\"data/dr.csv.gz\", compression=\"gzip\")\ndf_pop = pd.read_csv(\"data/pop_brackets.csv.gz\", compression=\"gzip\")\n\n# Configure parameters\nyears = [2000, 2025, 2050, 2075, 2100]\nregions = [\"Belgium\", \"China\", \"Brazil\", \"India\", \"Japan\", \"Nigeria\"]\n\n# graph functions were importe earlier with \n\nfor name in regions:\n    # generate slide header\n    display(Markdown(f\"## Age and Population Pyramids for {name}\"))\n    \n    # generate columns\n    display(Markdown(f'<div class=\"columns\">'))\n    display(Markdown(f'<div class=\"column\">'))\n    # column 1 contains a dependency ratio plot\n    plot_dependency_ratio(df_dr[df_dr.Location == name])\n    display(Markdown(f'</div>'))\n    display(Markdown(f'<div class=\"column\">'))\n    # column 2 contains a population pyramid\n    plot_population_pyramid_series(df_pop[df_pop[\"Location\"]==name], years)\n    display(Markdown(f'</div>'))\n    display(Markdown(f'</div>'))"
   },
   {
     "objectID": "index.html#age-and-population-pyramids-for-belgium",
@@ -228,7 +228,7 @@
     "href": "index.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\n\n\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. All you need are a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\n\n\nPresentations: special cases\nFor PowerPoint, render process = long edit cycle. Still useful when you have:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer\n\nQuarto works great for RevealJS."
   },
   {
     "objectID": "presentation.html#the-content-value-chain",
@@ -319,14 +319,14 @@
     "href": "presentation.html#creating-powerpoint-slides",
     "title": "Using Quarto with Python",
     "section": "Creating PowerPoint slides",
-    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nThe part I liked the least is that Quarto will use the pandoc PowerPoint rules to render the content from the .qmd into the .pptx.\nThe “pandoc rules” substantially limit the flexibility you would have in PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nQuarto can use a template with (only) these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
+    "text": "Creating PowerPoint slides\n\n\nTo generate a presentation from a .qmd file, add format: pptx to the YAML front-matter.\nQuarto will use the pandoc PowerPoint rules to render the content from the .qmd into .pptx.\nThe “pandoc rules” limit the flexibility to create PowerPoint presentations. Quarto has better presentation support for revealjs and beamer.\n\n\nPowerPoint can use a template with only these layouts:\n\nTitle Slide\nTitle and Content\nSection Header\nTwo Content\nComparison\nContent with Caption\nBlank"
   },
   {
     "objectID": "presentation.html#powerpoint-layout-rules",
     "href": "presentation.html#powerpoint-layout-rules",
     "title": "Using Quarto with Python",
     "section": "PowerPoint layout rules",
-    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level markdown headings (for example, #)\nTwo Content: used when .md source contains .columns div (:::: {.columns}) and text content\nComparison: same as “Two Content”, but content of divs is not text\nBlank: used for slides that have no displayable content (e.g. notes)\nContent with Caption: used when content doesn’t have a columns div but has text and non-text content\nTitle and Content: whatever doesn’t fit the rules above."
+    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .md source contains :::: {.columns} and only text content\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
   },
   {
     "objectID": "presentation.html#powerpoint-templates",
@@ -347,7 +347,7 @@
     "href": "presentation.html#generating-slides-with-python",
     "title": "Using Quarto with Python",
     "section": "Generating slides with Python",
-    "text": "Generating slides with Python\nThe next slides/sections were generated using the code below:\ndf_dr = pd.read_csv(\"data/dr.csv.gz\", compression=\"gzip\")\ndf_pop = pd.read_csv(\"data/pop_brackets.csv.gz\", compression=\"gzip\")\n\nyears = [2000, 2025, 2050, 2075, 2100]\nregions = [\"Belgium\", \"China\", \"Brazil\", \"India\", \"Japan\", \"Nigeria\"]\n\nfor name in regions:\n    display(Markdown(f\"## Age and Population Pyramids for {name}\"))\n    display(Markdown(f'<div class=\"columns\">'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_dependency_ratio(df_dr[df_dr.Location == name])\n    display(Markdown(f'</div>'))\n    display(Markdown(f'<div class=\"column\">'))\n    plot_population_pyramid_series(df_pop[df_pop[\"Location\"]==name], years)\n    display(Markdown(f'</div>'))\n    display(Markdown(f'</div>'))"
+    "text": "Generating slides with Python\nThe next slides/sections were generated using the code below:\n# Read data\ndf_dr = pd.read_csv(\"data/dr.csv.gz\", compression=\"gzip\")\ndf_pop = pd.read_csv(\"data/pop_brackets.csv.gz\", compression=\"gzip\")\n\n# Configure parameters\nyears = [2000, 2025, 2050, 2075, 2100]\nregions = [\"Belgium\", \"China\", \"Brazil\", \"India\", \"Japan\", \"Nigeria\"]\n\n# graph functions were importe earlier with \n\nfor name in regions:\n    # generate slide header\n    display(Markdown(f\"## Age and Population Pyramids for {name}\"))\n    \n    # generate columns\n    display(Markdown(f'<div class=\"columns\">'))\n    display(Markdown(f'<div class=\"column\">'))\n    # column 1 contains a dependency ratio plot\n    plot_dependency_ratio(df_dr[df_dr.Location == name])\n    display(Markdown(f'</div>'))\n    display(Markdown(f'<div class=\"column\">'))\n    # column 2 contains a population pyramid\n    plot_population_pyramid_series(df_pop[df_pop[\"Location\"]==name], years)\n    display(Markdown(f'</div>'))\n    display(Markdown(f'</div>'))"
   },
   {
     "objectID": "presentation.html#age-and-population-pyramids-for-belgium",
@@ -452,6 +452,6 @@
     "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. All you need are a few YAML lines.\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: special cases\nFor PowerPoint, render process = long edit cycle. Still useful when you have:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer\n\nQuarto works great for RevealJS."
   }
 ]

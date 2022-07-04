@@ -4,16 +4,16 @@
 ::: {.column}
 To generate a presentation from a `.qmd` file, add `format: pptx` to the YAML front-matter.
 
-The part I liked the _least_ is that Quarto will use the 
+Quarto will use the 
 [pandoc PowerPoint rules](https://pandoc.org/MANUAL.html#powerpoint-layout-choice) 
-to render the content from the `.qmd` into the `.pptx`.
+to render the content from the `.qmd` into `.pptx`.
 
-The "pandoc rules" substantially limit the flexibility you would have in PowerPoint presentations. 
+The "pandoc rules" limit the flexibility to create PowerPoint presentations. 
 Quarto has better presentation support for `revealjs` and `beamer`. 
 :::
 
 ::: {.column}
-- Quarto can use a template with (**only**) these layouts:
+- PowerPoint can use a **template** with _only_ these layouts:
     - Title Slide
     - Title and Content
     - Section Header

@@ -3,13 +3,13 @@
 :::: {.columns}
 ::: {.column}
 
-### Articles: maybe yes
+### Articles: maybe
 
 I think Quarto is more helpful for a team that already uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
 
 ### Python notebook: excellent
 
-Quarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.
+Quarto adds features to Python notebooks without detracting anything. All you need are a few YAML lines.
 
 :::
 
@@ -19,13 +19,15 @@ Quarto adds to Python notebooks without detracting anything. All you need are a 
 
 Quarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.
 
-### Presentations: maybe not
+### Presentations: special cases
 
-Only if you have
+For PowerPoint, render process = long edit cycle. Still useful when you have:
 
 - *a lot* of dynamic content
 - Reproducibility needs
 - Collaborators used to Git/Beamer 
+
+Quarto works great for RevealJS.
 
 :::
 ::::
