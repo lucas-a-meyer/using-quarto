@@ -11,11 +11,18 @@ from markdownify import markdownify as md
 from IPython.display import display, Markdown
 ```
 
+Here's an example of the first regression in Wooldridge's Introductory Econometrics book:
+
+$$
+\text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
+$$
+
 ```python
 # Load the data
 df_wage = pd.read_csv("data/wage1.csv")
 
-# Create an OLS model using the R syntax - assumes an intercept
+# Create an OLS model using 
+# the R syntax - assumes an intercept
 mod = smf.ols(formula="wage ~ educ",
               data=df_wage)
 
@@ -24,7 +31,7 @@ res = mod.fit()
 
 # Show the results
 display(Markdown(md(res.summary().
-        tables[1].as_html())))
+        tables[1].as_markdown())))
 ```
 
 :::
@@ -34,7 +41,8 @@ display(Markdown(md(res.summary().
 # Load the data
 df_wage = pd.read_csv("data/wage1.csv")
 
-# Create an OLS model using the R syntax - assumes an intercept
+# Create an OLS model using 
+# the R syntax - assumes an intercept
 mod = smf.ols(formula="wage ~ educ",
               data=df_wage)
 

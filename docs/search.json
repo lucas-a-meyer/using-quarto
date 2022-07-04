@@ -221,7 +221,7 @@
     "href": "presentation.html#regression-and-results",
     "title": "Using Quarto for everything",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\n\n\n\n\ncoef\nstd err\nt\nP>\nt\n\n\n\nIntercept\n-0.9049\n0.685\n-1.321\n0.187\n-2.250\n0.441\n\n\neduc\n0.5414\n0.053\n10.167\n0.000\n0.437\n0.646"
+    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_markdown())))\n\n\n\n\n\ncoef\nstd err\nt\nP>\nt\n\n\n\nIntercept\n-0.9049\n0.685\n-1.321\n0.187\n-2.250\n0.441\n\n\neduc\n0.5414\n0.053\n10.167\n0.000\n0.437\n0.646"
   },
   {
     "objectID": "presentation.html#basic-slide-syntax",
@@ -362,5 +362,12 @@
     "title": "Using Quarto for everything",
     "section": "Python for Data Analysis, 3E",
     "text": "Python for Data Analysis, 3E"
+  },
+  {
+    "objectID": "presentation.html#where-i-think-quarto-is-good-july-2022",
+    "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
+    "title": "Using Quarto for everything",
+    "section": "Where I think Quarto is good (July 2022)",
+    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   }
 ]

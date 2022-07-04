@@ -92,6 +92,6 @@ import pandas as pd
 
 # Should I use Quarto?
 
-{{< include/_should-i-use-quarto.qmd >}}
+{{< include slides/_should-i-use-quarto.qmd >}}
 
 # THANK YOU
