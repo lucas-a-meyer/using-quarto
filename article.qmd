@@ -38,13 +38,11 @@ and the proportion of older adults will increase. This is detailed in @sec-depen
 
 ## Dependency ratio {#sec-dependency-ratio}
 
-Demographers use a metric called **Dependency Ratio** to evaluate how many non-working people are supported by 100 working people.
-
-The formula for the dependency ratio is:
+Demographers use a metric called **Dependency Ratio** (@eq-dep-ratio) to evaluate how many non-working people are supported by 100 working people.
 
 $$
 \text{Dependency Ratio} = 100 \times \frac{\text{Non-working population}}{\text{Working population}}
-$$
+$$ {#eq-dep-ratio}
 
 # World tour {#sec-world-tour}
 
