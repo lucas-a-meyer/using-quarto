@@ -36,6 +36,8 @@ import pandas as pd
 
 {{< include slides/_tools-for-literate-programming.qmd >}}
 
+{{< include slides/_intro_quarto.qmd >}}
+
 <!--
 {{< include slides/_population-project-challenges.qmd >}}
 -->

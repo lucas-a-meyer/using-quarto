@@ -1,0 +1,27 @@
+## Quarto
+
+:::: {.columns}
+
+::: {.column}
+
+[Quarto®](https://www.quarto.org) is an open-source scientific and technical publishing system built on [Pandoc](https://pandoc.org/).
+
+The name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.
+
+The earliest known European printed book (Gutemberg, c.1452), the Sibyllenbuch, is a quarto. 
+
+:::
+::: {.column}
+
+With Quarto:
+
+- Write Markdown and Python (or R, Julia, OJS)
+- Use equations, diagrams, citations, figures, etc.
+- Output articles, presentations, websites
+- Great integration with VSCode
+
+Ypu can [install Quarto](https://quarto.org/docs/get-started/) on Linux, Windows and Mac.
+
+:::
+
+::::

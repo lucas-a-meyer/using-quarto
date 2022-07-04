@@ -39,7 +39,7 @@
     "href": "index.html#quarto-for-python-in-a-nutshell",
     "title": "Using Quarto",
     "section": "Quarto for Python, in a nutshell",
-    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter. Once you create your Quarto .qmd file, just render it with quarto render file.qmd.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "index.html#the-yaml-front-matter",
@@ -168,6 +168,13 @@
     "text": "I tried many tools for Literate Programming\n\n\nLaTeX\n\nGreat for PDFs… Ok, Beamer!\nWebsite generation is not great\nDynamic content requires Latex programming\n\n\\usepackage{ifthen}\n@for, @while\n\n\nWord/PPT\n\nHard to collaborate before O365\nHard to reproduce / auto-generate\n\n\nJekyll\n\nGreat for sites\nNot great for PPT, papers\n\nRMarkdown\n\nGreat PDFs\nMostly good presentations\nHugo and blogdown work well\nHeavily dependent on R R\n\nPython notebooks\n\nGreat, with Pandoc"
   },
   {
+    "objectID": "presentation.html#quarto",
+    "href": "presentation.html#quarto",
+    "title": "Using Quarto for everything",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book (Gutemberg, c.1452), the Sibyllenbuch, is a quarto.\n\nWith Quarto:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, websites\nGreat integration with VSCode\n\nYpu can install Quarto on Linux, Windows and Mac."
+  },
+  {
     "objectID": "presentation.html#the-content-pipeline-for-.ipynb",
     "href": "presentation.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto for everything",
@@ -179,7 +186,7 @@
     "href": "presentation.html#quarto-for-python-in-a-nutshell",
     "title": "Using Quarto for everything",
     "section": "Quarto for Python, in a nutshell",
-    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter. Once you create your Quarto .qmd file, just render it with quarto render file.qmd.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "presentation.html#but-wait-theres-more",
