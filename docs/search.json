@@ -168,11 +168,11 @@
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
-    "objectID": "index.html#one-liner-creates-a-website",
-    "href": "index.html#one-liner-creates-a-website",
+    "objectID": "index.html#changing-one-line-creates-a-website",
+    "href": "index.html#changing-one-line-creates-a-website",
     "title": "Quarto with Python",
-    "section": "One-liner creates a website",
-    "text": "One-liner creates a website\n---\ntitle: \"Quarto with Python\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
+    "section": "Changing one line creates a website",
+    "text": "Changing one line creates a website\n---\ntitle: \"Quarto with Python\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
   },
   {
     "objectID": "index.html#screenshot-of-website",
@@ -413,11 +413,11 @@
     "text": "Age and Population Pyramids for Nigeria"
   },
   {
-    "objectID": "presentation.html#one-liner-creates-a-website",
-    "href": "presentation.html#one-liner-creates-a-website",
+    "objectID": "presentation.html#changing-one-line-creates-a-website",
+    "href": "presentation.html#changing-one-line-creates-a-website",
     "title": "Using Quarto with Python",
-    "section": "One-liner creates a website",
-    "text": "One-liner creates a website\n---\ntitle: \"Quarto with Python\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
+    "section": "Changing one line creates a website",
+    "text": "Changing one line creates a website\n---\ntitle: \"Quarto with Python\"\nformat: html\n    # revealjs:\n    #     incremental: false\n    #     theme: [simple, revealjs-customizations.scss]\n    #     title-slide-attributes:\n    #         data-background-image: images/data-viz-bg.jpg\n    #         data-background-size: contain\n    #         data-background-position: right\n\nauthor: Lucas A. Meyer\ndate: 2022-07-14\n---\n\nAdding or changing the format to html will create a website."
   },
   {
     "objectID": "presentation.html#screenshot-of-website",

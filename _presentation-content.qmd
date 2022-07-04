@@ -71,6 +71,7 @@
 {{< include slides/_next-steps.qmd >}}
 
 ::: {.content-visible unless-format="pptx"}
+## Hacks
 {{< include slides/_hacks-pptx.qmd >}}
 :::
 
