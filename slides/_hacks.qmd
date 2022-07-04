@@ -1,14 +1,4 @@
-::: {.content-visible when-format="pptx"}
-
-## Hacks
-
-:::
-
-::: {.content-visible unless-format="pptx"}
-
 ## Hacks {background-color="black" background-image="images/hacks.png" background-size="350px" background-position="top right"}
-
-:::
 
 Quarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.
 

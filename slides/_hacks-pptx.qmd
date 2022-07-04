@@ -1,0 +1,12 @@
+## Hacks
+
+Quarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.
+
+1. I created a [script](https://github.com/quarto-dev/quarto-cli/discussions/1232) to quickly install the latest version
+2. Mermaid diagrams blank in PPTX. [Bug](https://github.com/quarto-dev/quarto-cli/issues/1159) quickly fixed.
+3. Mermaid diagrams blank in RevealJS. Workaround: refresh.
+4. HTML website and RevealJS from same source: images disappear
+    - Workaround: add `self-contained: true` to YAML front-matter
+5. Pandoc large monospaced font size in PowerPoint. Workaround: [script](https://github.com/quarto-dev/quarto-cli/discussions/1272).
+6. The decorations on this slide only appear on RevealJS, by design.
+7. Slide with article screenshots renders weird in HTML, no workaround.

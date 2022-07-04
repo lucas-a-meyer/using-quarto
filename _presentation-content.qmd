@@ -68,6 +68,13 @@
 
 # Where to go next
 
-{{< include slides/_hacks.qmd >}}
-
 {{< include slides/_next-steps.qmd >}}
+
+::: {.content-visible unless-format="html"}
+{{< include slides/_hacks.qmd >}}
+:::
+
+::: {.content-visible when-format="pptx"}
+{{< include slides/_hacks.qmd >}}
+:::
+
