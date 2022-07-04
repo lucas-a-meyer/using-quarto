@@ -74,7 +74,7 @@
     "href": "index.html#diagrams",
     "title": "Using Quarto",
     "section": "Diagrams",
-    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart UD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart UD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "index.html#regression-and-results",
@@ -298,7 +298,7 @@
     "href": "presentation.html#diagrams",
     "title": "Using Quarto with Python",
     "section": "Diagrams",
-    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart UD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart UD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "presentation.html#regression-and-results",
