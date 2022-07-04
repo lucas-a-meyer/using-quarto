@@ -14,7 +14,7 @@ from IPython.display import display, Markdown
 
 ::: {.column}
 
-This code runs the first simple regression in Wooldridge's Econometrics
+This code runs the first simple regression in Wooldridge's Econometrics book.
 
 $\text{wage} = \alpha + \beta_1 \text{educ} + \epsilon$
 
