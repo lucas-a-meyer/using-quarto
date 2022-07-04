@@ -13,7 +13,8 @@ from IPython.display import display, Markdown
 :::: {.columns}
 ::: {.column}
 
-### Education impact on wage
+This code runs the first regression in Wooldridge's Econometrics. This simple regression omits variables and is used (both here and in Wooldridge's book) for its simplicity.
+
 ```python
 # Load the data
 df_wage = pd.read_csv("data/wage1.csv")
@@ -33,7 +34,6 @@ display(Markdown(md(res.summary().
 :::
 ::: {.column}
 
-This code runs the first regression in Wooldridge's Econometrics. This simple regression omits variables and is used (both here and in Wooldridge's book) for its simplicity.
 $$
 \text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
 $$

@@ -8,7 +8,7 @@ All you need to use Quarto is to add some YAML (mostly simplified Pandoc configu
 
 This keeps the configuration and content in the same file. You can then render the outputs using `quarto render <file.qmd>` in the command line.
 :::
-::: {.column}
+::: {.column width="75%"}
 ```{mermaid}
 graph TD
 Q[.qmd] --> A

@@ -10,7 +10,7 @@
 
 - Projects can have pre- and post-render steps
 :::
-::: {.column}
+::: {.column width="75%"}
 ```{mermaid}
 graph TD
     P[Pre-scripts] --> Q

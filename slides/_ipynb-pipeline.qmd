@@ -9,7 +9,7 @@ With some scripting, you can use [`Pandoc`](https://pandoc.org/index.html) on .i
 You just need to learn Pandoc and shell scripting.
 
 :::
-::: {.column}
+::: {.column width="75%"}
 
 ```{mermaid}
 graph TD
