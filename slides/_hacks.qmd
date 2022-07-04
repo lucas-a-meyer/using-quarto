@@ -1,4 +1,14 @@
-## Hacks {background-color="black" background-image="images/hacks.png" background-size="250px" background-position="top right"}
+::: {.content-visible when-format="pptx"}
+
+## Hacks {background-color="black"}
+
+:::
+
+::: {.content-visible unless-format="pptx"}
+
+## Hacks {background-color="black" background-image="images/hacks.png" background-size="350px" background-position="top right"}
+
+:::
 
 Quarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.
 
@@ -8,5 +18,5 @@ Quarto is under active development, and quickly reaching v1.0. While creating th
 4. HTML website and RevealJS from same source: images disappear
     - Workaround: add `self-contained: true` to YAML front-matter
 5. Pandoc large monospaced font size in PowerPoint. Workaround: script.
-6. The decorations on this slide only appear on RevealJS, no workaround.
+6. The decorations on this slide only appear on RevealJS, by design.
 7. Slide with article screenshots renders weird in HTML, no workaround.

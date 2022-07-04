@@ -196,11 +196,11 @@
     "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
-    "objectID": "index.html#hacks",
-    "href": "index.html#hacks",
+    "objectID": "index.html#hacks-1",
+    "href": "index.html#hacks-1",
     "title": "Quarto with Python",
     "section": "Hacks",
-    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Issue quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nSlide with article screenshots renders weird in HTML, no workaround."
+    "text": "Hacks"
   },
   {
     "objectID": "index.html#next-steps",
@@ -399,11 +399,11 @@
     "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
-    "objectID": "presentation.html#hacks",
-    "href": "presentation.html#hacks",
+    "objectID": "presentation.html#hacks-1",
+    "href": "presentation.html#hacks-1",
     "title": "Using Quarto with Python",
     "section": "Hacks",
-    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Issue quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nSlide with article screenshots renders weird in HTML, no workaround."
+    "text": "Hacks"
   },
   {
     "objectID": "presentation.html#next-steps",
