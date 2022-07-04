@@ -1,7 +1,7 @@
 ## The content pipeline for .ipynb
 
 :::: {.columns}
-::: {.column}
+::: {.column width="35%"}
 About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks. 
 
 With some scripting, you can use [`Pandoc`](https://pandoc.org/index.html) on .ipynb files to generate papers, HTML, PowerPoint, etc.

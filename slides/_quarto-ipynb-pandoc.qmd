@@ -1,7 +1,7 @@
 
 ## Quarto in Python, in a nutshell
 :::: {.columns}
-::: {.column}
+::: {.column width="35%"}
 All you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a `.qmd` file. 
 
 `ipynb` + YAML = `.qmd`. 

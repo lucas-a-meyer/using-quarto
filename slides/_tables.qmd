@@ -11,11 +11,7 @@ from markdownify import markdownify as md
 from IPython.display import display, Markdown
 ```
 
-Here's an example of the first regression in Wooldridge's Introductory Econometrics book:
-
-$$
-\text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
-$$
+This code runs the first regression in Wooldridge's Econometrics:
 
 ```python
 # Load the data
@@ -33,6 +29,9 @@ res = mod.fit()
 display(Markdown(md(res.summary().
         tables[1].as_html())))
 ```
+$$
+\text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
+$$
 
 :::
 ::: {.column}

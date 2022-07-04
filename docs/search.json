@@ -81,7 +81,7 @@
     "href": "index.html#regression-and-results",
     "title": "Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
+    "text": "Regression and results\n\n\nThis code runs the first regression in Wooldridge’s Econometrics:\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
   },
   {
     "objectID": "index.html#basic-slide-syntax",
@@ -312,7 +312,7 @@
     "href": "presentation.html#regression-and-results",
     "title": "Using Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nHere’s an example of the first regression in Wooldridge’s Introductory Econometrics book:\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
+    "text": "Regression and results\n\n\nThis code runs the first regression in Wooldridge’s Econometrics:\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using \n# the R syntax - assumes an intercept\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\ndisplay(Markdown(md(res.summary().\n        tables[1].as_html())))\n\\[\n\\text{wage} = \\alpha + \\beta_1 \\times \\text{educ} + \\epsilon\n\\]\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
   },
   {
     "objectID": "presentation.html#basic-slide-syntax",
