@@ -1,6 +1,10 @@
 ## The content pipeline for .ipynb
 
-About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks, and one can use [`pandoc`](https://pandoc.org/index.html) to generate papers and PowerPoint, but it can be complicated.
+About [75% of data scientists](https://visualstudiomagazine.com/articles/2021/02/09/kaggle-survey.aspx) use Python through Jupyter notebooks. 
+
+With some scripting, you can use [`pandoc`](https://pandoc.org/index.html) to generate papers, HTML, PowerPoint, etc.
+
+You just need to learn Pandoc.
 
 ```{mermaid}
 graph LR

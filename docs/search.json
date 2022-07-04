@@ -32,14 +32,14 @@
     "href": "index.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto",
     "section": "The content pipeline for .ipynb",
-    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks, and one can use pandoc to generate papers and PowerPoint, but it can be complicated.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use pandoc to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
-    "objectID": "index.html#quarto-for-python-in-a-nutshell",
-    "href": "index.html#quarto-for-python-in-a-nutshell",
+    "objectID": "index.html#quarto-in-python-in-a-nutshell",
+    "href": "index.html#quarto-in-python-in-a-nutshell",
     "title": "Using Quarto",
-    "section": "Quarto for Python, in a nutshell",
-    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter. Once you create your Quarto .qmd file, just render it with quarto render file.qmd.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "section": "Quarto in Python, in a nutshell",
+    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "index.html#the-yaml-front-matter",
@@ -172,21 +172,21 @@
     "href": "presentation.html#quarto",
     "title": "Using Quarto for everything",
     "section": "Quarto",
-    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book (Gutemberg, c.1452), the Sibyllenbuch, is a quarto.\n\nWith Quarto:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, websites\nGreat integration with VSCode\n\nYpu can install Quarto on Linux, Windows and Mac."
+    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare’s plays.\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
   },
   {
     "objectID": "presentation.html#the-content-pipeline-for-.ipynb",
     "href": "presentation.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto for everything",
     "section": "The content pipeline for .ipynb",
-    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks, and one can use pandoc to generate papers and PowerPoint, but it can be complicated.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use pandoc to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
-    "objectID": "presentation.html#quarto-for-python-in-a-nutshell",
-    "href": "presentation.html#quarto-for-python-in-a-nutshell",
+    "objectID": "presentation.html#quarto-in-python-in-a-nutshell",
+    "href": "presentation.html#quarto-in-python-in-a-nutshell",
     "title": "Using Quarto for everything",
-    "section": "Quarto for Python, in a nutshell",
-    "text": "Quarto for Python, in a nutshell\nIn Quarto’s .qmd files, you write Markdown and code, just like .ipynb. Add some YAML configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter. Once you create your Quarto .qmd file, just render it with quarto render file.qmd.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "section": "Quarto in Python, in a nutshell",
+    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file1. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]\n\n\n\n\n\n\n\n\nyou can also add the YAML as raw content in the first cell of an .ipynb file"
   },
   {
     "objectID": "presentation.html#but-wait-theres-more",

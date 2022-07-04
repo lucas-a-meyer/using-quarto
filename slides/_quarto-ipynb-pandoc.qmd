@@ -1,7 +1,10 @@
 
-## Quarto for Python, in a nutshell
+## Quarto in Python, in a nutshell
 
-In Quarto's `.qmd` files, you write Markdown and code, just like `.ipynb`. Add some `YAML` configuration and Quarto does the intermediate steps. It integrates well with VSCode and Jupyter. Once you create your Quarto `.qmd` file, just render it with `quarto render file.qmd`.
+All you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your `.ipynb` files: that's a `.qmd` file[^qmd]. This keeps the configuration and content in the same file.
+
+You can then render the outputs using `quarto render <file.qmd>` in the command line.
+
 
 ```{mermaid}
 graph LR
@@ -21,3 +24,5 @@ end
     F --> G[.pdf]
     I --> J[.html]
 ```
+
+[^qmd]: you can also add the YAML as raw content in the first cell of an .ipynb file
