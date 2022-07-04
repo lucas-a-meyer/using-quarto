@@ -16,15 +16,6 @@ from IPython.display import display, Markdown
 
 This code runs the first simple regression in Wooldridge's Econometrics $\text{wage} = \alpha + \beta_1 \text{educ} + \epsilon$
 
-```python
-df_wage = pd.read_csv("data/wage1.csv")
-mod = smf.ols(formula="wage ~ educ", data=df_wage)
-res = mod.fit()
-display(Markdown(res.summary().tables[1]))
-```
-
-:::
-::: {.column}
 ```{python}
 #| echo: false
 # Load the data
@@ -46,5 +37,15 @@ reg_table.columns = ["coef", "s.e.", "t", "p-value"]
 display(Markdown(reg_table.to_markdown(index=False)))
 ```
 
+
+:::
+::: {.column}
+
+```python
+df_wage = pd.read_csv("data/wage1.csv")
+mod = smf.ols(formula="wage ~ educ", data=df_wage)
+res = mod.fit()
+display(Markdown(res.summary().tables[1]))
+```
 :::
 ::::

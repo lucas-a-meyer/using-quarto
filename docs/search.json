@@ -81,7 +81,7 @@
     "href": "index.html#regression-and-results",
     "title": "Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics \\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\ndf_wage = pd.read_csv(\"data/wage1.csv\")\nmod = smf.ols(formula=\"wage ~ educ\", data=df_wage)\nres = mod.fit()\ndisplay(Markdown(res.summary().tables[1]))\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
+    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics \\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0\n\n\n\n\ndf_wage = pd.read_csv(\"data/wage1.csv\")\nmod = smf.ols(formula=\"wage ~ educ\", data=df_wage)\nres = mod.fit()\ndisplay(Markdown(res.summary().tables[1]))"
   },
   {
     "objectID": "index.html#basic-slide-syntax",
@@ -312,7 +312,7 @@
     "href": "presentation.html#regression-and-results",
     "title": "Using Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics \\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\ndf_wage = pd.read_csv(\"data/wage1.csv\")\nmod = smf.ols(formula=\"wage ~ educ\", data=df_wage)\nres = mod.fit()\ndisplay(Markdown(res.summary().tables[1]))\n\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0"
+    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics \\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\ncoef\ns.e.\nt\np-value\n\n\n\n\n-0.9049\n0.685\n-1.321\n0.187\n\n\n0.5414\n0.053\n10.167\n0\n\n\n\n\ndf_wage = pd.read_csv(\"data/wage1.csv\")\nmod = smf.ols(formula=\"wage ~ educ\", data=df_wage)\nres = mod.fit()\ndisplay(Markdown(res.summary().tables[1]))"
   },
   {
     "objectID": "presentation.html#basic-slide-syntax",
