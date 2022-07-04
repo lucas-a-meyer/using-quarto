@@ -39,14 +39,14 @@
     "href": "index.html#the-content-pipeline-for-.ipynb",
     "title": "Quarto with Python",
     "section": "The content pipeline for .ipynb",
-    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use pandoc to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+    "text": "The content pipeline for .ipynb\n\n\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use Pandoc on .ipynb files to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc and shell scripting.\n\n\n\n\n\ngraph TD\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
     "objectID": "index.html#quarto-in-python-in-a-nutshell",
     "href": "index.html#quarto-in-python-in-a-nutshell",
     "title": "Quarto with Python",
     "section": "Quarto in Python, in a nutshell",
-    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file. ipynb + YAML = .qmd. This keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto in Python, in a nutshell\n\n\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file.\nipynb + YAML = .qmd.\nThis keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\n\ngraph TD\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "index.html#the-yaml-front-matter",
@@ -228,7 +228,7 @@
     "href": "index.html#where-i-think-quarto-is-good-july-2022",
     "title": "Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\n\n\nPresentations: special cases\nFor PowerPoint, render process => long edit cycle. Still useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer\n\nQuarto works great for RevealJS."
+    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
     "objectID": "index.html#next-steps-1",
@@ -270,14 +270,14 @@
     "href": "presentation.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto with Python",
     "section": "The content pipeline for .ipynb",
-    "text": "The content pipeline for .ipynb\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use pandoc to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc.\n\n\n\n\ngraph LR\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+    "text": "The content pipeline for .ipynb\n\n\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use Pandoc on .ipynb files to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc and shell scripting.\n\n\n\n\n\ngraph TD\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
     "objectID": "presentation.html#quarto-in-python-in-a-nutshell",
     "href": "presentation.html#quarto-in-python-in-a-nutshell",
     "title": "Using Quarto with Python",
     "section": "Quarto in Python, in a nutshell",
-    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file. ipynb + YAML = .qmd. This keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto in Python, in a nutshell\n\n\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file.\nipynb + YAML = .qmd.\nThis keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\n\ngraph TD\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "presentation.html#the-yaml-front-matter",
@@ -459,7 +459,7 @@
     "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: special cases\nFor PowerPoint, render process => long edit cycle. Still useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer\n\nQuarto works great for RevealJS."
+    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
     "objectID": "presentation.html#next-steps-1",
