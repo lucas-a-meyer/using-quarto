@@ -14,7 +14,7 @@
 
 ```{mermaid}
 
-graph td
+graph TD
 
     P[Pre-scripts] --> Q
     style P fill:#AA99FF
