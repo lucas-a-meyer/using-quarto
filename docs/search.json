@@ -495,5 +495,12 @@
     "title": "Using Quarto with Python",
     "section": "Hacks",
     "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI created a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Bug quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, by design.\nSlide with article screenshots renders weird in HTML, no workaround."
+  },
+  {
+    "objectID": "computations.html",
+    "href": "computations.html",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "The visualization below shows a positive, strong, and linear relationship between the city and highway mileage of these cars. Additionally, mileage is higher for cars with fewer cylinders.\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()"
   }
 ]
