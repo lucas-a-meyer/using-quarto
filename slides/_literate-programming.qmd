@@ -4,9 +4,9 @@
 
 ::: {.column}
 
-Donald E. Knuth proposed literate programming in a 1984 [article](http://www.literateprogramming.com/knuthweb.pdf).
+Literate programming can help create high-quality reproducible, documented, code.
 
-One of my proudest tech moments was to make `CWeave` and `CWeb` (and `LaTeX`) run in a Windows computer circa 1998.
+Donald E. Knuth proposed literate programming in a 1984 [article](http://www.literateprogramming.com/knuthweb.pdf).
 
 Jupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.
 

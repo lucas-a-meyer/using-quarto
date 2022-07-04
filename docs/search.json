@@ -18,7 +18,7 @@
     "href": "index.html#literate-programming",
     "title": "Using Quarto",
     "section": "Literate Programming",
-    "text": "Literate Programming\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.\n\n\n\n\nDonald Knuth’s Literate Programming book"
+    "text": "Literate Programming\n\n\nLiterate programming can help create high-quality reproducible, documented, code.\nDonald E. Knuth proposed literate programming in a 1984 article.\nJupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.\n\n\n\n\nDonald Knuth’s Literate Programming book"
   },
   {
     "objectID": "index.html#i-tried-many-tools-for-literate-programming",
@@ -74,7 +74,7 @@
     "href": "index.html#diagrams",
     "title": "Using Quarto",
     "section": "Diagrams",
-    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nThe diagram in this and in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "index.html#regression-and-results",
@@ -242,7 +242,7 @@
     "href": "presentation.html#literate-programming",
     "title": "Using Quarto with Python",
     "section": "Literate Programming",
-    "text": "Literate Programming\n\n\nDonald E. Knuth proposed literate programming in a 1984 article.\nOne of my proudest tech moments was to make CWeave and CWeb (and LaTeX) run in a Windows computer circa 1998.\nJupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.\n\n\n\n\nDonald Knuth’s Literate Programming book"
+    "text": "Literate Programming\n\n\nLiterate programming can help create high-quality reproducible, documented, code.\nDonald E. Knuth proposed literate programming in a 1984 article.\nJupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.\n\n\n\n\nDonald Knuth’s Literate Programming book"
   },
   {
     "objectID": "presentation.html#i-tried-many-tools-for-literate-programming",
@@ -298,7 +298,7 @@
     "href": "presentation.html#diagrams",
     "title": "Using Quarto with Python",
     "section": "Diagrams",
-    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nHere’s the first example from Mermaid’s website. The diagrams in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
+    "text": "Diagrams\n\n\nYou can use mermaid to create diagrams.\nThe diagram in this and in previous sections were created with mermaid.\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]\n\n\n\n\n\nflowchart TD\n\nA[Hard] -->|Text| B(Round)\nB --> C{Decision}\nC -->|One| D[Result 1]\nC -->|Two| E[Result 2]"
   },
   {
     "objectID": "presentation.html#regression-and-results",

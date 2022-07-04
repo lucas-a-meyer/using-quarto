@@ -5,7 +5,7 @@
 ::: {.column}
 You can use [mermaid](https://github.com/mermaid-js/mermaid) to create diagrams. 
 
-Here's the first example from Mermaid's website. The diagrams in previous sections were created with mermaid.
+The diagram in this and in previous sections were created with mermaid.
 
 ```mermaid
 flowchart TD
