@@ -9,11 +9,7 @@ from markdownify import markdownify as md
 from IPython.display import display, Markdown
 ```
 
-
-:::: {.columns}
-::: {.column}
-
-This code runs the first regression in Wooldridge's Econometrics. This simple regression omits variables and is used (both here and in Wooldridge's book) for its simplicity.
+This code runs the first simple regression in Wooldridge's Econometrics. 
 
 ```python
 # Load the data
@@ -31,9 +27,6 @@ res = mod.fit()
 display(Markdown(md(res.summary().
         tables[1].as_html())))
 ```
-:::
-::: {.column}
-
 $$
 \text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
 $$
@@ -59,5 +52,3 @@ reg_table = reg_table[["coef", 'std err', 't', 'P>|t|']]
 reg_table.columns = ["coef", "s.e.", "t", "p-value"]
 display(Markdown(reg_table.to_markdown(index=False)))
 ```
-:::
-::::
