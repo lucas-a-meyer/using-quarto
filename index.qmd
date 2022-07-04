@@ -24,6 +24,15 @@ I created one main content file [(source)](https://github.com/lucas-a-meyer/usin
 - A [PowerPoint presentation](/presentation.pptx) using my team's template
 - This website, starting after the "Why Quarto" header below [(source)](https://github.com/lucas-a-meyer/using-quarto/blob/main/index.qmd)
 
+The RevealJS presentation is embedded below:
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="presentation.html"></iframe>
+```
+
+</div>
+
 I also reused some of the content above in another Quarto file [(source)](https://github.com/lucas-a-meyer/using-quarto/blob/main/article.qmd) to create:
 
 - A scholarly-looking [article](/article.pdf) in PDF using LaTeX
