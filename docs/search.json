@@ -32,7 +32,7 @@
     "href": "index.html#quarto",
     "title": "Quarto with Python",
     "section": "Quarto",
-    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare’s plays.\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
+    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name “quarto” comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format. Shakespeare’s plays, too!\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
   },
   {
     "objectID": "index.html#the-content-pipeline-for-.ipynb",
@@ -256,7 +256,7 @@
     "href": "presentation.html#quarto",
     "title": "Using Quarto with Python",
     "section": "Quarto",
-    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare’s plays.\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
+    "text": "Quarto\n\n\nQuarto® is an open-source scientific and technical publishing system built on Pandoc.\nThe name “quarto” comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.\nThe earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format. Shakespeare’s plays, too!\n\nWith Quarto, you can:\n\nWrite Markdown and Python (or R, Julia, OJS)\nUse equations, diagrams, citations, figures, etc.\nOutput articles, presentations, interactive websites…\nWork with Jupyter Lab or VSCode\n\nYou can install Quarto on Linux, Windows and Mac."
   },
   {
     "objectID": "presentation.html#the-content-pipeline-for-.ipynb",

@@ -6,9 +6,9 @@
 
 [Quarto®](https://www.quarto.org) is an open-source scientific and technical publishing system built on [Pandoc](https://pandoc.org/).
 
-The name comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.
+The name "quarto" comes from the format of a book or pamphlet printed with eight pages of text, four to a side, then folded twice to produce four leaves.
 
-The earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format, as were many of Shakespeare's plays.
+The earliest known European printed book, the Sibyllenbuch (Gutemberg, c.1452), was done in the quarto format. Shakespeare's plays, too!
 
 :::
 ::: {.column}
