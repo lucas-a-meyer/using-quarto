@@ -19,6 +19,6 @@ Content stuck in my computer is nearly worthless.
 :::
 
 ::: {.column}
-![The content value chain from David Robinson's (@drrob) Tweet](images/content-value-chain.jpg)
+![The content value chain by (@drrob) captured by Amelia McNamara](images/content-value-chain.jpg)
 :::
 ::::

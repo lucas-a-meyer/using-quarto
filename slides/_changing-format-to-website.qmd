@@ -1,4 +1,4 @@
-## What I could get by just changing the format in YAML
+## One-liner creates a website
 
 ```{.yaml code-line-numbers="3"}
 ---

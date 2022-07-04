@@ -4,11 +4,11 @@
 
 ::: {.column}
 
-Literate programming can help create high-quality reproducible, documented, code.
+Literate programming can help create high-quality reproducible, documented code.
 
 Donald E. Knuth proposed literate programming in a 1984 [article](http://www.literateprogramming.com/knuthweb.pdf).
 
-Jupyter implements the literate programming paradigm, but generating high-quality output requires additional tools.
+Jupyter implements the literate programming paradigm, but generating high-quality mass-consumable output (articles, websites) requires additional tools.
 
 :::
 
