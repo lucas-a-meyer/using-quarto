@@ -71,11 +71,10 @@
 {{< include slides/_next-steps.qmd >}}
 
 ::: {.content-visible unless-format="pptx"}
-## Hacks
-{{< include slides/_hacks-pptx.qmd >}}
+{{< include slides/_hacks.qmd >}}
 :::
 
 ::: {.content-visible when-format="pptx"}
-{{< include slides/_hacks.qmd >}}
+{{< include slides/_hacks-pptx.qmd >}}
 :::
 
