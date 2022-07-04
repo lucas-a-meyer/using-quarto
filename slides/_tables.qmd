@@ -1,7 +1,5 @@
 ## Regression and results
 
-:::: {.columns}
-::: {.column}
 ```{python}
 #| echo: false
 
@@ -11,7 +9,9 @@ from markdownify import markdownify as md
 from IPython.display import display, Markdown
 ```
 
-This code runs the first regression in Wooldridge's Econometrics:
+
+:::: {.columns}
+::: {.column}
 
 ```python
 # Load the data
@@ -29,12 +29,15 @@ res = mod.fit()
 display(Markdown(md(res.summary().
         tables[1].as_html())))
 ```
+:::
+::: {.column}
+
+This code runs the first regression in Wooldridge's Econometrics:
 $$
 \text{wage} = \alpha + \beta_1 \times \text{educ} + \epsilon
 $$
 
-:::
-::: {.column}
+
 ```{python}
 #| echo: false
 # Load the data
