@@ -200,7 +200,7 @@
     "href": "index.html#hacks",
     "title": "Quarto with Python",
     "section": "Hacks",
-    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams were blank in PPTX. I opened an issue that was quickly fixed.\nMermaid diagrams need refresh in RevealJS. I didn’t submit an issue yet.\nCreating a HTML website & HTML RevealJS from the same source, images disappear\n\nWorkaround: add self-contained: true to the YAML front-matter of both\n\nPandoc can’t change monospaced font size in PowerPoint. I wrote a script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nThe slide with the article screenshots render weird in HTML. No workaround."
+    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Issue quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nSlide with article screenshots renders weird in HTML, no workaround."
   },
   {
     "objectID": "index.html#next-steps",
@@ -403,7 +403,7 @@
     "href": "presentation.html#hacks",
     "title": "Using Quarto with Python",
     "section": "Hacks",
-    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams were blank in PPTX. I opened an issue that was quickly fixed.\nMermaid diagrams need refresh in RevealJS. I didn’t submit an issue yet.\nCreating a HTML website & HTML RevealJS from the same source, images disappear\n\nWorkaround: add self-contained: true to the YAML front-matter of both\n\nPandoc can’t change monospaced font size in PowerPoint. I wrote a script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nThe slide with the article screenshots render weird in HTML. No workaround."
+    "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI create a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Issue quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, no workaround.\nSlide with article screenshots renders weird in HTML, no workaround."
   },
   {
     "objectID": "presentation.html#next-steps",
