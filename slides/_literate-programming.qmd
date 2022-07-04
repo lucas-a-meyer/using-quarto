@@ -13,7 +13,7 @@ Jupyter implements the literate programming paradigm, but generating high-qualit
 :::
 
 ::: {.column}
-![Donald Knuth's Literate Programming book](images/literate-programming.jpg){width=70%}
+![Donald Knuth's Literate Programming](images/literate-programming.jpg){width=70%}
 :::
 
 ::::
