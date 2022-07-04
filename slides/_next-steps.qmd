@@ -5,7 +5,7 @@
     - [VSCode](https://quarto.org/docs/get-started/hello/vscode.html)
 
 - If you have multiple input files (e.g., [blog](https://www.meyerperin.com) or book), you can create a [project](https://quarto.org/docs/projects/quarto-projects.html). This allows rendering multiple files that link to each other.
-    - This allows people that write in Python and R to collaborate natively on the same project
+    - This also allows combining Python and R natively for the same project
     - Some writers can use R, some can use Python, their content can link to each other as long as they're in different `.qmd` files.
 
 - Projects can have pre-render and post-render steps in Python, R, Lua and shell script. I tend to use shell scripts that call other scripts.

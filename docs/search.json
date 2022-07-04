@@ -242,7 +242,7 @@
     "href": "index.html#next-steps",
     "title": "Quarto with Python",
     "section": "Next Steps",
-    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\n\nThis allows people that write in Python and R to collaborate natively on the same project\nSome writers can use R, some can use Python, their content can link to each other as long as they’re in different .qmd files.\n\nProjects can have pre-render and post-render steps in Python, R, Lua and shell script. I tend to use shell scripts that call other scripts."
+    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\n\nThis also allows combining Python and R natively for the same project\nSome writers can use R, some can use Python, their content can link to each other as long as they’re in different .qmd files.\n\nProjects can have pre-render and post-render steps in Python, R, Lua and shell script. I tend to use shell scripts that call other scripts."
   },
   {
     "objectID": "index.html#hacks",
@@ -487,7 +487,7 @@
     "href": "presentation.html#next-steps",
     "title": "Using Quarto with Python",
     "section": "Next Steps",
-    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\n\nThis allows people that write in Python and R to collaborate natively on the same project\nSome writers can use R, some can use Python, their content can link to each other as long as they’re in different .qmd files.\n\nProjects can have pre-render and post-render steps in Python, R, Lua and shell script. I tend to use shell scripts that call other scripts."
+    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\n\nThis also allows combining Python and R natively for the same project\nSome writers can use R, some can use Python, their content can link to each other as long as they’re in different .qmd files.\n\nProjects can have pre-render and post-render steps in Python, R, Lua and shell script. I tend to use shell scripts that call other scripts."
   },
   {
     "objectID": "presentation.html#hacks",
