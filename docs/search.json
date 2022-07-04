@@ -228,14 +228,14 @@
     "href": "index.html#where-i-think-quarto-is-good-july-2022",
     "title": "Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+    "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
     "objectID": "index.html#next-steps-1",
     "href": "index.html#next-steps-1",
     "title": "Quarto with Python",
     "section": "Next Steps",
-    "text": "Next Steps\n\n\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project.\nProjects can have pre- and post-render steps\n\n\n\n\n\n\ngraph TD\n\n    P[Pre-scripts] --> Q\n    style P fill:#AA99FF\n    Q[.qmd] --> A\n    subgraph Quarto\n        A[.ipynb] --> B((\"Pandoc\"))\n        B --> C[.md]\n        B --> D[.tex] \n        D --> F((Xetex))\n        C --> I((Hugo))\n        style B fill:#FF6655AA\n        style F fill:#88ffFF\n        style I fill:#88ffFF\n    end\n        B ----> E[.doc]\n        B ----> H[.pptx]\n        F --> G[.pdf]\n        I --> J[.html]\n    E --> X[Post-scripts]\n    H --> X\n    G --> X\n    J --> X\n    style X fill:#AA99FF"
+    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\nProjects can have pre- and post-render steps in Python, R, Lua and shell script"
   },
   {
     "objectID": "presentation.html#the-content-value-chain",
@@ -459,13 +459,13 @@
     "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
     "title": "Using Quarto with Python",
     "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
     "objectID": "presentation.html#next-steps-1",
     "href": "presentation.html#next-steps-1",
     "title": "Using Quarto with Python",
     "section": "Next Steps",
-    "text": "Next Steps\n\n\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project.\nProjects can have pre- and post-render steps\n\n\n\n\n\n\ngraph TD\n\n    P[Pre-scripts] --> Q\n    style P fill:#AA99FF\n    Q[.qmd] --> A\n    subgraph Quarto\n        A[.ipynb] --> B((\"Pandoc\"))\n        B --> C[.md]\n        B --> D[.tex] \n        D --> F((Xetex))\n        C --> I((Hugo))\n        style B fill:#FF6655AA\n        style F fill:#88ffFF\n        style I fill:#88ffFF\n    end\n        B ----> E[.doc]\n        B ----> H[.pptx]\n        F --> G[.pdf]\n        I --> J[.html]\n    E --> X[Post-scripts]\n    H --> X\n    G --> X\n    J --> X\n    style X fill:#AA99FF"
+    "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\nProjects can have pre- and post-render steps in Python, R, Lua and shell script"
   }
 ]
