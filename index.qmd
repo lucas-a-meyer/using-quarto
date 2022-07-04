@@ -18,7 +18,7 @@ import pandas as pd
 
 Folowing the spirit of ["learning out loud"](https://www.meyerperin.com/2019-02-13-why-you-should-blog-if-you-are-a-data-scientist.html), I created several artifacts while I was learning about [Quarto](https://www.quarto.org). 
 
-I created one main content file [(source)](https://github.com/lucas-a-meyer/using-quarto/blob/main/_presentation-content.qmd) that I used to create:
+I created one main content file [(source)](https://github.com/lucas-a-meyer/using-quarto/blob/main/_presentation-content.qmd) that imports each [slide](https://github.com/lucas-a-meyer/using-quarto/tree/main/slides), to create:
 
 - A RevealJS [presentation](/presentation.html)
 - A [PowerPoint presentation](/presentation.pptx) using my team's template
