@@ -81,7 +81,7 @@
     "href": "index.html#regression-and-results",
     "title": "Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics\n\\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\nvar\ncoef\ns.e.\nt\np-value\n\n\n\n\nIntercept\n-0.9\n0.68\n-1.32\n0.19\n\n\neduc\n0.54\n0.05\n10.17\n0\n\n\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using R syntax\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\nreg_table = pd.read_html(res.summary().\n  tables[1].as_html(), header=0)[0]\ndisplay(Markdown(reg_table.\n  to_markdown(index=False)))"
+    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics\n\\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\nvar\ncoef\ns.e.\nt\np-val\n\n\n\n\nint\n-0.9\n0.68\n-1.32\n0.19\n\n\neduc\n0.54\n0.05\n10.17\n0\n\n\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using R syntax\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\nreg_table = pd.read_html(res.summary().\n  tables[1].as_html(), header=0)[0]\ndisplay(Markdown(reg_table.\n  to_markdown(index=False)))"
   },
   {
     "objectID": "index.html#basic-slide-syntax",
@@ -326,7 +326,7 @@
     "href": "presentation.html#regression-and-results",
     "title": "Using Quarto with Python",
     "section": "Regression and results",
-    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics\n\\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\nvar\ncoef\ns.e.\nt\np-value\n\n\n\n\nIntercept\n-0.9\n0.68\n-1.32\n0.19\n\n\neduc\n0.54\n0.05\n10.17\n0\n\n\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using R syntax\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\nreg_table = pd.read_html(res.summary().\n  tables[1].as_html(), header=0)[0]\ndisplay(Markdown(reg_table.\n  to_markdown(index=False)))"
+    "text": "Regression and results\n\n\nThis code runs the first simple regression in Wooldridge’s Econometrics\n\\(\\text{wage} = \\alpha + \\beta_1 \\text{educ} + \\epsilon\\)\n\n\n\nvar\ncoef\ns.e.\nt\np-val\n\n\n\n\nint\n-0.9\n0.68\n-1.32\n0.19\n\n\neduc\n0.54\n0.05\n10.17\n0\n\n\n\n\n# Load the data\ndf_wage = pd.read_csv(\"data/wage1.csv\")\n\n# Create an OLS model using R syntax\nmod = smf.ols(formula=\"wage ~ educ\",\n              data=df_wage)\n\n# Fit the model\nres = mod.fit()\n\n# Show the results\nreg_table = pd.read_html(res.summary().\n  tables[1].as_html(), header=0)[0]\ndisplay(Markdown(reg_table.\n  to_markdown(index=False)))"
   },
   {
     "objectID": "presentation.html#basic-slide-syntax",

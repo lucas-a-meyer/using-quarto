@@ -35,9 +35,11 @@ res = mod.fit()
 reg_table = pd.read_html(res.summary().
   tables[1].as_html(), header=0)[0]
 reg_table = reg_table.iloc[:,:5]
-reg_table.columns = ["var", "coef", "s.e.", "t", "p-value"]
+reg_table.columns = ["var", "coef", "s.e.", "t", "p-val"]
 for c in reg_table.columns[1:5]:
   reg_table[c] = reg_table[c].round(2)
+reg_table.iloc[0,0] = "int"
+reg_table.iloc[1,4] = 0.00
 display(Markdown(reg_table.to_markdown(index=False)))
 ```
 
