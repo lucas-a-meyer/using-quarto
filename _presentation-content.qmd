@@ -70,7 +70,7 @@
 
 {{< include slides/_next-steps.qmd >}}
 
-::: {.content-visible unless-format="html"}
+::: {.content-visible unless-format="pptx"}
 {{< include slides/_hacks.qmd >}}
 :::
 
