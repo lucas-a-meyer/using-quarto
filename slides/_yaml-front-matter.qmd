@@ -2,7 +2,7 @@
 
 :::: {.columns}
 ::: {.column}
-Quarto files always start with a YAML front-matter. 
+Quarto `.qmd` files always start with a YAML front-matter. 
 
 The YAML configuration determines what's the output format of your document. A few popular output options are `html`, `pptx`, `docx`, and `pdf`. 
 

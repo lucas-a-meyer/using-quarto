@@ -1,6 +1,10 @@
 ## Writing scholarly articles
 
-I reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don't contain original research. Quarto add cross-reference, citations and bibliography support to Markdown.
+I reused some of the content of this presentation to create two scholarly-looking articles. 
+
+The purpose of the articles is just to show how easy it is to generate them with Quarto, they don't contain original research. 
+
+Quarto adds cross-reference, citations and bibliography support to Markdown.
 
 The relevant files are:
 

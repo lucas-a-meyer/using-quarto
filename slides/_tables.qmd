@@ -34,8 +34,10 @@ res = mod.fit()
 # Show the results
 reg_table = pd.read_html(res.summary().
   tables[1].as_html(), header=0)[0]
-reg_table = reg_table[["coef", 'std err', 't', 'P>|t|']]
-reg_table.columns = ["coef", "s.e.", "t", "p-value"]
+reg_table = reg_table.iloc[:,:5]
+reg_table.columns = ["var", "coef", "s.e.", "t", "p-value"]
+for c in reg_table.columns[1:5]:
+  reg_table[c] = reg_table[c].round(2)
 display(Markdown(reg_table.to_markdown(index=False)))
 ```
 
@@ -47,8 +49,7 @@ display(Markdown(reg_table.to_markdown(index=False)))
 # Load the data
 df_wage = pd.read_csv("data/wage1.csv")
 
-# Create an OLS model using 
-# the R syntax - assumes an intercept
+# Create an OLS model using R syntax
 mod = smf.ols(formula="wage ~ educ",
               data=df_wage)
 

@@ -5,28 +5,26 @@
 
 ### LaTeX
 
+- Needs extra tools like CWeb
 - Great for PDFs... Beamer for slides
 - Not great for websites
-- Dynamic content: coding Latex
+- Dynamic content -> code in Latex
     - `\usepackage{ifthen}`
     - `@for`, `@while`
+
+### Python notebooks
+
+- Great, with Pandoc
+- Config separated from files
+
+:::
+::: {.column}
 
 ### Word/PPT
 
 - Hard to collaborate before O365
 - Hard to reproduce / auto-generate 
-
-:::
-::: {.column}
-
-### Jekyll / Github Pages
-
-- Great for sites
-- Not great for slides, papers
-
-### Python notebooks
-
-- Great, with Pandoc
+  - code and writing separate
 
 ### RMarkdown
 

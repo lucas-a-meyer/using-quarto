@@ -9,4 +9,4 @@ and the [PDF](https://www.meyerperin.com/using-quarto/article.pdf) and [DOCX](ht
 
 Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
 
-[^f1]: You can use footnotes in presentations and websites, too
+[^f1]: You can use footnotes in presentations and websites, too. In PowerPoint, they appear in the appendix.
