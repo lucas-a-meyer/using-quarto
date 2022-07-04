@@ -36,6 +36,8 @@ This has been markedly the case in Asia. Although Japan is frequently remembered
 The outcome of these changes is that over the next few decades, the proportion of children and working adults will go down in many countries,
 and the proportion of older adults will increase. This is detailed in @sec-dependency-ratio and the projected status for several countries is shown in @sec-world-tour.
 
+{{< pagebreak >}}
+
 ## Dependency ratio {#sec-dependency-ratio}
 
 Demographers use a metric called **Dependency Ratio** (@eq-dep-ratio) to evaluate how many non-working people are supported by 100 working people.

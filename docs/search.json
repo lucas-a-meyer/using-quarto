@@ -161,6 +161,13 @@
     "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to articles.\nYou need to reference a BibTex file in the YAML front-matter bibliography: references.bib. Quarto supports any of the 8000+ Citation Style Languages and will generate the “References” section automatically.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1."
   },
   {
+    "objectID": "index.html#cross-references",
+    "href": "index.html#cross-references",
+    "title": "Quarto with Python",
+    "section": "Cross references",
+    "text": "Cross references\n\n\nThe [Quarto guide] has a great section on [cross-references]. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
+  },
+  {
     "objectID": "index.html#books-in-quarto-1",
     "href": "index.html#books-in-quarto-1",
     "title": "Quarto with Python",
@@ -189,8 +196,8 @@
     "text": "Where I think Quarto is good (July 2022)\n\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\n\n\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\n\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\n\n\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
-    "objectID": "index.html#next-steps-1",
-    "href": "index.html#next-steps-1",
+    "objectID": "index.html#next-steps",
+    "href": "index.html#next-steps",
     "title": "Quarto with Python",
     "section": "Next Steps",
     "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\nProjects can have pre- and post-render steps in Python, R, Lua and shell script"
@@ -350,6 +357,13 @@
     "text": "Citations and Footnotes\nCitations don’t work on presentations, but are easy to add to articles.\nYou need to reference a BibTex file in the YAML front-matter bibliography: references.bib. Quarto supports any of the 8000+ Citation Style Languages and will generate the “References” section automatically.\nYou can cite by using [@citation-name] in your text. Please check the article .qmd source and the PDF and DOCX outputs.\nGenerating footnotes is also easy. Using [^ref] links to a footnote, and [^ref: content of the footnote] generates its content1.\nYou can use footnotes in presentations and websites, too"
   },
   {
+    "objectID": "presentation.html#cross-references",
+    "href": "presentation.html#cross-references",
+    "title": "Using Quarto with Python",
+    "section": "Cross references",
+    "text": "Cross references\n\n\nThe [Quarto guide] has a great section on [cross-references]. I cover only the main points.\nTo create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively “fig”, “sec” and “eq”.\nTo tag it, use the following syntax: #prefix-name.\n\nFor example, when declaring a figure, you can use:\n![Elephant](elephant.png){#fig-elephant}\nLater, you can refer to it using:\nSee @fig-elephant for an illustration."
+  },
+  {
     "objectID": "presentation.html#books-in-quarto-1",
     "href": "presentation.html#books-in-quarto-1",
     "title": "Using Quarto with Python",
@@ -378,8 +392,8 @@
     "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles.\nMicrosoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds features to Python notebooks without detracting anything. You just need a few YAML lines.\n\nBlog: excellent\nQuarto allowed me to have a scriptable, Python-based blog. I wrote code to post new articles to Twitter and LinkedIn.\nPresentations: maybe\nGreat for RevealJS. For PPT, render process => long edit cycle. Useful for:\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
   },
   {
-    "objectID": "presentation.html#next-steps-1",
-    "href": "presentation.html#next-steps-1",
+    "objectID": "presentation.html#next-steps",
+    "href": "presentation.html#next-steps",
     "title": "Using Quarto with Python",
     "section": "Next Steps",
     "text": "Next Steps\n\nThe Quarto website has great tutorials:\n\nJupyter\nVSCode\n\nIf you have multiple input files (e.g., blog or book), you can create a project. This allows rendering multiple files that link to each other.\nProjects can have pre- and post-render steps in Python, R, Lua and shell script"

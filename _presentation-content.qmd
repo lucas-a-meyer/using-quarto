@@ -56,6 +56,8 @@
 
 {{< include slides/_citations-footnotes.qmd >}}
 
+{{< include slides/_cross-references.qmd >}}
+
 # Books in Quarto
 
 {{< include slides/_books.qmd >}}
@@ -64,6 +66,8 @@
 
 {{< include slides/_should-i-use-quarto.qmd >}}
 
-# Next steps
+# Where to go next
+
+{{< include slides/_hacks.qmd >>}}
 
 {{< include slides/_next-steps.qmd >}}

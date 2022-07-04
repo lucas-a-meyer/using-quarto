@@ -1,0 +1,28 @@
+## Cross references
+
+:::: {.columns}
+::: {.column}
+
+The [Quarto guide] has a great section on [cross-references]. I cover only the main points.
+
+To create a cross-referenceable figure, section or equation, you need to tag it with its corresponding prefix, respectively "fig", "sec" and "eq".
+
+To tag it, use the following syntax: `#prefix-name`.
+
+:::
+::: {.column}
+
+For example, when declaring a figure, you can use:
+
+``` markdown
+![Elephant](elephant.png){#fig-elephant}
+```
+
+Later, you can refer to it using:
+
+``` markdown
+See @fig-elephant for an illustration.
+```
+
+:::
+::::

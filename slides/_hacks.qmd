@@ -1,0 +1,11 @@
+## Hacks {background-color="black" background-image="images/hacks.png" backgound-position="top right"}
+
+Quarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.
+
+1. To ensure I always have the latest version, I created a quick script that downloads and installs Quarto.
+2. Mermaid diagrams were not rendering in PowerPoints. I submitted a bug and it was quickly fixed.
+3. Mermaid diagrams require refreshing RevealJS pages twice, at least in Edge. I didn't yet submit a bug about this.
+4. When creating a HTML website and a HTML RevealJS presentation from the same source, only one keeps the images.
+    - Workaround: force both to be `self-contained`, by adding `self-contained: true` to the YAML front-matter
+5. Pandoc doesn't have a way to control the monospaced font size for PowerPoint. I wrote a script to do that.
+6. The decorations on this slide (background color, background image) only appear on RevealJS, no workaround.
