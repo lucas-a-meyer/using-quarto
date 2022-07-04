@@ -8,6 +8,10 @@ With some scripting, you can use [`Pandoc`](https://pandoc.org/index.html) on .i
 
 You just need to learn Pandoc and shell scripting.
 
+::: {.content-visible when-format="revealjs"}
+Refresh the page to see the diagram on the right.
+:::
+
 :::
 ::: {.column width="66%"}
 

@@ -102,7 +102,7 @@
     "href": "index.html#powerpoint-layout-rules",
     "title": "Quarto with Python",
     "section": "PowerPoint layout rules",
-    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .md source contains :::: {.columns} and only text content\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
+    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .qmd source contains :::: {.columns} and only text content. Previous slide is an example.\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
   },
   {
     "objectID": "index.html#powerpoint-templates",
@@ -284,14 +284,14 @@
     "href": "presentation.html#the-content-pipeline-for-.ipynb",
     "title": "Using Quarto with Python",
     "section": "The content pipeline for .ipynb",
-    "text": "The content pipeline for .ipynb\n\n\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use Pandoc on .ipynb files to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc and shell scripting.\n\n\n\n\n\ngraph TD\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
+    "text": "The content pipeline for .ipynb\n\n\nAbout 75% of data scientists use Python through Jupyter notebooks.\nWith some scripting, you can use Pandoc on .ipynb files to generate papers, HTML, PowerPoint, etc.\nYou just need to learn Pandoc and shell scripting.\n\nRefresh the page to see the diagram on the right.\n\n\n\n\n\n\ngraph TD\n    A[.ipynb] --> B((\"Pandoc\"))\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    F --> G[.pdf]\n    I --> J[.html]\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF"
   },
   {
     "objectID": "presentation.html#quarto-in-python-in-a-nutshell",
     "href": "presentation.html#quarto-in-python-in-a-nutshell",
     "title": "Using Quarto with Python",
     "section": "Quarto in Python, in a nutshell",
-    "text": "Quarto in Python, in a nutshell\n\n\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file.\nipynb + YAML = .qmd.\nThis keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\n\ngraph TD\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto in Python, in a nutshell\n\n\nAll you need to use Quarto is to add some YAML (mostly simplified Pandoc configurations) to a .qmd file.\nipynb + YAML = .qmd.\nThis keeps the configuration and content in the same file. You can then render the outputs using quarto render <file.qmd> in the command line.\n\nRefresh the page to see the diagram on the right.\n\n\n\n\n\n\ngraph TD\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "presentation.html#the-yaml-front-matter",
@@ -347,7 +347,7 @@
     "href": "presentation.html#powerpoint-layout-rules",
     "title": "Using Quarto with Python",
     "section": "PowerPoint layout rules",
-    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .md source contains :::: {.columns} and only text content\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
+    "text": "PowerPoint layout rules\nThe rules are available at:  https://pandoc.org/MANUAL.html#powerpoint-layout-choice\n\nTitle Slide: created from metadata fields like title and author\nSection Header: created from the top-level headings (#)\nTwo Content: used when .qmd source contains :::: {.columns} and only text content. Previous slide is an example.\nComparison: same as “Two Content”, but content of columns is not text\nContent with Caption: used when slide has non-text content, but no columns\nTitle and Content: whatever doesn’t fit the rules above."
   },
   {
     "objectID": "presentation.html#powerpoint-templates",

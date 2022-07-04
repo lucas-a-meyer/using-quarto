@@ -5,7 +5,7 @@ The rules are available at: <br />
 
 - **Title Slide:** created from metadata fields like `title` and `author`
 - **Section Header:** created from the top-level headings (`#`)
-- **Two Content:** used when `.md` source contains `:::: {.columns}` and only **text** content
+- **Two Content:** used when `.qmd` source contains `:::: {.columns}` and only **text** content. [Previous slide](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/slides/_powerpoint-slides.qmd) is an example.
 - **Comparison:** same as "Two Content", but content of columns is not text
 - **Content with Caption:** used when slide has non-text content, but no columns
 - **Title and Content:** whatever doesn't fit the rules above.
