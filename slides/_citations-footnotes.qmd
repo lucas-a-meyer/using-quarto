@@ -1,0 +1,12 @@
+## Citations and Footnotes
+
+Citations don't work on presentations, but are easy to add to documents. 
+
+You need a BibTex file, e.g., `bibliography.bib`, and a reference to it `bibliography: references.bib` to the YAML front-matter. Quarto supports any [Citation Style Language](https://citationstyles.org/).
+
+You can cite by using `[@citation-name]` in your text. Please check the [article .qmd source](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
+and the [PDF](https://www.meyerperin.com/using-quarto/article.pdf) and [DOCX](https://www.meyerperin.com/using-quarto/article.docx) outputs.
+
+Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
+
+[^f1]: You can use footnotes in presentations and websites, too

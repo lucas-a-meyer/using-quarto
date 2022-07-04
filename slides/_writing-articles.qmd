@@ -1,0 +1,10 @@
+## Writing a scholarly article
+
+I reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don't contain original research.
+
+The relevant files are:
+
+- [Quarto source file](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
+- [Microsoft Word output](https://www.meyerperin.com/using-quarto/article.docx)
+- [LaTeX PDF output](https://www.meyerperin.com/using-quarto/article.pdf)
+`

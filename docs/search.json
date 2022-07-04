@@ -39,7 +39,7 @@
     "href": "index.html#quarto-in-python-in-a-nutshell",
     "title": "Using Quarto",
     "section": "Quarto in Python, in a nutshell",
-    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
+    "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file1. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]"
   },
   {
     "objectID": "index.html#the-yaml-front-matter",
@@ -189,13 +189,6 @@
     "text": "Quarto in Python, in a nutshell\nAll you need to use Quarto is to add some YAML (mostly Pandoc configurations) to your .ipynb files: that’s a .qmd file1. This keeps the configuration and content in the same file.\nYou can then render the outputs using quarto render <file.qmd> in the command line.\n\n\n\n\ngraph LR\nQ[.qmd] --> A\nsubgraph Quarto\n    A[.ipynb] --> B((\"Pandoc\"))\n    B --> C[.md]\n    B --> D[.tex] \n    D --> F((Xetex))\n    C --> I((Hugo))\n    style B fill:#FF6655AA\n    style F fill:#88ffFF\n    style I fill:#88ffFF\nend\n    B ----> E[.doc]\n    B ----> H[.pptx]\n    F --> G[.pdf]\n    I --> J[.html]\n\n\n\n\n\n\n\n\nyou can also add the YAML as raw content in the first cell of an .ipynb file"
   },
   {
-    "objectID": "presentation.html#but-wait-theres-more",
-    "href": "presentation.html#but-wait-theres-more",
-    "title": "Using Quarto for everything",
-    "section": "But wait, there’s more!",
-    "text": "But wait, there’s more!\nQuarto can easily run pre-scripts and post-scripts. I frequenly use this to pre-process data and to automatically publish output to git repositories.\n\n\n\n\ngraph LR\n    P[Pre-scripts] --> Q\n    style P fill:#AA99FF\n    Q[.qmd] --> A\n    subgraph Quarto\n        A[.ipynb] --> B((\"Pandoc\"))\n        B --> C[.md]\n        B --> D[.tex] \n        D --> F((Xetex))\n        C --> I((Hugo))\n        style B fill:#FF6655AA\n        style F fill:#88ffFF\n        style I fill:#88ffFF\n    end\n        B ----> E[.doc]\n        B ----> H[.pptx]\n        F --> G[.pdf]\n        I --> J[.html]\n    E --> X[Post-scripts]\n    H --> X\n    G --> X\n    J --> X\n    style X fill:#AA99FF"
-  },
-  {
     "objectID": "presentation.html#the-yaml-front-matter",
     "href": "presentation.html#the-yaml-front-matter",
     "title": "Using Quarto for everything",
@@ -329,11 +322,11 @@
     "text": "Screenshot of website"
   },
   {
-    "objectID": "presentation.html#generating-a-scholarly-article",
-    "href": "presentation.html#generating-a-scholarly-article",
+    "objectID": "presentation.html#writing-a-scholarly-article",
+    "href": "presentation.html#writing-a-scholarly-article",
     "title": "Using Quarto for everything",
-    "section": "Generating a scholarly article",
-    "text": "Generating a scholarly article\nI reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don’t contain original research.\nThe relevant files are:\n\nQuarto source file\nMicrosoft Word output\nLaTeX PDF output"
+    "section": "Writing a scholarly article",
+    "text": "Writing a scholarly article\nI reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don’t contain original research.\nThe relevant files are:\n\nQuarto source file\nMicrosoft Word output\nLaTeX PDF output `"
   },
   {
     "objectID": "presentation.html#scholarly-article-screenshots",
@@ -354,13 +347,20 @@
     "href": "presentation.html#books-in-quarto-1",
     "title": "Using Quarto for everything",
     "section": "Books in Quarto",
-    "text": "Books in Quarto\nHere are few books that have been recently written with Quarto:"
+    "text": "Books in Quarto\nYou can also write books with quarto. From the same collection of .qmd files, Quarto can generate:\n\nePub\nPDF\nOnline book\n\nTwo recent examples are:\n\nHands-on Programming in R, by Garrett Grolemund source\nPython for Data Analysis, 3E, by Wes McKinney source"
   },
   {
-    "objectID": "presentation.html#where-i-think-quarto-is-good-july-2022",
-    "href": "presentation.html#where-i-think-quarto-is-good-july-2022",
+    "objectID": "presentation.html#hands-on-programming-in-r",
+    "href": "presentation.html#hands-on-programming-in-r",
     "title": "Using Quarto for everything",
-    "section": "Where I think Quarto is good (July 2022)",
-    "text": "Where I think Quarto is good (July 2022)\n\n\nArticles: maybe yes\nI think Quarto is more helpful for a team that already uses Git with Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto… but it’s not reproducible.\nPython notebook: excellent\nQuarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.\n\nBlog: excellent\nQuarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.\nPresentations: maybe not\nOnly if you have\n\na lot of dynamic content\nReproducibility needs\nCollaborators used to Git/Beamer"
+    "section": "Hands-on Programming in R",
+    "text": "Hands-on Programming in R"
+  },
+  {
+    "objectID": "presentation.html#python-for-data-analysis-3e",
+    "href": "presentation.html#python-for-data-analysis-3e",
+    "title": "Using Quarto for everything",
+    "section": "Python for Data Analysis, 3E",
+    "text": "Python for Data Analysis, 3E"
   }
 ]

@@ -1,4 +1,23 @@
 ## Books in Quarto
 
-Here are few books that have been recently written with Quarto:
+You can also write books with quarto. From the same collection of `.qmd` files, Quarto can generate:
+
+- ePub
+- PDF
+- Online book
+
+Two recent examples are:
+
+- [Hands-on Programming in R](https://jjallaire.github.io/hopr/), by Garrett Grolemund [source](https://github.com/jjallaire/hopr/)
+- [Python for Data Analysis, 3E](https://wesmckinney.com/book/), by Wes McKinney [source](https://github.com/wesm/pydata-book/tree/3rd-edition)
+
+## Hands-on Programming in R
+
+![](images/hands-on-programming-with-r.png)
+
+## Python for Data Analysis, 3E
+
+![](images/python-data-analysis-book.png)
+
+
 

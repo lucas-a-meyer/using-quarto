@@ -1,0 +1,15 @@
+## Scholarly article screenshots
+
+:::: {.columns}
+::: {.column}
+
+![PDF version of the article](images/pdf-screenshot.png)
+
+:::
+
+::: {.column}
+
+![Microsoft Word version of the article](images/word-screenshot.png)
+
+:::
+::::

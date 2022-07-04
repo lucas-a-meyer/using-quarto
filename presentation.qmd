@@ -42,13 +42,11 @@ import pandas as pd
 {{< include slides/_population-project-challenges.qmd >}}
 -->
 
-# What Quarto really is
+# Quarto workflow
 
 {{< include slides/_ipynb-pipeline.qmd >}}
 
 {{< include slides/_quarto-ipynb-pandoc.qmd >}}
-
-{{< include slides/_quarto-pandoc-scripts.qmd >}}
 
 # Using Quarto
 
@@ -78,88 +76,22 @@ import pandas as pd
 
 {{< include slides/_changing-format-to-website.qmd >}}
 
-## Screenshot of website
-
-![](images/website.png)
+{{< include slides/_presentation-screenshot.qmd >}}
 
 # Scholarly articles
 
-## Generating a scholarly article
+{{< include slides/_writing-articles.qmd >}}
 
-I reused some of the content of this presentation to create two scholarly-looking articles. The purpose of the articles is just to show how easy it is to generate them with Quarto, they don't contain original research.
+{{< include slides/_articles-screenshots.qmd >}}
 
-The relevant files are:
-
-- [Quarto source file](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
-- [Microsoft Word output](https://www.meyerperin.com/using-quarto/article.docx)
-- [LaTeX PDF output](https://www.meyerperin.com/using-quarto/article.pdf)
-
-## Scholarly article screenshots
-
-:::: {.columns}
-::: {.column}
-
-![PDF version of the article](images/pdf-screenshot.png)
-
-:::
-
-::: {.column}
-
-![Microsoft Word version of the article](images/word-screenshot.png)
-
-:::
-::::
-
-## Citations and Footnotes
-
-Citations don't work on presentations, but are easy to add to documents. 
-
-You need a BibTex file, e.g., `bibliography.bib`, and a reference to it `bibliography: references.bib` to the YAML front-matter. Quarto supports any [Citation Style Language](https://citationstyles.org/).
-
-You can cite by using `[@citation-name]` in your text. Please check the [article .qmd source](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/article.qmd)
-and the [PDF](https://www.meyerperin.com/using-quarto/article.pdf) and [DOCX](https://www.meyerperin.com/using-quarto/article.docx) outputs.
-
-Generating footnotes is also easy. Using `[^ref]` links to a footnote, and `[^ref: content of the footnote]` generates its content[^f1].
-
-[^f1]: You can use footnotes in presentations and websites, too
+{{< include slides/_citations-footnotes.qmd >}}
 
 # Books in Quarto
 
 {{< include slides/_books.qmd >}}
 
-
 # Should I use Quarto?
 
-## Where I think Quarto is good (July 2022)
-
-:::: {.columns}
-::: {.column}
-
-### Articles: maybe yes
-
-I think Quarto is more helpful for a team that already uses Git **with** Python notebooks or LaTeX to write articles. Microsoft Word collaboration through SharePoint and Teams is easier than Git and Quarto... but it's not reproducible.
-
-### Python notebook: excellent
-
-Quarto adds to Python notebooks without detracting anything. All you need are a few YAML lines.
-
-:::
-
-::: {.column}
-
-### Blog: excellent
-
-Quarto allows me to have a scriptable, Python-based blog. I can automate my blog to tweet and post to LinkedIn when I write new articles.
-
-### Presentations: maybe not
-
-Only if you have
-
-- *a lot* of dynamic content
-- Reproducibility needs
-- Collaborators used to Git/Beamer 
-
-:::
-::::
+{{< include/_should-i-use-quarto.qmd >}}
 
 # THANK YOU
