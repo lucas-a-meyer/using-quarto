@@ -30,4 +30,4 @@ for name in regions:
     display(Markdown(f'</div>'))
 ```
 
-{{< include _dynamic-content.qmd >>}}
+{{< include ../_dynamic-content.qmd >}}
