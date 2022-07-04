@@ -6,7 +6,7 @@ df_dr = pd.read_csv("data/dr.csv.gz", compression="gzip")
 df_pop = pd.read_csv("data/pop_brackets.csv.gz", compression="gzip")
 
 years = [2000, 2025, 2050, 2075, 2100]
-regions = ["Belgium", "China", "Brazil", "India", "Japan", "Nigeria"]
+regions = ["Italy", "China", "Brazil", "India", "Japan", "Nigeria"]
 
 for name in regions:
     display(Markdown(f"## Age and Population Pyramids for {name}"))
