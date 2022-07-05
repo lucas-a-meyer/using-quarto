@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Quarto with Python",
     "section": "",
-    "text": "Folowing the spirit of “learning out loud”, I created several artifacts while I was learning about Quarto.\nI created one main content file (source) that imports each slide, to create:\nI also reused some of the content above in another Quarto file (source) to create:"
+    "text": "Folowing the spirit of “learning out loud”, I created several artifacts while I was learning about Quarto.\nI created one main content file (source) that imports lots of other topic-based files, to create:\nI also reused some of the content above in another Quarto file (source) to create:\nThe content below tells why I chose Quarto and how I use it with Python."
   },
   {
     "objectID": "index.html#the-content-value-chain",
