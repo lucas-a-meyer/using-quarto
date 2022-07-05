@@ -252,6 +252,13 @@
     "text": "Hacks\nQuarto is under active development, and quickly reaching v1.0. While creating this content, I had to do some workarounds.\n\nI created a script to quickly install the latest version\nMermaid diagrams blank in PPTX. Bug quickly fixed.\nMermaid diagrams blank in RevealJS. Workaround: refresh.\nHTML website and RevealJS from same source: images disappear\n\nWorkaround: add self-contained: true to YAML front-matter\n\nPandoc large monospaced font size in PowerPoint. Workaround: script.\nThe decorations on this slide only appear on RevealJS, by design.\nSlide with article screenshots renders weird in HTML, no workaround."
   },
   {
+    "objectID": "index.html#mixing-r-and-python",
+    "href": "index.html#mixing-r-and-python",
+    "title": "Quarto with Python",
+    "section": "Mixing R and Python",
+    "text": "Mixing R and Python\nI also created an R source file (copied directly from the Quarto tutorial) and added it to this project. Quarto does not allow the same file to run Python and R, but allows two different files. The result of the R source is here."
+  },
+  {
     "objectID": "presentation.html#the-content-value-chain",
     "href": "presentation.html#the-content-value-chain",
     "title": "Using Quarto with Python",

@@ -32,3 +32,7 @@ I also reused some of the content above in another Quarto file [(source)](https:
 The content below tells why I chose Quarto and how I use it with Python.
 
 {{< include _presentation-content.qmd >}}
+
+## Mixing R and Python
+
+I also created an R [source](https://raw.githubusercontent.com/lucas-a-meyer/using-quarto/main/computations.qmd) file (copied directly from the Quarto tutorial) and added it to this project. Quarto does not allow the same file to run Python and R, but allows two different files. The result of the R source is [here](computations.qmd).
